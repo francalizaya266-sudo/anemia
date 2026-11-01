@@ -17,13 +17,16 @@ The prospective Puno protocol is described in the article and in `protocolo_puno
 | `gpu/` | PyTorch/CUDA replica used for the reported CNN results: `train_torch.py` (7 architectures, 2-phase fine-tuning, ONNX FP32/FP16/INT8 export, onnxruntime latency), `gradcam_torch.py`, `run_all.bat`, `run_seeds.bat` |
 | `codigo/meta_groups.csv` | **The duplicate map.** One row per CP-AnemiC image: `image_id, image_path, hb, anemia, severity, hospital, age_months, gender, sha, grp`. Rows sharing `grp` are byte-identical or perceptual near-duplicates (pHash-16 with mirror, Hamming ≤ 20, connected components). 710 rows → 472 unique groups → 471 after removing one label-conflict group. |
 | `resultados/` | `classic_results.csv`, `cnn_gpu_results.csv`, `fusion_results.csv`, `tabla_comparativa.csv`, `hb_reg.json`, `who2024.json`, `xai_classic.json`, SHAP and Grad-CAM figures, out-of-fold predictions (`*_oof.json` / `cnn_*_clean.json`) |
-| `figuras/` | Figures 1–4 of the article (PNG + PDF) |
+| `figuras/` | Figures 1–4 of the first draft (PNG + PDF); `figuras/review/` holds the figures of the revised manuscript (Fig. 1–7, S3, S5) |
+| `codigo/review/` | Analyses added after peer review (CPU): `review_analyses.py` (naive / grouped / deduplicated protocols with paired bootstrap and DeLong tests, per-repetition AUC, nested screening thresholds, calibration, PPV/NPV, sex subgroups, singleton-only and random-representative sensitivity), `review_analyses_b.py` (feature-space duplicate audit, 1-NN/5-NN, shape-only and brightness ablations, leave-one-hospital-out with random effects, DeLong + Holm comparisons against the CNNs, SHAP), `review_strict.py` (strict 452-image set), `figs/` (figure scripts) |
+| `codigo/dedup_audit_v2.py` | **Third stage of the duplicate audit (post hoc).** Perceptual hash under the eight dihedral transforms (rotations and mirror) plus feature-vector identity. It found 19 copies rotated by 90°/180°/270° that the mirror-only hash had missed. |
+| `codigo/meta_groups_strict.csv` | The strict duplicate map produced by `dedup_audit_v2.py`: 710 rows → 453 components → 452 after removing the label-conflict group (218 anaemic / 234 non-anaemic). The pre-specified analyses use `meta_groups.csv` (471); the strict map is used in the sensitivity analysis. |
+| `resultados/review/` | Result files of the review analyses (`review_results.json`, `review_results_b.json`, `review_strict.json`, out-of-fold predictions, `dihedral_links.json`, `strict_pairs.json`) |
+| `sha256sums.txt` | SHA-256 digest of every CP-AnemiC v1 file we analysed, so that readers can check whether their copy is the same data |
 
 ## Data
 
-CP-AnemiC is not redistributed here. Download it from Mendeley Data (CC BY 4.0):
-Appiahene P, Asare JW, Donkoh ET. CP-AnemiC. https://doi.org/10.17632/m53vz6b7fx.1
-and point `DATA_DIR` to the extracted folder (expects `metadata.csv` and `images/`).
+CP-AnemiC is not redistributed here. It was published on Mendeley Data (CC BY 4.0): Appiahene P, Asare JW, Donkoh ET. CP-AnemiC. https://doi.org/10.17632/m53vz6b7fx.1. Both versions of the record have since been withdrawn by the depositors; we analysed version 1 (downloaded before the withdrawal) and publish the SHA-256 digest of every file in `sha256sums.txt`. If you hold a copy, point `DATA_DIR` to the extracted folder (expects `metadata.csv` and `images/`) and compare the digests.
 
 ## Reproduce
 
@@ -61,7 +64,7 @@ Latency: onnxruntime CPU, 1 intra-op thread, median of 100 single-image runs aft
 | EfficientNet-B0 FP32 | 0.734 (0.69–0.78) | 15.3 MB | 9.6 ms |
 | MobileNetV2 FP32 | 0.664 (0.61–0.71) | 8.5 MB | 6.8 ms |
 
-With duplicates (naive protocol) the same models reach 0.95 / 0.94 / 0.86 / 0.83.
+With duplicates (naive protocol) the same models reach 0.95 / 0.94 / 0.86 / 0.83. Keeping every duplicate group inside one fold on the same 708 rows (grouped protocol) lowers the AUC of the colour-feature models by 0.05–0.07, which is the leakage itself. On the strict 452-image set (third audit stage) Random Forest reaches 0.849 (0.811–0.885).
 
 ## Citation
 

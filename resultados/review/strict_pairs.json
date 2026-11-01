@@ -1,0 +1,401 @@
+[
+ {
+  "a": "Image_011",
+  "b": "Image_059",
+  "bits": 0,
+  "transform": "rot180",
+  "size_a": [
+   174,
+   42
+  ],
+  "size_b": [
+   174,
+   42
+  ],
+  "fdist": 1.939254478078561e-07,
+  "label_a": 0,
+  "label_b": 0,
+  "hb_differs": true,
+  "facility_differs": true,
+  "age_differs": true,
+  "sex_differs": false
+ },
+ {
+  "a": "Image_111",
+  "b": "Image_171",
+  "bits": 0,
+  "transform": "rot180",
+  "size_a": [
+   210,
+   103
+  ],
+  "size_b": [
+   210,
+   103
+  ],
+  "fdist": 1.8737793961296149e-06,
+  "label_a": 1,
+  "label_b": 1,
+  "hb_differs": true,
+  "facility_differs": true,
+  "age_differs": false,
+  "sex_differs": true
+ },
+ {
+  "a": "Image_025",
+  "b": "Image_179",
+  "bits": 0,
+  "transform": "rot180",
+  "size_a": [
+   198,
+   103
+  ],
+  "size_b": [
+   198,
+   103
+  ],
+  "fdist": 5.245667671148268e-07,
+  "label_a": 1,
+  "label_b": 1,
+  "hb_differs": true,
+  "facility_differs": true,
+  "age_differs": false,
+  "sex_differs": false
+ },
+ {
+  "a": "Image_013",
+  "b": "Image_201",
+  "bits": 0,
+  "transform": "rot180",
+  "size_a": [
+   265,
+   82
+  ],
+  "size_b": [
+   265,
+   82
+  ],
+  "fdist": 3.4467025711248344e-07,
+  "label_a": 1,
+  "label_b": 1,
+  "hb_differs": true,
+  "facility_differs": true,
+  "age_differs": true,
+  "sex_differs": false
+ },
+ {
+  "a": "Image_021",
+  "b": "Image_227",
+  "bits": 0,
+  "transform": "rot180",
+  "size_a": [
+   220,
+   67
+  ],
+  "size_b": [
+   220,
+   67
+  ],
+  "fdist": 3.828679194436651e-07,
+  "label_a": 1,
+  "label_b": 1,
+  "hb_differs": true,
+  "facility_differs": true,
+  "age_differs": true,
+  "sex_differs": true
+ },
+ {
+  "a": "Image_168",
+  "b": "Image_241",
+  "bits": 0,
+  "transform": "rot180",
+  "size_a": [
+   111,
+   42
+  ],
+  "size_b": [
+   111,
+   42
+  ],
+  "fdist": 5.740203672070931e-07,
+  "label_a": 1,
+  "label_b": 1,
+  "hb_differs": true,
+  "facility_differs": true,
+  "age_differs": false,
+  "sex_differs": false
+ },
+ {
+  "a": "Image_043",
+  "b": "Image_278",
+  "bits": 0,
+  "transform": "rot90",
+  "size_a": [
+   121,
+   91
+  ],
+  "size_b": [
+   91,
+   121
+  ],
+  "fdist": 1.1059943723079613e-06,
+  "label_a": 1,
+  "label_b": 1,
+  "hb_differs": true,
+  "facility_differs": true,
+  "age_differs": true,
+  "sex_differs": false
+ },
+ {
+  "a": "Image_253",
+  "b": "Image_305",
+  "bits": 0,
+  "transform": "rot180",
+  "size_a": [
+   217,
+   58
+  ],
+  "size_b": [
+   217,
+   58
+  ],
+  "fdist": 2.127335601009861e-07,
+  "label_a": 0,
+  "label_b": 0,
+  "hb_differs": true,
+  "facility_differs": true,
+  "age_differs": true,
+  "sex_differs": false
+ },
+ {
+  "a": "Image_276",
+  "b": "Image_323",
+  "bits": 4,
+  "transform": "rot90",
+  "size_a": [
+   202,
+   180
+  ],
+  "size_b": [
+   180,
+   202
+  ],
+  "fdist": 2.685714421738356,
+  "label_a": 0,
+  "label_b": 0,
+  "hb_differs": true,
+  "facility_differs": true,
+  "age_differs": false,
+  "sex_differs": false
+ },
+ {
+  "a": "Image_187",
+  "b": "Image_326",
+  "bits": 6,
+  "transform": "mirror+rot180",
+  "size_a": [
+   171,
+   34
+  ],
+  "size_b": [
+   171,
+   34
+  ],
+  "fdist": 1.6283631508990992,
+  "label_a": 1,
+  "label_b": 1,
+  "hb_differs": true,
+  "facility_differs": true,
+  "age_differs": true,
+  "sex_differs": false
+ },
+ {
+  "a": "Image_281",
+  "b": "Image_337",
+  "bits": 16,
+  "transform": "rot180",
+  "size_a": [
+   298,
+   124
+  ],
+  "size_b": [
+   295,
+   124
+  ],
+  "fdist": 3.1871950919355676,
+  "label_a": 0,
+  "label_b": 0,
+  "hb_differs": true,
+  "facility_differs": true,
+  "age_differs": true,
+  "sex_differs": false
+ },
+ {
+  "a": "Image_386",
+  "b": "Image_443",
+  "bits": 0,
+  "transform": "rot180",
+  "size_a": [
+   246,
+   70
+  ],
+  "size_b": [
+   246,
+   70
+  ],
+  "fdist": 2.1859532480120435e-07,
+  "label_a": 1,
+  "label_b": 1,
+  "hb_differs": true,
+  "facility_differs": true,
+  "age_differs": true,
+  "sex_differs": false
+ },
+ {
+  "a": "Image_018",
+  "b": "Image_528",
+  "bits": 0,
+  "transform": "rot180",
+  "size_a": [
+   301,
+   109
+  ],
+  "size_b": [
+   301,
+   109
+  ],
+  "fdist": 6.293939255281471e-07,
+  "label_a": 1,
+  "label_b": 1,
+  "hb_differs": true,
+  "facility_differs": true,
+  "age_differs": true,
+  "sex_differs": true
+ },
+ {
+  "a": "Image_080",
+  "b": "Image_589",
+  "bits": 0,
+  "transform": "rot180",
+  "size_a": [
+   237,
+   70
+  ],
+  "size_b": [
+   237,
+   70
+  ],
+  "fdist": 1.223228700003389e-07,
+  "label_a": 1,
+  "label_b": 1,
+  "hb_differs": true,
+  "facility_differs": true,
+  "age_differs": false,
+  "sex_differs": true
+ },
+ {
+  "a": "Image_285",
+  "b": "Image_606",
+  "bits": 0,
+  "transform": "rot180",
+  "size_a": [
+   295,
+   82
+  ],
+  "size_b": [
+   295,
+   82
+  ],
+  "fdist": 6.45540470426537e-07,
+  "label_a": 1,
+  "label_b": 1,
+  "hb_differs": true,
+  "facility_differs": true,
+  "age_differs": true,
+  "sex_differs": true
+ },
+ {
+  "a": "Image_063",
+  "b": "Image_663",
+  "bits": 0,
+  "transform": "rot270",
+  "size_a": [
+   213,
+   228
+  ],
+  "size_b": [
+   228,
+   213
+  ],
+  "fdist": 6.533995550981936e-07,
+  "label_a": 0,
+  "label_b": 0,
+  "hb_differs": true,
+  "facility_differs": true,
+  "age_differs": true,
+  "sex_differs": true
+ },
+ {
+  "a": "Image_072",
+  "b": "Image_682",
+  "bits": 0,
+  "transform": "rot180",
+  "size_a": [
+   192,
+   82
+  ],
+  "size_b": [
+   192,
+   82
+  ],
+  "fdist": 1.1068332409775584e-06,
+  "label_a": 0,
+  "label_b": 0,
+  "hb_differs": true,
+  "facility_differs": true,
+  "age_differs": false,
+  "sex_differs": true
+ },
+ {
+  "a": "Image_585",
+  "b": "Image_686",
+  "bits": 0,
+  "transform": "rot180",
+  "size_a": [
+   172,
+   37
+  ],
+  "size_b": [
+   172,
+   37
+  ],
+  "fdist": 1.1059943724189836e-06,
+  "label_a": 0,
+  "label_b": 0,
+  "hb_differs": false,
+  "facility_differs": true,
+  "age_differs": true,
+  "sex_differs": false
+ },
+ {
+  "a": "Image_651",
+  "b": "Image_707",
+  "bits": 0,
+  "transform": "rot270",
+  "size_a": [
+   195,
+   139
+  ],
+  "size_b": [
+   139,
+   195
+  ],
+  "fdist": 1.4750222073835929e-06,
+  "label_a": 0,
+  "label_b": 0,
+  "hb_differs": true,
+  "facility_differs": false,
+  "age_differs": true,
+  "sex_differs": true
+ }
+]
