@@ -1,4 +1,4 @@
-cff-version: 1.2.0
+cff-version: 1.0.2
 message: "If you use this code or the duplicate map, please cite the article and this repository."
 title: "Deduplicated benchmark for smartphone conjunctival anaemia detection in children (CP-AnemiC)"
 type: software
@@ -20,7 +20,8 @@ authors:
     orcid: https://orcid.org/0000-0003-4681-4272
     affiliation: Universidad Peruana Unión
 license: MIT
+doi: 10.5281/zenodo.23851748
 repository-code: "https://github.com/francalizaya266-sudo/anemia"
-version: 1.0.0
+version: 1.0.2
 date-released: 2026-11-01
 keywords: [anaemia, conjunctiva, smartphone, data leakage, deduplication, edge AI, explainable AI, children, Peru]

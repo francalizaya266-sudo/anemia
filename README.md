@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23851748.svg)](https://doi.org/10.5281/zenodo.23851748)
+
 # Deduplicated benchmark for smartphone conjunctival anaemia detection in children (CP-AnemiC)
 
 Code, duplicate map and out-of-fold predictions for the article
@@ -63,7 +65,7 @@ With duplicates (naive protocol) the same models reach 0.95 / 0.94 / 0.86 / 0.83
 
 ## Citation
 
-See `CITATION.cff`. Archive DOI (Zenodo): to be added at first release.
+Archived on Zenodo: **https://doi.org/10.5281/zenodo.23851748** (release v1.0.2). See `CITATION.cff` for the full citation.
 
 ## Licence
 
