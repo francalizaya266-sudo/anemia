@@ -1,0 +1,23 @@
+{
+ "n_new_pairs": 168,
+ "concordant": 168,
+ "null_mean": 83.9695,
+ "null_max": 111,
+ "p": 4.999750012499375e-05,
+ "flips": 11,
+ "rescaled": 32,
+ "hosp_differ": 142,
+ "hb_differ": 144,
+ "geo_unique": 338,
+ "label_conflicts": 1,
+ "n_class": 337,
+ "n_anaemic": 179,
+ "n_non": 158,
+ "singletons": 204,
+ "multi": 134,
+ "mrows": 506,
+ "dup_anaemic_pct": 62.055335968379445,
+ "single_anaemic_pct": 53.92156862745098,
+ "largest": 22,
+ "criteria": "inliers>=10, NCC>=0.70, overlap>=0.30, scale 0.5-2"
+}

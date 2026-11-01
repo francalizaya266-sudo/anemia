@@ -37,7 +37,7 @@ box(ax,0.01,0.06,0.57,0.48,'Evaluation on identical folds\n\n'
     'brightness-invariant features, 1-NN memorisation check\n'
     'ONNX export: FP32 / FP16 / INT8 size and single-thread CPU latency',fc='#ffffff',fs=6.8)
 arrow(ax,0.63,0.18,0.58,0.18)
-plt.savefig(OUT+'Fig1_overview.pdf'); plt.savefig(OUT+'Fig1_overview.png'); plt.close()
+plt.close()  # superseded by make_fig1.py (vertical layout with fit checks)
 
 # ---------------- Fig 2: duplicate-audit flow (vertical) ----------------
 fig,ax=plt.subplots(figsize=(6.7,6.4)); ax.set_xlim(0,1); ax.set_ylim(0,1); ax.axis('off')
@@ -66,7 +66,7 @@ box(ax,L,0.01,W,0.125,'Post hoc third stage: pHash under the 8 dihedral\ntransfo
 box(ax,R,0.01,RW,0.125,'Strict set (sensitivity analysis):\n452 images, 218 anaemic (48 %),\n234 non-anaemic;\nstrict singleton set: 370 images',fc='#e6f3ec',fs=FS2)
 arrow(ax,L+W,0.0725,R,0.0725)
 arrow(ax,cx,SH+0.01*(1-SH),cx,0.135)
-plt.savefig(OUT+'Fig2_dedup_flow.pdf'); plt.savefig(OUT+'Fig2_dedup_flow.png'); plt.close()
+plt.close()  # superseded by make_fig2.py (four-stage audit flow)
 
 # ---------------- Fig 4: ROC curves ----------------
 def roc(y,p):
@@ -90,14 +90,14 @@ def gpu(name):
 series=[('Random Forest, colour features',y,np.array(cl['oof']['RF (color)']),'0.871 (0.837--0.903)'),
         ('XGBoost, colour features',y,np.array(cl['oof']['XGBoost (color)']),'0.863 (0.830--0.895)'),
         ('EfficientNet-B0 (seed 42)',*gpu('EfficientNet-B0'),'0.734 (0.693--0.779)'),('MobileNetV2 (seed 42)',*gpu('MobileNetV2'),'0.664 (0.612--0.712)')]
-fig,ax=plt.subplots(figsize=(4.3,4.1))
+fig,ax=plt.subplots(figsize=(4.3,4.9))
 for k,(lab,yy,p,ci) in enumerate(series):
     f,t=roc(yy,p); a=auc(yy,p); ax.plot(f,t,color=C[k],lw=1.8,label=f'{lab}: AUC {ci.replace("--","-")}')
     g,lo,hi=band(yy,p); ax.fill_between(g,lo,hi,color=C[k],alpha=0.10,lw=0)
 ax.plot([0,1],[0,1],ls=':',color='#9a9a9a',lw=1); ax.text(0.62,0.57,'chance (AUC 0.5)',rotation=38,fontsize=6.5,color='#7a7a7a',ha='center')
 ax.set_xlabel('1 - specificity (false-positive rate)'); ax.set_ylabel('Sensitivity (true-positive rate)'); ax.set_xlim(0,1); ax.set_ylim(0,1)
 ax.set_xticks(np.linspace(0,1,6)); ax.set_yticks(np.linspace(0,1,6)); ax.set_aspect('equal')
-ax.legend(frameon=False,loc='lower right',title='Model: AUC (95 % bootstrap CI)',title_fontsize=7)
+ax.legend(frameon=False,loc='upper center',bbox_to_anchor=(0.5,-0.13),title='Model: AUC (95 % bootstrap CI)',title_fontsize=7,alignment='left')
 plt.savefig(OUT+'Fig4_roc.pdf'); plt.savefig(OUT+'Fig4_roc.png'); plt.close()
 print('AUCs', [round(auc(s[1],s[2]),3) for s in series])
 
@@ -107,7 +107,7 @@ pts=[]
 for r in rows:
     if r['variant'] in ('fp32','fp16'): pts.append((r['model'],r['variant'],float(r['MB']),float(r['AUC']),float(r['lat_ms'])))
 classical=[('XGBoost',0.40,0.863,6.1),('Random Forest',3.84,0.871,29.8),('SVM-RBF',0.16,0.808,6.3),('Logistic regression',0.01,0.679,7.9)]
-fig,ax=plt.subplots(figsize=(6.3,4.0))
+fig,ax=plt.subplots(figsize=(6.3,4.6))
 def s_of(lat): return 12+lat*1.6
 for name,mb,a,lat in classical:
     ax.scatter(mb,a,s=s_of(lat),marker='s',color=C[0],alpha=0.9,edgecolor='white',lw=0.6,zorder=3)
@@ -120,13 +120,15 @@ lab_off={'XGBoost':(0.40,0.863,0.9,0.905),'Random Forest':(3.84,0.871,5.5,0.905)
 for k,(x,yv,tx,ty) in lab_off.items():
     ax.annotate(k,(x,yv),xytext=(tx,ty),fontsize=6.8,color=GREY,ha='center',va='center',arrowprops=dict(arrowstyle='-',color='#b5b5b5',lw=0.6,shrinkB=3))
 ax.set_xscale('log'); ax.set_xlabel('Model file size (MB, log scale)'); ax.set_ylabel('AUC, deduplicated protocol (471 images)'); ax.set_ylim(0.44,0.93); ax.set_xlim(0.006,400)
-ax.axhline(0.5,ls=':',color='#9a9a9a',lw=1); ax.text(0.007,0.505,'chance',fontsize=6.5,color='#7a7a7a',va='bottom')
+ax.axhline(0.5,ls=':',color='#9a9a9a',lw=1); ax.text(380,0.505,'chance (AUC 0.5)',fontsize=6.5,color='#7a7a7a',va='bottom',ha='right')
 ax.grid(color='#eeeeea',lw=0.8,zorder=0)
 h1=ax.scatter([],[],marker='s',color=C[0],s=30,label='Colour features + classical model')
 h2=ax.scatter([],[],marker='o',color=C[1],s=30,label='CNN, FP32')
 h3=ax.scatter([],[],marker='^',facecolor='none',edgecolor=C[1],s=30,label='CNN, FP16')
-leg1=ax.legend(handles=[h1,h2,h3],frameon=False,loc='lower left',bbox_to_anchor=(0.0,0.0)); ax.add_artist(leg1)
+leg1=ax.legend(handles=[h1,h2,h3],frameon=False,loc='upper left',bbox_to_anchor=(0.0,-0.14),title='Model type',title_fontsize=7,alignment='left'); ax.add_artist(leg1)
 hs=[ax.scatter([],[],s=s_of(l),color='#9a9a9a',alpha=0.6,label=f'{l} ms') for l in (5,20,50)]
-ax.legend(handles=hs,frameon=False,loc='lower right',title='Latency, one CPU thread',title_fontsize=7,labelspacing=1.1,borderpad=0.8)
-plt.savefig(OUT+'Fig7_size_vs_auc.pdf'); plt.savefig(OUT+'Fig7_size_vs_auc.png'); plt.close()
+ax.legend(handles=hs,frameon=False,loc='upper right',bbox_to_anchor=(1.0,-0.14),title='Marker area: latency, one CPU thread',title_fontsize=7,ncol=3,columnspacing=1.6,borderpad=0.8,alignment='left')
+leg2=ax.get_legend()
+for ext in ('pdf','png'): plt.savefig(OUT+'Fig7_size_vs_auc.'+ext,bbox_extra_artists=[leg1,leg2])
+plt.close()
 print('done')

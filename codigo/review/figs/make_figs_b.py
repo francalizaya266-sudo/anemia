@@ -20,6 +20,8 @@ P=R['protocols']
 import os as _o
 RS=json.load(open('/home/claude/exp/out/review_strict/review_strict.json')) if _o.path.exists('/home/claude/exp/out/review_strict/review_strict.json') else {}
 GS=RS.get('grouped_strict',{})
+GEOF='/home/claude/exp/out/review2/geo/review_geo.json'
+GQ=(json.load(open(GEOF)).get('grouped_strict',{}) if _o.path.exists(GEOF) else {}); GQ={k:v for k,v in GQ.items() if 'naive_minus_grouped_strict' in v}
 rows=[]
 for k in M:
     rows.append((M[k],P[k]['naive708_AUC'],P[k]['naive708_ci'],P[k]['grouped708_AUC'],P[k]['grouped708_ci'],float(cls[k]['AUC']),pci(cls[k]['AUC_ci'])))
@@ -32,32 +34,38 @@ for k,(na,nci,ca,cci) in cnn.items():
 # classical models (sorted by leak, largest at the top) above the CNNs (sorted by leak when the grouped run exists, else by naive - dedup.)
 cl=sorted([r for r in rows if r[0] in M.values()],key=lambda r: r[1]-r[3]); cn=sorted([r for r in rows if r[0] in cnn],key=lambda r: (r[1]-r[3]) if r[3] is not None else (r[1]-r[5]))
 rows=cn+cl
-fig,ax=plt.subplots(figsize=(6.3,4.3))
+fig,ax=plt.subplots(figsize=(6.3,5.0))
 ax.axhline(len(cn)-0.5,color='#d9d8d3',lw=0.8,ls=(0,(3,3)),zorder=0)
 for i,(lab,na,nci,ga,gci,ca,cci) in enumerate(rows):
-    ax.plot([ca,na],[i,i],color='#d9d8d3',lw=3,zorder=1,solid_capstyle='round')
-    ax.errorbar(na,i+0.12,xerr=[[na-nci[0]],[nci[1]-na]],fmt='o',color=C[1],ms=4.5,capsize=2,lw=0.9,zorder=3)
-    if ga is not None: ax.errorbar(ga,i,xerr=[[ga-gci[0]],[gci[1]-ga]],fmt='D',color=C[3],ms=4,capsize=2,lw=0.9,zorder=3)
+    pass  # (range bar removed: four markers per row)
+    ax.errorbar(na,i+0.24,xerr=[[na-nci[0]],[nci[1]-na]],fmt='o',color=C[1],ms=4.5,capsize=2,lw=0.9,zorder=3)
+    if ga is not None: ax.errorbar(ga,i+0.12,xerr=[[ga-gci[0]],[gci[1]-ga]],fmt='D',color=C[3],ms=4,capsize=2,lw=0.9,zorder=3)
     kk=[k for k in M if M[k]==lab]
     if kk and kk[0] in GS:
         gs_=GS[kk[0]]['grouped_strict_AUC']; gsc=GS[kk[0]]['ci']
-        ax.errorbar(gs_,i-0.24,xerr=[[gs_-gsc[0]],[gsc[1]-gs_]],fmt='D',mfc='white',mec=C[3],color=C[3],ms=4,capsize=2,lw=0.9,zorder=3)
+        ax.errorbar(gs_,i,xerr=[[gs_-gsc[0]],[gsc[1]-gs_]],fmt='D',mfc='white',mec=C[3],color=C[3],ms=4,capsize=2,lw=0.9,zorder=3)
+    if kk and kk[0] in GQ:
+        gq=GQ[kk[0]]['grouped_strict_AUC']; gqc=GQ[kk[0]]['ci']
+        ax.errorbar(gq,i-0.12,xerr=[[gq-gqc[0]],[gqc[1]-gq]],fmt='^',mfc='white',mec='#9a5b00',color='#9a5b00',ms=4.5,capsize=2,lw=0.9,zorder=3)
     if lab in GSC:
         gs_=GSC[lab]['AUC']; gsc=GSC[lab]['ci']
-        ax.errorbar(gs_,i-0.24,xerr=[[gs_-gsc[0]],[gsc[1]-gs_]],fmt='D',mfc='white',mec=C[3],color=C[3],ms=4,capsize=2,lw=0.9,zorder=3)
-    ax.errorbar(ca,i-0.12,xerr=[[ca-cci[0]],[cci[1]-ca]],fmt='s',color=C[0],ms=4.5,capsize=2,lw=0.9,zorder=3)
+        ax.errorbar(gs_,i,xerr=[[gs_-gsc[0]],[gsc[1]-gs_]],fmt='D',mfc='white',mec=C[3],color=C[3],ms=4,capsize=2,lw=0.9,zorder=3)
+    ax.errorbar(ca,i-0.24,xerr=[[ca-cci[0]],[cci[1]-ca]],fmt='s',color=C[0],ms=4.5,capsize=2,lw=0.9,zorder=3)
     kk=[k for k in M if M[k]==lab]
-    txt=(f'leak {na-ga:.3f}'+(f" ({GS[kk[0]]['naive_minus_grouped_strict']:.3f})" if kk and kk[0] in GS and 'naive_minus_grouped_strict' in GS[kk[0]] else (f" ({GSC[lab]['naive_minus_grouped_strict']:.3f})" if lab in GSC else ''))) if ga is not None else f'naive $-$ dedup. {na-ca:+.2f}'
+    _st=(GS[kk[0]]['naive_minus_grouped_strict'] if kk and kk[0] in GS and 'naive_minus_grouped_strict' in GS[kk[0]] else (GSC[lab]['naive_minus_grouped_strict'] if lab in GSC else None))
+    _gq=GQ[kk[0]]['naive_minus_grouped_strict'] if kk and kk[0] in GQ else None
+    txt=(f'leak {na-ga:.3f}'+(f' / {_st:.3f}' if _st is not None else '')+(f' / {_gq:.3f}' if _gq is not None else '')) if ga is not None else f'naive $-$ dedup. {na-ca:+.2f}'
     ax.text(1.005,i,txt.replace('+',''),va='center',fontsize=6.5,color=GREY)
 ax.set_yticks(range(len(rows))); ax.set_yticklabels([r[0] for r in rows]); ax.set_xlim(0.45,1.0); ax.set_xlabel('AUC (95 % bootstrap CI)')
 ax.grid(axis='x',color='#eeeeea',lw=0.8,zorder=0)
 h=[plt.Line2D([],[],marker='o',color=C[1],ls='',ms=5,label='Naive: 708 rows, random row-level folds'),
    plt.Line2D([],[],marker='D',color=C[3],ls='',ms=4.5,label='Grouped: same 708 rows, duplicate groups in one fold'),
    plt.Line2D([],[],marker='D',mfc='white',mec=C[3],color=C[3],ls='',ms=4.5,label='Grouped with the strict duplicate map (third audit stage'+('' if GSC else '; colour-feature models')+')'),
+   *([plt.Line2D([],[],marker='^',mfc='white',mec='#9a5b00',color='#9a5b00',ls='',ms=5,label='Grouped with the geometric duplicate map (fourth audit stage; colour-feature models)')] if GQ else []),
    plt.Line2D([],[],marker='s',color=C[0],ls='',ms=5,label='Deduplicated: 471 unique images')]
 ax.legend(handles=h,frameon=False,loc='upper center',bbox_to_anchor=(0.42,-0.15),ncol=1,handletextpad=0.4,borderaxespad=0,fontsize=6.8)
 ax.text(0.455,len(rows)-0.55,'Colour-feature models',fontsize=6.5,color=GREY,va='center'); ax.text(0.455,len(cn)-0.85,'CNNs',fontsize=6.5,color=GREY,va='center')
-ax.set_xlim(0.45,1.12); ax.set_xticks(np.arange(0.5,1.01,0.1))
+ax.set_xlim(0.45,1.16); ax.set_xticks(np.arange(0.5,1.01,0.1))
 plt.savefig(OUT+'Fig3_leakage.pdf'); plt.savefig(OUT+'Fig3_leakage.png'); plt.close()
 
 # ---------------- Fig 5: SHAP beeswarm (XGBoost) ----------------
@@ -144,10 +152,10 @@ for k,i in enumerate(closest):
     for r,ii in enumerate([i,nni[i]]):
         a=fig.add_subplot(sub[r,k]); im=Image.open('/home/claude/data/cp-anemic/'+ddl[ii]['image_path']).convert('RGB'); a.imshow(im); a.set_xticks([]); a.set_yticks([])
         for s in a.spines.values(): s.set_visible(False)
-        a.set_title(f"{ddl[ii]['image_id'].replace('Image_','#')}  Hb {float(ddl[ii]['hb'])*10:.0f}"+(f"\n{tr_of(ddl[i]['image_id'],ddl[nni[i]]['image_id'])}" if r==1 else ''),fontsize=6,pad=2)
-        if k==0: a.set_ylabel('image A' if r==0 else 'nearest B',fontsize=6)
+        a.set_title(f"{ddl[ii]['image_id'].replace('Image_','#')}, Hb {float(ddl[ii]['hb']):.1f}"+(f"\n{tr_of(ddl[i]['image_id'],ddl[nni[i]]['image_id'])}" if r==1 else ''),fontsize=6,pad=2)
+        if k==0: a.set_ylabel('image A' if r==0 else 'nearest\nimage B',fontsize=6,rotation=0,ha='right',va='center',labelpad=4)
     if True: fig.text(0,0,'')
-pos=fig.axes[1].get_position(); fig.text(0.02,pos.y1+0.05,'(b)',fontsize=8)
+pos=fig.axes[1].get_position(); fig.text(0.02,pos.y1+0.05,'(b)  closest pairs in feature space (Hb in g/dL)',fontsize=8)
 plt.savefig(OUT+'figS3_feature_space.pdf'); plt.savefig(OUT+'figS3_feature_space.png'); plt.close()
 print('S3 median nnd',np.median(nnd),'ref median',np.median(ref),'n below max ref',(nnd<=max(ref)).sum())
 
@@ -178,8 +186,10 @@ fig,ax=plt.subplots(figsize=(5.6,3.2))
 for i,x in enumerate(per):
     ax.errorbar(x['AUC'],i,xerr=[[x['AUC']-x['ci'][0]],[x['ci'][1]-x['AUC']]],fmt='s',color=C[0],ms=4+6*np.sqrt(x['n']/100),capsize=2,lw=0.9)
 ax.errorbar(L['pooled_AUC'],len(per),xerr=[[L['pooled_AUC']-L['pooled_ci'][0]],[L['pooled_ci'][1]-L['pooled_AUC']]],fmt='o',color=C[1],ms=5,capsize=2,lw=0.9)
-ax.errorbar(L['random_effects_AUC'],len(per)+1,xerr=[[L['random_effects_AUC']-L['random_effects_ci'][0]],[L['random_effects_ci'][1]-L['random_effects_AUC']]],fmt='D',color=C[2],ms=5,capsize=2,lw=0.9)
-ax.set_yticks(range(len(per)+2)); ax.set_yticklabels([f"{x['hospital']} (n = {x['n']})" for x in per]+['Pooled (ten facilities)',f"Random effects (I$^2$ = {100*L['I2']:.0f} %)"])
+RM=json.load(open('/home/claude/exp/out/review2/review2_stats.json'))['loho_meta']
+yk=len(per)+1; ax.plot(RM['pred_int'],[yk,yk],color=C[2],lw=5,alpha=0.25,solid_capstyle='butt')
+ax.errorbar(RM['mu'],yk,xerr=[[RM['mu']-RM['ci_hk'][0]],[RM['ci_hk'][1]-RM['mu']]],fmt='D',color=C[2],ms=5,capsize=2,lw=0.9)
+ax.set_yticks(range(len(per)+2)); ax.set_yticklabels([f"{x['hospital']} (n = {x['n']})" for x in per]+['Pooled out-of-facility predictions',f"Random effects, REML + Hartung-Knapp\n(k = {RM['k']}; shaded: 95 % prediction interval)"])
 ax.axvline(0.5,ls=':',color='#9a9a9a'); ax.set_xlabel('AUC (95 % CI), Random Forest trained on the other facilities'); ax.set_xlim(0.4,1.0); ax.grid(axis='x',color='#eeeeea',lw=0.8)
 plt.savefig(OUT+'figS5_loho_forest.pdf'); plt.savefig(OUT+'figS5_loho_forest.png'); plt.close()
 print('done')

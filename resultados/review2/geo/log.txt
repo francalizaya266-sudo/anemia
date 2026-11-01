@@ -1,0 +1,17 @@
+[     0s] 1. feature space strict
+[     6s] NN quantiles {0: 0.28576326017562853, 1: 0.31493309394200547, 5: 0.44912015818041584, 25: 1.1196384485346644, 50: 2.0774284936403027, 75: 2.9256104328271304, 95: 4.399767336615559, 100: 7.963421561721532} 1NN 0.663 5NN 0.646 agree 0.694
+[     6s] 2. strict dedup CV
+[    18s] LR (color) strict AUC 0.643 [0.584,0.701] per-rep 0.630±0.015 None None
+[    46s] SVM-RBF (color) strict AUC 0.712 [0.655,0.766] per-rep 0.699±0.022 None None
+[  1167s] RF (color) strict AUC 0.754 [0.700,0.806] per-rep 0.741±0.010 0.9050279329608939 0.369620253164557
+[  1372s] XGBoost (color) strict AUC 0.733 [0.677,0.786] per-rep 0.718±0.012 0.9083798882681565 0.28734177215189877
+[  1372s] 3. grouped-strict protocol 708
+[  1386s] LR (color) grouped-strict AUC 0.550
+[  1432s] SVM-RBF (color) grouped-strict AUC 0.709
+[  2027s] RF (color) grouped-strict AUC 0.736
+[  2138s] XGBoost (color) grouped-strict AUC 0.724
+[  2144s] LR (color) naive - grouped-strict 0.180 [0.15125964713048823, 0.2096532259991005]
+[  2150s] SVM-RBF (color) naive - grouped-strict 0.177 [0.14755325678259026, 0.20736248244328545]
+[  2156s] RF (color) naive - grouped-strict 0.222 [0.18860509572619089, 0.25334880668778786]
+[  2162s] XGBoost (color) naive - grouped-strict 0.225 [0.19167053263421174, 0.2560912926713792]
+[  2162s] done
