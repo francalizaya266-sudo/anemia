@@ -1,0 +1,20 @@
+{
+  "title": "Deduplicated benchmark for smartphone conjunctival anaemia detection in children (CP-AnemiC): code, duplicate map and results",
+  "upload_type": "software",
+  "description": "<p>Code, duplicate map (meta_groups.csv) and out-of-fold predictions for the article <em>Data leakage inflates smartphone conjunctival pallor anaemia detection in children: a deduplicated benchmark of colour features versus lightweight CNNs on CP-AnemiC</em>. Includes the SHA-256 + perceptual-hash duplicate audit of CP-AnemiC (710 rows, 472 unique images), colour-feature classifiers with nested repeated cross-validation, lightweight CNNs (PyTorch/CUDA and Keras) with ONNX/TFLite FP32/FP16/INT8 export and latency measurements, SHAP and Grad-CAM explainability, WHO-2024 threshold sensitivity analysis, per-seed CNN results, figures and a CLAIM 2024 / TRIPOD+AI reporting map. Development phase of a system intended for children aged 6-59 months in Puno, Peru.</p>",
+  "creators": [
+    {"name": "Calizaya Apaza, Fran Franklin", "affiliation": "Universidad Peruana Unión", "orcid": "0009-0009-5786-1104"},
+    {"name": "Arce Apaza, Bisleyn de la Flor", "affiliation": "Universidad Peruana Unión", "orcid": "0009-0002-4673-8222"},
+    {"name": "Apaza Quispe, Jhoel Hairton", "affiliation": "Universidad Peruana Unión", "orcid": "0009-0005-1745-1654"},
+    {"name": "Condori Coaquira, Angel Rosendo", "affiliation": "Universidad Peruana Unión"}
+  ],
+  "access_right": "open",
+  "license": "MIT",
+  "keywords": ["anaemia", "anemia", "conjunctiva", "pallor", "smartphone", "data leakage", "deduplication", "edge AI", "explainable AI", "children", "Peru", "Ghana", "CP-AnemiC"],
+  "language": "eng",
+  "related_identifiers": [
+    {"identifier": "10.17632/m53vz6b7fx.1", "relation": "isDerivedFrom", "resource_type": "dataset", "scheme": "doi"},
+    {"identifier": "10.1016/j.medntd.2023.100244", "relation": "cites", "resource_type": "publication-article", "scheme": "doi"}
+  ],
+  "notes": "The CP-AnemiC images are not redistributed here; download them from Mendeley Data (CC BY 4.0). meta_groups.csv and the result tables are derived from CP-AnemiC and released under CC BY 4.0; the code is MIT."
+}
