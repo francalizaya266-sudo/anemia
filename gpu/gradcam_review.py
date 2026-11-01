@@ -30,12 +30,12 @@ X = np.stack([T.tight(read_rgb(p), T.S) for p in d.image_path])
 masks = np.array([mask_of(x) for x in X]); area = masks.mean((1, 2))
 summary = {}; examples = {}; cams_keep = {}
 for name in ['EfficientNet-B0', 'MobileNetV2']:
-    t0 = time.time(); ratio = np.full(len(y), np.nan); inside = np.full(len(y), np.nan); ps = np.full(len(y), np.nan); cams = np.zeros((len(y), T.S, T.S), np.float16)
+    t0 = time.time(); ratio = np.full(len(y), np.nan); inside = np.full(len(y), np.nan); zero = np.zeros(len(y), bool); ps = np.full(len(y), np.nan); cams = np.zeros((len(y), T.S, T.S), np.float16)
     for k, (tr, te) in enumerate(folds(y, None, seed=SEED)):
         m = T.train(name, X[tr], y[tr]); gc, hooks = cam_fn(m)
         for i in te:
             c, p = gc(X[i]); cams[i] = c; ps[i] = p
-            inside[i] = (c * masks[i]).sum() / (c.sum() + 1e-8); ratio[i] = inside[i] / area[i]
+            inside[i] = (c * masks[i]).sum() / (c.sum() + 1e-8); ratio[i] = inside[i] / area[i]; zero[i] = c.max() <= 0  # identically-zero rectified map
         for h in hooks: h.remove()
         print(f'{name} fold {k} AUC {roc_auc_score(y[te], ps[te]):.3f} mean ratio {np.nanmean(ratio[te]):.2f} {time.time() - t0:.0f}s', flush=True)
     rng = np.random.default_rng(SEED); boots = [ratio[rng.integers(0, len(y), len(y))].mean() for _ in range(2000)]
@@ -43,8 +43,8 @@ for name in ['EfficientNet-B0', 'MobileNetV2']:
     summary[name] = {'n': int(len(y)), 'AUC_oof_fp32': float(roc_auc_score(y, ps)), 'mask_area_mean': float(area.mean()), 'cam_mass_inside_mask_mean': float(inside.mean()),
                      'ratio_mean': float(ratio.mean()), 'ratio_ci': [float(np.percentile(boots, 2.5)), float(np.percentile(boots, 97.5))], 'ratio_median': float(np.median(ratio)),
                      'frac_ratio_gt1': float((ratio > 1).mean()), 'wilcoxon_stat': float(w.statistic), 'wilcoxon_p_greater_than_1': float(w.pvalue),
-                     'ratio_mean_fold5_only': float(ratio[folds(y, None, seed=SEED)[-1][1]].mean()), 'train_time_s': time.time() - t0}
-    np.savez_compressed(os.path.join(T.OUT, f'gradcam_review_{name}.npz'), ratio=ratio, inside=inside, p=ps, y=y, hb=hb, ids=ids)
+                     'ratio_mean_fold5_only': float(ratio[folds(y, None, seed=SEED)[-1][1]].mean()), 'n_ratio0': int((ratio == 0).sum()), 'n_zero_maps': int(zero.sum()), 'train_time_s': time.time() - t0}
+    np.savez_compressed(os.path.join(T.OUT, f'gradcam_review_{name}.npz'), ratio=ratio, inside=inside, zero=zero, p=ps, y=y, hb=hb, ids=ids)
     order = np.argsort(-np.abs(ps - 0.5))
     tp = [i for i in order if y[i] == 1 and ps[i] >= 0.5][:3]; tn = [i for i in order if y[i] == 0 and ps[i] < 0.5][:3]; err = [i for i in order if (ps[i] >= 0.5) != y[i]][:2]
     sel = tp + tn + err; examples[name] = [{'image_id': str(ids[i]), 'hb_gL': float(hb[i] * 10), 'label': int(y[i]), 'p': float(ps[i]), 'ratio': float(ratio[i]), 'kind': ['TP'] * 3 + ['TN'] * 3 + ['error'] * 2} for i in sel]

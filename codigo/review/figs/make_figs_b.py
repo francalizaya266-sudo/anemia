@@ -24,9 +24,13 @@ rows=[]
 for k in M:
     rows.append((M[k],P[k]['naive708_AUC'],P[k]['naive708_ci'],P[k]['grouped708_AUC'],P[k]['grouped708_ci'],float(cls[k]['AUC']),pci(cls[k]['AUC_ci'])))
 cnn={'EfficientNet-B0':(0.8553,(0.8272,0.8826),0.7341,(0.6925,0.7788)),'MobileNetV2':(0.8265,(0.7960,0.8549),0.6644,(0.6123,0.7124)),'MobileNetV3-Small':(0.6058,(0.5629,0.6446),0.5562,(0.5044,0.6064))}
-for k,(na,nci,ca,cci) in cnn.items(): rows.append((k,na,nci,None,None,ca,cci))
-# classical models (sorted by leak, largest at the top) above the CNNs (sorted by naive - dedup.)
-cl=sorted([r for r in rows if r[3] is not None],key=lambda r: r[1]-r[3]); cn=sorted([r for r in rows if r[3] is None],key=lambda r: r[1]-r[5])
+GRF='/home/claude/exp/out/review/gpu_review.json'
+_GR=json.load(open(GRF)) if _o.path.exists(GRF) else {}; GG=_GR.get('grouped',{}); GSC={m[:-8]:v for m,v in _GR.get('strict',{}).items() if m.endswith('_grouped') and 'naive_minus_grouped_strict' in v}
+for k,(na,nci,ca,cci) in cnn.items():
+    if k in GG: rows.append((k,na,nci,GG[k]['AUC'],tuple(GG[k]['ci']),ca,cci))
+    else: rows.append((k,na,nci,None,None,ca,cci))
+# classical models (sorted by leak, largest at the top) above the CNNs (sorted by leak when the grouped run exists, else by naive - dedup.)
+cl=sorted([r for r in rows if r[0] in M.values()],key=lambda r: r[1]-r[3]); cn=sorted([r for r in rows if r[0] in cnn],key=lambda r: (r[1]-r[3]) if r[3] is not None else (r[1]-r[5]))
 rows=cn+cl
 fig,ax=plt.subplots(figsize=(6.3,4.3))
 ax.axhline(len(cn)-0.5,color='#d9d8d3',lw=0.8,ls=(0,(3,3)),zorder=0)
@@ -38,15 +42,18 @@ for i,(lab,na,nci,ga,gci,ca,cci) in enumerate(rows):
     if kk and kk[0] in GS:
         gs_=GS[kk[0]]['grouped_strict_AUC']; gsc=GS[kk[0]]['ci']
         ax.errorbar(gs_,i-0.24,xerr=[[gs_-gsc[0]],[gsc[1]-gs_]],fmt='D',mfc='white',mec=C[3],color=C[3],ms=4,capsize=2,lw=0.9,zorder=3)
+    if lab in GSC:
+        gs_=GSC[lab]['AUC']; gsc=GSC[lab]['ci']
+        ax.errorbar(gs_,i-0.24,xerr=[[gs_-gsc[0]],[gsc[1]-gs_]],fmt='D',mfc='white',mec=C[3],color=C[3],ms=4,capsize=2,lw=0.9,zorder=3)
     ax.errorbar(ca,i-0.12,xerr=[[ca-cci[0]],[cci[1]-ca]],fmt='s',color=C[0],ms=4.5,capsize=2,lw=0.9,zorder=3)
     kk=[k for k in M if M[k]==lab]
-    txt=(f'leak {na-ga:.3f}'+(f" ({GS[kk[0]]['naive_minus_grouped_strict']:.3f})" if kk and kk[0] in GS and 'naive_minus_grouped_strict' in GS[kk[0]] else '')) if ga is not None else f'naive $-$ dedup. {na-ca:+.2f}'
+    txt=(f'leak {na-ga:.3f}'+(f" ({GS[kk[0]]['naive_minus_grouped_strict']:.3f})" if kk and kk[0] in GS and 'naive_minus_grouped_strict' in GS[kk[0]] else (f" ({GSC[lab]['naive_minus_grouped_strict']:.3f})" if lab in GSC else ''))) if ga is not None else f'naive $-$ dedup. {na-ca:+.2f}'
     ax.text(1.005,i,txt.replace('+',''),va='center',fontsize=6.5,color=GREY)
 ax.set_yticks(range(len(rows))); ax.set_yticklabels([r[0] for r in rows]); ax.set_xlim(0.45,1.0); ax.set_xlabel('AUC (95 % bootstrap CI)')
 ax.grid(axis='x',color='#eeeeea',lw=0.8,zorder=0)
 h=[plt.Line2D([],[],marker='o',color=C[1],ls='',ms=5,label='Naive: 708 rows, random row-level folds'),
    plt.Line2D([],[],marker='D',color=C[3],ls='',ms=4.5,label='Grouped: same 708 rows, duplicate groups in one fold'),
-   plt.Line2D([],[],marker='D',mfc='white',mec=C[3],color=C[3],ls='',ms=4.5,label='Grouped with the strict duplicate map (third audit stage)'),
+   plt.Line2D([],[],marker='D',mfc='white',mec=C[3],color=C[3],ls='',ms=4.5,label='Grouped with the strict duplicate map (third audit stage'+('' if GSC else '; colour-feature models')+')'),
    plt.Line2D([],[],marker='s',color=C[0],ls='',ms=5,label='Deduplicated: 471 unique images')]
 ax.legend(handles=h,frameon=False,loc='upper center',bbox_to_anchor=(0.42,-0.15),ncol=1,handletextpad=0.4,borderaxespad=0,fontsize=6.8)
 ax.text(0.455,len(rows)-0.55,'Colour-feature models',fontsize=6.5,color=GREY,va='center'); ax.text(0.455,len(cn)-0.85,'CNNs',fontsize=6.5,color=GREY,va='center')
