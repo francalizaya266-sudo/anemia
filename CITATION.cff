@@ -1,4 +1,4 @@
-cff-version: 1.0.2
+cff-version: 1.2.0
 message: "If you use this code or the duplicate map, please cite the article and this repository."
 title: "Deduplicated benchmark for smartphone conjunctival anaemia detection in children (CP-AnemiC)"
 type: software

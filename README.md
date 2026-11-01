@@ -65,7 +65,7 @@ With duplicates (naive protocol) the same models reach 0.95 / 0.94 / 0.86 / 0.83
 
 ## Citation
 
-Archived on Zenodo: **https://doi.org/10.5281/zenodo.23851748** (release v1.0.2). See `CITATION.cff` for the full citation.
+Archived on Zenodo: **https://doi.org/10.5281/zenodo.23851748** (release v1.0.2; concept DOI for all versions: https://doi.org/10.5281/zenodo.23851747). See `CITATION.cff` for the full citation.
 
 ## Licence
 
