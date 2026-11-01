@@ -31,8 +31,8 @@ y = box(L, y, FW, 'Duplicate audit',
         'Stage 3 (post hoc): perceptual hash under the 8 rotations and reflections, feature identity\n'
         '            → 453 unique images; strict set of 452 for classification\n'
         'Stage 4 (post hoc): SIFT keypoints + RANSAC on every pair, photometric verification\n'
-        '            → 338 distinct photographs; geometric set of 337 for classification\n'
-        'Permutation test: are copies confined to one anaemia class?', '#fdf6e3')
+        '            → 338 distinct images (images of the same eye merged); geometric set of 337\n'
+        'Permutation tests: are duplicates confined to one anaemia class? Composition by stage', '#fdf6e3')
 arrow(W / 2, y, W / 2, y - GAP); y -= GAP
 y = box(L, y, FW, 'Three cross-validation protocols on identical folds',
         'Naive: 708 rows, duplicates spread at random across folds, as in prior work\n'
@@ -45,7 +45,7 @@ yl = box(xl, y, cw, 'Colour features',
          'Logistic regression, SVM-RBF,\nRandom Forest, XGBoost\n(nested grid search)', '#e6f3ec')
 yr = box(xr, y, cw, 'Images',
          'ROI cropped and letter-boxed to 224 × 224,\ngeometric augmentation only\n'
-         'Seven ImageNet-pretrained CNNs fine-tuned\nwith one common recipe; a tuned recipe\n(mask bounding box, trainable BatchNorm,\nlearning rate chosen per fold) for three', '#eaf0fb')
+         'Seven ImageNet-pretrained CNNs fine-tuned\nwith one common recipe\nTuned recipe (mask bounding box, trainable\nBatchNorm, learning rate chosen per fold)\nfor EfficientNet-B0, MobileNetV2 and\nMobileNetV3-Large', '#eaf0fb')
 # equalise the two column boxes
 yb = min(yl, yr)
 for (bx, by, bw, bh), ts in checks[-2:]:
@@ -61,7 +61,7 @@ y = box(L, y, FW, 'Evaluation',
         'Sensitivity analyses: singletons only, random representative, strict set, shape-only model,\n'
         'brightness ablation, feature stability, 1-NN memorisation check\n'
         'Explainability: SHAP for the colour models; Grad-CAM and tissue occlusion for the CNNs\n'
-        'ONNX export: FP32, FP16 and INT8 size and single-thread CPU latency', '#ffffff')
+        'Supplement: ONNX export in FP32, FP16 and INT8 with size and CPU latency', '#ffffff')
 fig.canvas.draw(); bad = []
 for (x, yy, w, hh), ts in checks:
     for t in ts:

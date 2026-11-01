@@ -11,6 +11,7 @@ Tasks (each writes its own JSON under out/review2/ and is skipped if that file a
                         15 % validation split (the test fold is never used); per-epoch validation curves are saved.
   geo      MODEL        original recipe on the geometric set (duplicate map meta_groups_geo.csv: hash stages plus the
                         SIFT/RANSAC + photometric verification stage).
+  tunedgeo MODEL        tuned recipe (as in 'tuned') on the geometric set.
 The seed comes from the SEED environment variable, as in train_torch.py.   Uso: python review2_cnn.py tuned EfficientNet-B0"""
 import sys, os, json, time, copy
 import numpy as np, pandas as pd, torch, torch.nn as nn, cv2
@@ -111,16 +112,16 @@ if __name__ == '__main__':
     task, name = sys.argv[1], sys.argv[2]; sfx = f'_s{SEED}'
     fn = f'cnn_{name}_{task}{sfx}.json'
     if os.path.exists(os.path.join(OUT2, fn)): print('ya existe', fn); sys.exit(0)
-    d = load('meta_groups_geo.csv' if task == 'geo' else 'meta_groups.csv')
+    d = load('meta_groups_geo.csv' if task in ('geo', 'tunedgeo') else 'meta_groups.csv')
     if SMOKE: d = d.groupby('anemia').head(30).reset_index(drop=True)
     y = d.anemia.values; ids = d.image_id.tolist()
-    prep = stretch if task == 'tuned' else T.tight
+    prep = stretch if task in ('tuned', 'tunedgeo') else T.tight
     X = np.stack([prep(read_rgb(p), T.S) for p in d.image_path])
     print(task, name, 'seed', SEED, 'n =', len(y), 'device =', T.DEV, flush=True)
     t0 = time.time(); oof = np.zeros(len(y)); extra = {}; per_fold = []
     for k, (tr, te) in enumerate(folds(y, None, seed=SEED)):
         torch.manual_seed(SEED); np.random.seed(SEED)
-        if task == 'tuned':
+        if task in ('tuned', 'tunedgeo'):
             m, lr, info = train_tuned(name, X[tr], y[tr]); extra[f'fold{k}'] = {'chosen_lr': lr, 'candidates': info}
         else:
             m = T.train(name, X[tr], y[tr])

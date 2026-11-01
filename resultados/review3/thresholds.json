@@ -1,0 +1,109 @@
+{
+ "grid": [
+  {
+   "inliers": 8,
+   "ncc": 0.6,
+   "accepted": 206,
+   "new_pairs": 188,
+   "concordant": 187,
+   "distinct": 327,
+   "classification_set": 325,
+   "anaemic": 172,
+   "label_conflict_groups": 2
+  },
+  {
+   "inliers": 8,
+   "ncc": 0.7,
+   "accepted": 203,
+   "new_pairs": 185,
+   "concordant": 184,
+   "distinct": 330,
+   "classification_set": 328,
+   "anaemic": 173,
+   "label_conflict_groups": 2
+  },
+  {
+   "inliers": 8,
+   "ncc": 0.8,
+   "accepted": 198,
+   "new_pairs": 180,
+   "concordant": 179,
+   "distinct": 334,
+   "classification_set": 332,
+   "anaemic": 176,
+   "label_conflict_groups": 2
+  },
+  {
+   "inliers": 10,
+   "ncc": 0.6,
+   "accepted": 185,
+   "new_pairs": 168,
+   "concordant": 168,
+   "distinct": 338,
+   "classification_set": 337,
+   "anaemic": 179,
+   "label_conflict_groups": 1
+  },
+  {
+   "inliers": 10,
+   "ncc": 0.7,
+   "accepted": 185,
+   "new_pairs": 168,
+   "concordant": 168,
+   "distinct": 338,
+   "classification_set": 337,
+   "anaemic": 179,
+   "label_conflict_groups": 1
+  },
+  {
+   "inliers": 10,
+   "ncc": 0.8,
+   "accepted": 181,
+   "new_pairs": 164,
+   "concordant": 164,
+   "distinct": 341,
+   "classification_set": 340,
+   "anaemic": 181,
+   "label_conflict_groups": 1
+  },
+  {
+   "inliers": 15,
+   "ncc": 0.6,
+   "accepted": 164,
+   "new_pairs": 147,
+   "concordant": 147,
+   "distinct": 352,
+   "classification_set": 351,
+   "anaemic": 186,
+   "label_conflict_groups": 1
+  },
+  {
+   "inliers": 15,
+   "ncc": 0.7,
+   "accepted": 164,
+   "new_pairs": 147,
+   "concordant": 147,
+   "distinct": 352,
+   "classification_set": 351,
+   "anaemic": 186,
+   "label_conflict_groups": 1
+  },
+  {
+   "inliers": 15,
+   "ncc": 0.8,
+   "accepted": 161,
+   "new_pairs": 144,
+   "concordant": 144,
+   "distinct": 355,
+   "classification_set": 354,
+   "anaemic": 188,
+   "label_conflict_groups": 1
+  }
+ ],
+ "precision_bound": {
+  "new_pairs": 168,
+  "discordant": 0,
+  "null_discordance": 0.5,
+  "false_link_upper95": 0.03534739010143622
+ }
+}

@@ -34,6 +34,16 @@ for k,(na,nci,ca,cci) in cnn.items():
 # classical models (sorted by leak, largest at the top) above the CNNs (sorted by leak when the grouped run exists, else by naive - dedup.)
 cl=sorted([r for r in rows if r[0] in M.values()],key=lambda r: r[1]-r[3]); cn=sorted([r for r in rows if r[0] in cnn],key=lambda r: (r[1]-r[3]) if r[3] is not None else (r[1]-r[5]))
 rows=cn+cl
+# third round: cluster-bootstrap CIs (groups of the geometric map) for every marker
+CC3=json.load(open('/home/claude/exp/out/review3/cluster_cis.json')); INV={v:k for k,v in M.items()}
+def _cc(lab): return CC3[INV.get(lab,lab)]
+def _ci(e): return tuple(e['ci'])
+rows=[(lab,na,(_ci(_cc(lab)['naive']) if 'naive' in _cc(lab) else nci),ga,(_ci(_cc(lab)['grouped']) if ga is not None and 'grouped' in _cc(lab) else gci),ca,_ci(_cc(lab)['dedup'])) for (lab,na,nci,ga,gci,ca,cci) in rows]
+for k in M:
+    if k in GS: GS[k]=dict(GS[k],ci=CC3[k]['grouped_strict']['ci'])
+    if k in GQ: GQ[k]=dict(GQ[k],ci=CC3[k]['grouped_geo']['ci'])
+for m in list(GSC):
+    if 'grouped_strict' in CC3.get(m,{}): GSC[m]=dict(GSC[m],ci=CC3[m]['grouped_strict']['ci'])
 fig,ax=plt.subplots(figsize=(6.3,5.0))
 ax.axhline(len(cn)-0.5,color='#d9d8d3',lw=0.8,ls=(0,(3,3)),zorder=0)
 for i,(lab,na,nci,ga,gci,ca,cci) in enumerate(rows):
@@ -56,7 +66,7 @@ for i,(lab,na,nci,ga,gci,ca,cci) in enumerate(rows):
     _gq=GQ[kk[0]]['naive_minus_grouped_strict'] if kk and kk[0] in GQ else None
     txt=(f'leak {na-ga:.3f}'+(f' / {_st:.3f}' if _st is not None else '')+(f' / {_gq:.3f}' if _gq is not None else '')) if ga is not None else f'naive $-$ dedup. {na-ca:+.2f}'
     ax.text(1.005,i,txt.replace('+',''),va='center',fontsize=6.5,color=GREY)
-ax.set_yticks(range(len(rows))); ax.set_yticklabels([r[0] for r in rows]); ax.set_xlim(0.45,1.0); ax.set_xlabel('AUC (95 % bootstrap CI)')
+ax.set_yticks(range(len(rows))); ax.set_yticklabels([r[0] for r in rows]); ax.set_xlim(0.45,1.0); ax.set_xlabel('AUC (95 % cluster-bootstrap CI)')
 ax.grid(axis='x',color='#eeeeea',lw=0.8,zorder=0)
 h=[plt.Line2D([],[],marker='o',color=C[1],ls='',ms=5,label='Naive: 708 rows, random row-level folds'),
    plt.Line2D([],[],marker='D',color=C[3],ls='',ms=4.5,label='Grouped: same 708 rows, duplicate groups in one fold'),
