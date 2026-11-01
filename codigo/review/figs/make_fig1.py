@@ -56,8 +56,8 @@ y = yb
 arrow(xl + cw / 2, y, W / 2 - 0.5, y - GAP); arrow(xr + cw / 2, y, W / 2 + 0.5, y - GAP); y -= GAP
 y = box(L, y, FW, 'Evaluation',
         'AUC with bootstrap CI; DeLong and paired-bootstrap tests (Holm); cluster-aware tests on the 708 rows\n'
-        'Calibration; screening thresholds fixed inside the training folds; PPV and NPV at local prevalence\n'
-        'Leave-one-hospital-out validation; sex and age subgroups\n'
+        'Calibration; screening thresholds fixed inside the training folds; PPV and NPV at the prevalence of each set\n'
+        'Sex and age subgroups; leave-one-hospital-out in the supplement\n'
         'Sensitivity analyses: singletons only, random representative, strict set, shape-only model,\n'
         'brightness ablation, feature stability, 1-NN memorisation check\n'
         'Explainability: SHAP for the colour models; Grad-CAM and tissue occlusion for the CNNs\n'

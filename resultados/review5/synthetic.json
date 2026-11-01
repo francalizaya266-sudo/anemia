@@ -1,0 +1,117 @@
+{
+ "n_images": 337,
+ "summary": [
+  {
+   "transform": "mirror",
+   "n": 337,
+   "stage2": 1.0,
+   "stage3": 1.0,
+   "stage4": 0.9970326409495549,
+   "any_stage": 1.0,
+   "spurious": 0,
+   "spurious_pairs": 1685
+  },
+  {
+   "transform": "rotate 90",
+   "n": 337,
+   "stage2": 0.0,
+   "stage3": 1.0,
+   "stage4": 0.9584569732937686,
+   "any_stage": 1.0,
+   "spurious": 0,
+   "spurious_pairs": 1685
+  },
+  {
+   "transform": "rotate 180",
+   "n": 337,
+   "stage2": 0.0,
+   "stage3": 1.0,
+   "stage4": 0.9258160237388724,
+   "any_stage": 1.0,
+   "spurious": 0,
+   "spurious_pairs": 1685
+  },
+  {
+   "transform": "rotate 10 deg",
+   "n": 337,
+   "stage2": 0.0,
+   "stage3": 0.0,
+   "stage4": 0.7893175074183977,
+   "any_stage": 0.7893175074183977,
+   "spurious": 0,
+   "spurious_pairs": 1685
+  },
+  {
+   "transform": "rescale 0.6",
+   "n": 337,
+   "stage2": 0.9821958456973294,
+   "stage3": 0.9821958456973294,
+   "stage4": 0.6379821958456974,
+   "any_stage": 0.9910979228486647,
+   "spurious": 0,
+   "spurious_pairs": 1685
+  },
+  {
+   "transform": "rescale 1.5",
+   "n": 337,
+   "stage2": 1.0,
+   "stage3": 1.0,
+   "stage4": 0.9525222551928784,
+   "any_stage": 1.0,
+   "spurious": 0,
+   "spurious_pairs": 1685
+  },
+  {
+   "transform": "JPEG q60",
+   "n": 337,
+   "stage2": 1.0,
+   "stage3": 1.0,
+   "stage4": 0.49554896142433236,
+   "any_stage": 1.0,
+   "spurious": 0,
+   "spurious_pairs": 1685
+  },
+  {
+   "transform": "crop 85 %",
+   "n": 337,
+   "stage2": 0.0,
+   "stage3": 0.0,
+   "stage4": 0.8664688427299704,
+   "any_stage": 0.8664688427299704,
+   "spurious": 0,
+   "spurious_pairs": 1685
+  },
+  {
+   "transform": "crop 70 %",
+   "n": 337,
+   "stage2": 0.0,
+   "stage3": 0.0,
+   "stage4": 0.6439169139465876,
+   "any_stage": 0.6439169139465876,
+   "spurious": 0,
+   "spurious_pairs": 1685
+  },
+  {
+   "transform": "re-segment (erode 3 px)",
+   "n": 337,
+   "stage2": 0.0,
+   "stage3": 0.0,
+   "stage4": 0.5014836795252225,
+   "any_stage": 0.5014836795252225,
+   "spurious": 0,
+   "spurious_pairs": 1685
+  },
+  {
+   "transform": "combined (crop 85 %, x0.8, 5 deg, JPEG q75)",
+   "n": 337,
+   "stage2": 0.0,
+   "stage3": 0.0,
+   "stage4": 0.11869436201780416,
+   "any_stage": 0.11869436201780416,
+   "spurious": 0,
+   "spurious_pairs": 1685
+  }
+ ],
+ "total_spurious": 0,
+ "total_spurious_pairs": 18535
+}

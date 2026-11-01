@@ -1,9 +1,9 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23851748.svg)](https://doi.org/10.5281/zenodo.23851748)
 
-# Forensic duplicate audit of the CP-AnemiC conjunctival anaemia dataset
+# Data-integrity duplicate audit of the CP-AnemiC conjunctival anaemia dataset
 
 Code, duplicate maps and out-of-fold predictions for the article
-*"Class-conditional duplicate images inflate conjunctival anaemia detection in children: a forensic audit of the CP-AnemiC dataset"*
+*"Class-conditional duplicate images inflate the reported performance of conjunctival anaemia detection in children: a data-integrity audit of the CP-AnemiC dataset"*
 (Calizaya Apaza F, Arce Apaza B, Apaza Quispe JH, Condori Coaquira AR; Universidad Peruana Unión).
 
 The audit precedes a prospective study in children aged 6–59 months in Puno, Peru (3 800 m), which is described in the article.
@@ -15,7 +15,7 @@ No Peruvian data are included here.
 |---|---|
 | `codigo/` | Container pipeline (CPU): `common.py` (loading, dedup, folds, metrics, bootstrap CI), `classic.py` (63 colour features, nested repeated CV for LR/SVM/RF/XGBoost), `cnn.py` (TensorFlow/Keras CNNs + TFLite), `fusion.py`, `probe.py`, `hb_reg.py`, `xai_classic.py` (SHAP), `gradcam.py`, `make_table.py`, `who2024.py` |
 | `gpu/` | PyTorch/CUDA replica used for the reported CNN results: `train_torch.py` (7 architectures, 2-phase fine-tuning, ONNX FP32/FP16/INT8 export, onnxruntime latency), `gradcam_torch.py`, `run_all.bat`, `run_seeds.bat`; post hoc: `train_torch_grouped.py` (grouped protocol, StratifiedGroupKFold on the 708 rows), `gradcam_review.py` (fold-wise Grad-CAM with in-mask ratio, bootstrap CI and Wilcoxon test), `run_review.bat`, `run_strict.bat`; their outputs are in `gpu/out_review/` (grouped CNNs, Grad-CAM) and `gpu/out_strict/` (seven CNNs re-run on the strict 452-image map); `codigo/review/integrate_gpu.py` merges them with the CPU results into `resultados/review/gpu_review.json` (leakage CIs, DeLong, Grad-CAM statistics by predicted class and without ratio-0 maps) ; the figure scripts of the current manuscript are in `codigo/review/figs/` (`make_fig1.py`, `make_fig2.py`, `make_fig6.py`, `make_figS7.py`, `make_figs_a.py`, `make_figs_b.py`) |
-| `codigo/meta_groups.csv` | **The duplicate map.** One row per CP-AnemiC image: `image_id, image_path, hb, anemia, severity, hospital, age_months, gender, sha, grp`. Rows sharing `grp` are byte-identical or perceptual near-duplicates (pHash-16 with mirror, Hamming ≤ 20, connected components). 710 rows → 472 unique groups → 471 after removing one label-conflict group. |
+| `codigo/meta_groups.csv` | **The duplicate map.** One row per CP-AnemiC image: `image_id, image_path, anemia, sha, grp` (Hb, age, sex and facility of the children are not redistributed; see *Data*). Rows sharing `grp` are byte-identical or perceptual near-duplicates (pHash-16 with mirror, Hamming ≤ 20, connected components). 710 rows → 472 unique groups → 471 after removing one label-conflict group. |
 | `resultados/` | `classic_results.csv`, `cnn_gpu_results.csv`, `fusion_results.csv`, `tabla_comparativa.csv`, `hb_reg.json`, `who2024.json`, `xai_classic.json`, SHAP and Grad-CAM figures, out-of-fold predictions (`*_oof.json` / `cnn_*_clean.json`) |
 | `figuras/` | Figures 1–4 of the first draft (PNG + PDF); `figuras/review/` holds the figures of the current manuscript (main text: `Fig1_overview`, `Fig2_dedup_flow`, `Fig3_leakage`, `Fig5_shap`, `Fig6_gradcam`, printed as Figures 1–5; supplement: `figS3`–`figS8` and `Fig4_roc`, printed as Figure S9; `Fig7_size_vs_auc` is the same plot as `figS8_size_vs_auc`) |
 | `codigo/review/` | Post hoc analyses after the first internal review (CPU): `review_analyses.py` (naive / grouped / deduplicated protocols with paired bootstrap and DeLong tests, per-repetition AUC, nested screening thresholds, calibration, PPV/NPV, sex subgroups, singleton-only and random-representative sensitivity), `review_analyses_b.py` (feature-space duplicate audit, 1-NN/5-NN, shape-only and brightness ablations, leave-one-hospital-out with random effects, DeLong + Holm comparisons against the CNNs, SHAP), `review_strict.py` (strict 452-image set), `figs/` (figure scripts) |
@@ -29,11 +29,15 @@ No Peruvian data are included here.
 | `resultados/review3/` | Result files of the third round (`review3.json`, `cluster_cis.json`, `thresholds.json`, `size2.json`, `geomverify_lo.npy`, Random Forest out-of-fold predictions per repetition `rf_rep471.npy` and `rf_repgeo.npy`) |
 | `gpu/run_review3_cnn.bat` | GPU batch of the third round: tuned recipe on the geometric set (`review2_cnn.py tunedgeo`, three architectures × seeds 42, 1 and 2) and seeds 1 and 2 of MobileNetV3-Large with the tuned recipe; outputs in `resultados/review2/gpu2/` |
 | `resultados/review/` | Result files of the review analyses (`review_results.json`, `review_results_b.json`, `review_strict.json`, out-of-fold predictions `oof_review.json` / `oof_strict.json`, `dihedral_links.json`, `strict_pairs.json`). DeLong tests use the fast method of Sun & Xu (2014) with ranks over the positives-first ordering; 33 pairwise comparisons, Holm-adjusted |
+| `codigo/group_discordance.csv` | For every multi-row group of the three maps: number of rows, of distinct files and of distinct Hb, age, sex, facility and label values (the counts behind the metadata-discordance results, without the values themselves) |
+| `codigo/rebuild_meta.py` | Restores the Hb, age, sex and facility columns of the maps from your own copy of CP-AnemiC v1 (checks every image digest first); the analysis scripts that use those columns need it |
+| `codigo/review5/` | Post hoc analyses after the fifth internal review (CPU): `review5_synthetic.py` (recall of every audit stage on synthetic copies of known identity: mirror, rotations, rescaling, JPEG, re-cropping, re-segmentation, combined edits; spurious links to other images), `review5_cpu.py` (tree ensembles on the fold seeds of the CNN runs, hue statistics on a rotated axis, grouped SHAP), `review5_post.py` (label concordance of rejected look-alike stage-4 pairs and the false-link bound, DeLong tests between single runs on identical folds, Nadeau–Bengio corrected resampled t test, leave-one-hospital-out pooled on the logit scale), `review5_kit.py` (builds a blinded two-rater inspection kit of 70 coded pairs: accepted stage-4 links, rejected look-alike candidates and random pairs; it needs the images, so the kit itself is not distributed), `kappa_inspection.py` (Cohen's kappa between the raters and against the detector), `run_all_review5.sh`; results in `resultados/review5/` |
+| `revision_sistematica/` | Protocol and extraction template for a separate, future systematic review (thesis project). It has not been run, and the article does not rely on it |
 | `sha256sums.txt` | SHA-256 digest of every CP-AnemiC v1 file we analysed, so that readers can check whether their copy is the same data |
 
 ## Data
 
-CP-AnemiC is not redistributed here. It was published on Mendeley Data (CC BY 4.0): Appiahene P, Asare JW, Donkoh ET. CP-AnemiC. https://doi.org/10.17632/m53vz6b7fx.1. Both versions of the record have since been withdrawn by the depositors; we analysed version 1 (downloaded before the withdrawal) and publish the SHA-256 digest of every file in `sha256sums.txt`. If you hold a copy, point `DATA_DIR` to the extracted folder (expects `metadata.csv` and `images/`) and compare the digests.
+CP-AnemiC is not redistributed here. It was published on Mendeley Data: Appiahene P, Asare JW, Donkoh ET. CP-AnemiC. https://doi.org/10.17632/m53vz6b7fx.1; the manifest of our local ingestion (28 May 2026) records the CC BY 4.0 licence shown on the record at the time. Both versions of the record have since been withdrawn by the depositors without a stated reason, so the images can no longer be downloaded there. We analysed version 1 (downloaded on or before 28 May 2026) and publish the SHA-256 digest of every file in `sha256sums.txt`. Because the reason for the withdrawal is unknown, the per-child clinical metadata (Hb, age, sex, facility) are **not** redistributed: the maps keep the image identifier, digest, binary anaemia label and group, and `codigo/group_discordance.csv` gives the discordance counts. If you hold a copy, point `DATA_DIR` to the extracted folder (expects `metadata.csv` and `images/`), compare the digests, and run `python codigo/rebuild_meta.py <folder>` to restore the full columns locally (do not commit them). An earlier Mendeley Data record by the same authors (https://doi.org/10.17632/nt7r8hv2pz.1) describes 710 conjunctival images of children from ten Ghanaian hospitals; we have not examined it.
 
 ## Reproduce
 
@@ -59,11 +63,12 @@ set SEED=1 && python train_torch.py EfficientNet-B0 clean   # extra seeds for be
 python codigo/xai_classic.py; python gpu/gradcam_torch.py EfficientNet-B0
 python codigo/hb_reg.py; python codigo/who2024.py; python codigo/make_table.py; python codigo/figures.py
 
-# 6. post hoc analyses (three internal review rounds), in this order
+# 6. post hoc analyses (internal review rounds), in this order; run codigo/rebuild_meta.py first
 bash codigo/review/run_all_review.sh                 # protocols, feature-space audit, LOHO, strict set
 bash codigo/review2/run_all_review2.sh               # statistics, image analyses, fourth audit stage, geometric set
 cd gpu && run_review.bat && run_strict.bat && run_gradcam2.bat && run_review2_cnn.bat && run_review3_cnn.bat   # GPU runs
 bash codigo/review3/run_all_review3.sh               # third round: thresholds, cluster CIs, size control, contrasts, LOHO
+bash codigo/review5/run_all_review5.sh               # fifth round: detector validation, matched single runs, rotated hue, grouped SHAP
 ```
 
 Protocol fixed in `common.py`: `SEED = 42`, stratified 5-fold CV (repeated 5× for classical models), nested
@@ -82,7 +87,7 @@ Latency: onnxruntime CPU, 1 intra-op thread, median of 100 single-image runs aft
 - CP-AnemiC v1 holds 338 distinct photographs in 710 rows; copies stay within one anaemia class far more often than chance (permutation p < 0.0001) although their Hb, age, sex and facility differ.
 - On the same 708 rows, keeping duplicate groups in one fold lowers the AUC of the colour models by 0.05–0.07 with the pre-specified map and by 0.18–0.22 with the geometric map (cluster bootstrap CIs exclude zero).
 - The duplicates follow two class-dependent patterns: hash-detected copies are mostly anaemic (81 % of duplicated rows of the pre-specified map, against 42 % of singletons), whereas the images of the same eye found only by the keypoint search are mostly non-anaemic (131 of 182).
-- The count of 338 distinct images ranges from 327 to 355 over a 3 × 3 grid of NCC (0.6–0.8) and RANSAC-inlier (8–15) thresholds; none of the 168 new pairs has discordant labels, which bounds the false-link rate at 3.5 % (one-sided 95 %).
+- The count of 338 distinct images ranges from 327 to 355 over a 3 × 3 grid of NCC (0.6–0.8) and RANSAC-inlier (8–15) thresholds; none of the 168 new pairs has discordant labels, which bounds the false-link rate at 3.5 % (one-sided 95 %) if a false link agrees by chance. Rejected look-alike pairs agree on the label at chance level (about 50 %), and on synthetic copies of known identity the detector produced no spurious link in 18 535 comparisons while missing most heavily edited copies, so 338 is more likely an overestimate of the distinct images than an underestimate.
 - Size control: cutting the 471-image set to 337 images by removing only images without a near-duplicate keeps the AUC high (Random Forest 0.886, XGBoost 0.871), against 0.741 and 0.718 on the geometric set; removing images at random gives 0.811 and 0.792, so the smaller sample accounts for at most 0.046 and 0.052 of the falls of 0.116 and 0.127. On the 337 common images, models trained on the 471-image folds score 0.07–0.09 higher.
 - A tuned CNN recipe (mask bounding-box input, trainable BatchNorm, learning rate chosen per fold) raises EfficientNet-B0 from 0.73 to 0.79, MobileNetV2 from 0.65 to 0.78 and MobileNetV3-Large from 0.51 to 0.75 on the pre-specified set, and EfficientNet-B0 from 0.59 to 0.68 on the geometric set (three seeds each). Single runs stay below Random Forest on both sets (cluster bootstrap, Holm p ≤ 0.024); a three-seed ensemble of the tuned EfficientNet-B0 comes within 0.03 of the averaged Random Forest (DeLong, Holm p = 0.11 and 0.36).
 - With the 2-px eroded mask, Random Forest keeps AUC 0.82 on JPEG-75 and 0.86 on rescaled test images (original mask: 0.61 and 0.71); neither mask protects against a 5 % white-balance shift (0.75–0.76). Use the eroded mask with these features.
@@ -94,7 +99,7 @@ Archived on Zenodo: **https://doi.org/10.5281/zenodo.23851748** (release v1.0.2;
 
 ## Licence
 
-Code: MIT. `meta_groups.csv` and derived tables: CC BY 4.0 (derived from CP-AnemiC, CC BY 4.0, Appiahene et al. 2023).
+Code: MIT. Duplicate maps and derived tables: CC BY 4.0 (derived from CP-AnemiC, distributed under CC BY 4.0 when downloaded; Appiahene et al. 2023).
 
 ## Reporting checklist
 

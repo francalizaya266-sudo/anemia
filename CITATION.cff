@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this code or the duplicate map, please cite the article and this repository."
-title: "Deduplicated benchmark for smartphone conjunctival anaemia detection in children (CP-AnemiC)"
+title: "Data-integrity audit of the CP-AnemiC conjunctival anaemia dataset: code, duplicate maps and results"
 type: software
 authors:
   - family-names: Calizaya Apaza

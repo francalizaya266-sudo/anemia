@@ -1,5 +1,7 @@
 # Revisión sistemática: IA sobre imágenes de conjuntiva para anemia
 
+> **Estado: protocolo no ejecutado.** Esta carpeta es la planificación de una revisión sistemática futura e independiente (proyecto de tesis). La búsqueda no se ha realizado y el artículo de auditoría de CP-AnemiC no se apoya en ella: por eso el artículo no afirma que ningún otro dataset haya sido auditado, solo que los autores no conocen una auditoría publicada.
+
 Protocolo PRISMA 2020 (detallado en el informe del proyecto, sección "Revisión de literatura").
 
 ## Pasos
