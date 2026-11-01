@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this code or the duplicate map, please cite the article and this repository."
+title: "Deduplicated benchmark for smartphone conjunctival anaemia detection in children (CP-AnemiC)"
+type: software
+authors:
+  - family-names: Calizaya Apaza
+    given-names: Fran Franklin
+    orcid: https://orcid.org/0009-0009-5786-1104
+    affiliation: Universidad Peruana Unión
+  - family-names: Arce Apaza
+    given-names: Bisleyn de la Flor
+    orcid: https://orcid.org/0009-0002-4673-8222
+    affiliation: Universidad Peruana Unión
+  - family-names: Apaza Quispe
+    given-names: Jhoel Hairton
+    orcid: https://orcid.org/0009-0005-1745-1654
+    affiliation: Universidad Peruana Unión
+  - family-names: Condori Coaquira
+    given-names: Angel Rosendo
+    orcid: https://orcid.org/0000-0003-4681-4272
+    affiliation: Universidad Peruana Unión
+license: MIT
+repository-code: "https://github.com/francalizaya266-sudo/anemia"
+version: 1.0.0
+date-released: 2026-11-01
+keywords: [anaemia, conjunctiva, smartphone, data leakage, deduplication, edge AI, explainable AI, children, Peru]

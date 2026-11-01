@@ -1,0 +1,26 @@
+Domain,Reporting topic (CLAIM 2024 / TRIPOD+AI),Manuscript section,How it is addressed
+Title / abstract,Identify the study as an AI diagnostic-model study; structured abstract,Title; Abstract,"Title names the task, the data and the models; abstract is structured (background, methods, results, conclusions)."
+Introduction,"Clinical and scientific background, intended use and target population",1. Introduction,Screening (not diagnosis) in children 6-59 months; intended deployment in Puno; prevalence figures from ENDES 2023.
+Introduction,Objectives and hypotheses,1. Introduction (last paragraph),"Four pre-specified questions: duplicate audit, inflation, colour vs CNN, edge feasibility."
+Study design,Prospective/retrospective; study goal; reporting guidelines,2.1,Retrospective development and internal validation; TRIPOD+AI and CLAIM 2024; post hoc analyses labelled.
+Data,"Data source, eligibility, acquisition device and protocol",2.2,"CP-AnemiC, Mendeley DOI; 10 facilities, Ghana; 12-MP camera on Samsung Galaxy Tab 7 A, KoBo Collect, ambient light, flash off; ROI on black background."
+Data,Preprocessing; definition of data elements; de-identification; missing data,"2.2, 2.3, 2.5, 2.6",Tight crop + letterbox 224; non-black mask; no missing Hb/age; dataset released de-identified by its authors.
+Data,Selection of subsets; duplicate handling,"2.3, 3.1, Figure 1",SHA-256 + pHash-16 (mirror) + connected components; 710 rows -> 472 unique -> 471 (one label-conflict group removed).
+Ground truth,Reference standard definition and rationale,"2.2, 2.4, 3.7",Laboratory Hb; anaemia Hb < 11 g/dL (WHO 2001); WHO 2024 age-specific cut-offs as sensitivity analysis.
+Ground truth,Annotator source and variability,2.2,"Hb is a laboratory measurement, no image annotation; ROI segmentation by dataset authors (triangle thresholding)."
+Data partitions,Sample size rationale,"2.9, 4.6",All available unique images; post hoc power/precision given by bootstrap CI width; Buderer calculation for the prospective study.
+Data partitions,Assignment to partitions and level at which they are disjoint,2.4,Stratified 5-fold CV on unique images; naive protocol as control; leave-one-hospital-out; no patient ID available (limitation).
+Model,"Model structure, software, initialisation","2.5, 2.6, Code availability",63 colour features; LR/SVM/RF/XGBoost; 7 ImageNet-pretrained CNNs (torchvision); versions in requirements files.
+Training,"Training approach, augmentation, hyper-parameters, model selection","2.5, 2.6","Nested GridSearchCV; two-phase fine-tuning, geometric-only augmentation, AdamW, early stopping on 15 % internal split; selection by internal AUC only."
+Training,Ensembling,2.5,Random Forest / XGBoost are ensembles; no model stacking beyond the reported fusion experiment.
+Evaluation,Performance metrics and operating points,"2.9, 3.3, 3.4, Table 2","AUC, F1, accuracy, sensitivity, specificity, Brier at 0.5; sensitivity-0.90 screening operating point."
+Evaluation,Uncertainty and significance,2.9,2 000-sample bootstrap 95 % CIs; repeated CV; between-seed SD for CNNs.
+Evaluation,Robustness / sensitivity analyses,"3.2, 3.4, 3.6, 3.7",Naive vs deduplicated; leave-one-hospital-out; quantisation variants; WHO-2024 relabelling; per-age-group AUC.
+Evaluation,Explainability,"2.8, 3.5, Figures",SHAP (Tree/Kernel); Grad-CAM with quantitative in-mask attention ratio.
+Evaluation,External validation,"4.6, 4.4",None yet; prospective Puno study planned (protocol summarised).
+Results,Flow of data and characteristics,"3.1, Figure 1, Table 1","Duplicate flow; Hb, age, sex, facility distribution of unique vs duplicated rows."
+Results,Performance of final model(s) with CIs,"3.3, Tables 2-4, Figure 2","All models, both protocols; comparison with published results."
+Results,Failure analysis,3.5,Grad-CAM on errors; brightness confound; INT8 collapse analysis.
+Discussion,Limitations,4.6,"No patient ID, single country/device, no external validation, Hb method not named by source, label noise near cut-off."
+Discussion,Implications for practice and intended use,"4.5, 5",Screening with confirmatory HemoCue; XGBoost on-device; recommendations for the prospective study.
+Other,"Registration, protocol access, funding, conflicts, data and code availability",Declarations,Puno protocol code pending; data on Mendeley; code and duplicate map on GitHub/Zenodo (DOI pending); funding none; no conflicts.
