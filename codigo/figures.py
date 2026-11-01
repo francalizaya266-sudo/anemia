@@ -63,7 +63,7 @@ plt.tight_layout(); plt.savefig(F+'fig4_size_vs_auc.png'); plt.savefig(F+'fig4_s
 # ---- Figure 1: data flow (deduplication) ----
 fig,ax=plt.subplots(figsize=(8.2,2.4)); ax.axis('off')
 boxes=[(0.01,'CP-AnemiC\n710 rows\n424 anaemic / 286 non'),(0.26,'SHA-256 audit\n91 groups of\nbyte-identical files\n(303 rows)'),
-       (0.51,'Perceptual hash\n(pHash-16 + mirror)\n+21 near-duplicate pairs\n472 unique images'),(0.76,'Analysis set\n471 images\n(1 label-conflict group out)\n229 anaemic / 242 non')]
+       (0.51,'Perceptual hash\n(pHash-16 + mirror)\n+26 near-duplicate files\n472 unique images'),(0.76,'Analysis set\n471 images\n(1 label-conflict group out)\n229 anaemic / 242 non')]
 for k,(x,t) in enumerate(boxes):
     ax.add_patch(plt.Rectangle((x,0.2),0.22,0.62,fc='#f3f6fb' if k<3 else '#e6f3ec',ec='#9a9a9a',lw=0.8))
     ax.text(x+0.11,0.51,t,ha='center',va='center',fontsize=7.5)
