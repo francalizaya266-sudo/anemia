@@ -36,7 +36,7 @@ def _midrank(x):
 def delong(y,p1,p2):
     pos=np.where(y==1)[0]; neg=np.where(y==0)[0]; m=len(pos); n=len(neg)
     preds=np.vstack([p1,p2]); k=2
-    tx=np.array([_midrank(preds[r,pos]) for r in range(k)]); ty=np.array([_midrank(preds[r,neg]) for r in range(k)]); tz=np.array([_midrank(preds[r]) for r in range(k)])
+    tx=np.array([_midrank(preds[r,pos]) for r in range(k)]); ty=np.array([_midrank(preds[r,neg]) for r in range(k)]); tz=np.array([_midrank(np.concatenate([preds[r,pos],preds[r,neg]])) for r in range(k)])  # positives first (Sun & Xu 2014)
     aucs=tz[:,:m].sum(1)/m/n-(m+1.0)/(2.0*n)
     v01=(tz[:,:m]-tx)/n; v10=1.0-(tz[:,m:]-ty)/m
     S=np.cov(v01)/m+np.cov(v10)/n

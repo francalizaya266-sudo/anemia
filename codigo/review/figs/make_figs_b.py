@@ -17,6 +17,9 @@ def pci(s): a=re.findall(r'\d+\.\d+',s); return (float(a[0]),float(a[1]))
 
 # ---------------- Fig 3: three protocols ----------------
 P=R['protocols']
+import os as _o
+RS=json.load(open('/home/claude/exp/out/review_strict/review_strict.json')) if _o.path.exists('/home/claude/exp/out/review_strict/review_strict.json') else {}
+GS=RS.get('grouped_strict',{})
 rows=[]
 for k in M:
     rows.append((M[k],P[k]['naive708_AUC'],P[k]['naive708_ci'],P[k]['grouped708_AUC'],P[k]['grouped708_ci'],float(cls[k]['AUC']),pci(cls[k]['AUC_ci'])))
@@ -25,21 +28,27 @@ for k,(na,nci,ca,cci) in cnn.items(): rows.append((k,na,nci,None,None,ca,cci))
 # classical models (sorted by leak, largest at the top) above the CNNs (sorted by naive - dedup.)
 cl=sorted([r for r in rows if r[3] is not None],key=lambda r: r[1]-r[3]); cn=sorted([r for r in rows if r[3] is None],key=lambda r: r[1]-r[5])
 rows=cn+cl
-fig,ax=plt.subplots(figsize=(6.3,4.0))
+fig,ax=plt.subplots(figsize=(6.3,4.3))
 ax.axhline(len(cn)-0.5,color='#d9d8d3',lw=0.8,ls=(0,(3,3)),zorder=0)
 for i,(lab,na,nci,ga,gci,ca,cci) in enumerate(rows):
     ax.plot([ca,na],[i,i],color='#d9d8d3',lw=3,zorder=1,solid_capstyle='round')
     ax.errorbar(na,i+0.12,xerr=[[na-nci[0]],[nci[1]-na]],fmt='o',color=C[1],ms=4.5,capsize=2,lw=0.9,zorder=3)
     if ga is not None: ax.errorbar(ga,i,xerr=[[ga-gci[0]],[gci[1]-ga]],fmt='D',color=C[3],ms=4,capsize=2,lw=0.9,zorder=3)
+    kk=[k for k in M if M[k]==lab]
+    if kk and kk[0] in GS:
+        gs_=GS[kk[0]]['grouped_strict_AUC']; gsc=GS[kk[0]]['ci']
+        ax.errorbar(gs_,i-0.24,xerr=[[gs_-gsc[0]],[gsc[1]-gs_]],fmt='D',mfc='white',mec=C[3],color=C[3],ms=4,capsize=2,lw=0.9,zorder=3)
     ax.errorbar(ca,i-0.12,xerr=[[ca-cci[0]],[cci[1]-ca]],fmt='s',color=C[0],ms=4.5,capsize=2,lw=0.9,zorder=3)
-    txt=f'leak {na-ga:+.3f}' if ga is not None else f'naive $-$ dedup. {na-ca:+.2f}'
+    kk=[k for k in M if M[k]==lab]
+    txt=(f'leak {na-ga:.3f}'+(f" ({GS[kk[0]]['naive_minus_grouped_strict']:.3f})" if kk and kk[0] in GS and 'naive_minus_grouped_strict' in GS[kk[0]] else '')) if ga is not None else f'naive $-$ dedup. {na-ca:+.2f}'
     ax.text(1.005,i,txt.replace('+',''),va='center',fontsize=6.5,color=GREY)
 ax.set_yticks(range(len(rows))); ax.set_yticklabels([r[0] for r in rows]); ax.set_xlim(0.45,1.0); ax.set_xlabel('AUC (95 % bootstrap CI)')
 ax.grid(axis='x',color='#eeeeea',lw=0.8,zorder=0)
 h=[plt.Line2D([],[],marker='o',color=C[1],ls='',ms=5,label='Naive: 708 rows, random row-level folds'),
    plt.Line2D([],[],marker='D',color=C[3],ls='',ms=4.5,label='Grouped: same 708 rows, duplicate groups in one fold'),
+   plt.Line2D([],[],marker='D',mfc='white',mec=C[3],color=C[3],ls='',ms=4.5,label='Grouped with the strict duplicate map (third audit stage)'),
    plt.Line2D([],[],marker='s',color=C[0],ls='',ms=5,label='Deduplicated: 471 unique images')]
-ax.legend(handles=h,frameon=False,loc='upper center',bbox_to_anchor=(0.42,-0.16),ncol=1,handletextpad=0.4,borderaxespad=0)
+ax.legend(handles=h,frameon=False,loc='upper center',bbox_to_anchor=(0.42,-0.15),ncol=1,handletextpad=0.4,borderaxespad=0,fontsize=6.8)
 ax.text(0.455,len(rows)-0.55,'Colour-feature models',fontsize=6.5,color=GREY,va='center'); ax.text(0.455,len(cn)-0.85,'CNNs',fontsize=6.5,color=GREY,va='center')
 ax.set_xlim(0.45,1.12); ax.set_xticks(np.arange(0.5,1.01,0.1))
 plt.savefig(OUT+'Fig3_leakage.pdf'); plt.savefig(OUT+'Fig3_leakage.png'); plt.close()
