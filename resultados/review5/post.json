@@ -1,21 +1,43 @@
 {
+ "funnel": {
+  "pairs_searched": 111156,
+  "candidates": 9891,
+  "controls": 1000,
+  "cand_ge10_at_verification": 6716,
+  "cand_scale_ok": 186,
+  "cand_overlap_ok": 186,
+  "accepted": 185,
+  "accepted_already_stage3": 17,
+  "accepted_new": 168,
+  "rejected": 9706,
+  "rejected_same_geo_group": 0,
+  "rej_k_lt10": 3175,
+  "rej_scale": 6530,
+  "rej_overlap": 0,
+  "rej_ncc": 1,
+  "controls_ge10": 16,
+  "controls_accepted": 0
+ },
  "nearmiss": {
-  "n_cand": 6732,
+  "n_cand": 9891,
   "n_acc": 185,
-  "n_rej": 6547,
-  "rej_ncc_below_02": 6540,
+  "n_rej": 9706,
+  "n_rejd": 9706,
+  "rej_ncc_ge07": 14,
+  "n_rej_k10": 6531,
+  "rej_ncc_below_02": 6524,
   "rej_ncc_02_07": 6,
   "acc_ncc_min": 0.7392750382423401,
   "groups": {
    "rejected_all": {
-    "n": 6547,
-    "concordance": 0.5038949137009318,
-    "upper95": 0.5141324976008037
+    "n": 9706,
+    "concordance": 0.5104059344735216,
+    "upper95": 0.5188004221653204
    },
    "rejected_inl20": {
-    "n": 944,
-    "concordance": 0.5169491525423728,
-    "upper95": 0.5441644411918319
+    "n": 942,
+    "concordance": 0.5180467091295117,
+    "upper95": 0.5452867293412531
    },
    "rejected_inl30": {
     "n": 272,
@@ -23,17 +45,17 @@
     "upper95": 0.5697196379346283
    },
    "random_low": {
-    "n": 4159,
-    "concordance": 0.5186342870882423,
-    "upper95": 0.5314857839107765
+    "n": 1000,
+    "concordance": 0.502,
+    "upper95": 0.5284776885460062
    }
   },
   "prevalence_reps": 0.4851694915254237,
   "chance_concordance": 0.500439887963229,
   "new_pairs": 168,
   "bound_q05": 0.0353473901016923,
-  "bound_q_inl20": 0.03658764940350606,
-  "bound_q_inl20_upper": 0.038772085041052874
+  "bound_q_inl20": 0.036670970788319546,
+  "bound_q_inl20_upper": 0.03886777930462008
  },
  "synthetic": {
   "n_images": 337,

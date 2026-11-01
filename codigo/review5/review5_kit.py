@@ -10,11 +10,12 @@ mfull = pd.read_csv(REPO + 'codigo/meta_groups.csv'); ms = pd.read_csv(REPO + 'c
 reps = mfull.sort_values('image_id').drop_duplicates('grp').reset_index(drop=True); sg = ms.loc[reps.image_id, 'grp'].values
 a = np.load(REPO + 'resultados/review2/geomverify.npy'); i, j = a[:, 0].astype(int), a[:, 1].astype(int); k, cov, ncc, s = a[:, 2], a[:, 3], a[:, 4], a[:, 6]
 acc = (k >= 10) & (s >= 0.5) & (s <= 2) & (cov >= 0.3) & (ncc >= 0.7); stage3 = sg[i] == sg[j]
+n_orb = int((np.load(REPO + 'resultados/review2/orb_pairs.npy')[:, 3] >= 10).sum()); is_cand = np.arange(len(a)) < n_orb  # last 1000 rows: random controls
 rng = np.random.default_rng(2026)
-new = np.where(acc & ~stage3)[0]; low = np.where(k < 10)[0]
+new = np.where(acc & ~stage3)[0]; low = np.where(~is_cand)[0]
 # rejected look-alikes: every rejected candidate (>= 10 inliers, different stage-3 group) that came closest to acceptance
 # (NCC >= 0.2 or a non-degenerate scale), topped up with the rejected candidates that had the most inliers
-rej_all = np.where((k >= 10) & ~acc & ~stage3)[0]
+rej_all = np.where(is_cand & (k >= 10) & ~acc & ~stage3)[0]
 near = rej_all[(ncc[rej_all] >= 0.2) | (s[rej_all] > 0.1)]
 rest = np.setdiff1d(rej_all, near); rest = rest[np.argsort(-k[rest])]
 rej = np.concatenate([near, rest])[:30]

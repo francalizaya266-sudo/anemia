@@ -31,7 +31,7 @@ for pi, (name, z) in enumerate(Z.items()):
             ax = fig.add_subplot(sub[row, c]); ax.imshow(im); ax.imshow(cam, cmap='inferno', alpha=0.45, vmin=0, vmax=1)
             ax.contour(m.astype(float), levels=[0.5], colors='white', linewidths=0.5)
             ax.set_xticks([]); ax.set_yticks([]); [s.set_visible(False) for s in ax.spines.values()]
-            ax.set_title(f"{'TP' if cls else 'TN'}  p = {p[i]:.2f}  ratio {r[i]:.1f}", fontsize=5.8, pad=1.5)
+            ax.set_title(f"{'TP' if cls else 'TN'}  prob. {p[i]:.2f}  ratio {r[i]:.1f}", fontsize=5.8, pad=1.5)
     fig.text(0.125, left[pi].get_position(fig).y1 + 0.025, f"({'ab'[pi]}) {name}: Grad-CAM of the predicted class; top row true positives, bottom row true negatives", fontsize=7)
 ax = fig.add_subplot(outer[2])
 data = [Z['EfficientNet-B0']['ratio_a'], Z['EfficientNet-B0']['ratio_c'], Z['MobileNetV2']['ratio_a'], Z['MobileNetV2']['ratio_c'], ceil]

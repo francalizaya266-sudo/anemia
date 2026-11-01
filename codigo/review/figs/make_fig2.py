@@ -34,8 +34,8 @@ y = row(y, ('472 unique images (pre-specified map)', '386 singleton rows + 86 mu
         ('Class dependence', 'Duplicated rows 81 %% anaemic, singletons 42 %%\n%d of 86 groups carry one label;\npermutation null %.1f (maximum %d), p < 0.0001' % (85, C['null_all_rows_mean'], C['null_all_rows_max'])), Gn); y = down(y)
 y = row(y, ('Stage 3 (post hoc): pHash under 8 rotations and\nreflections + identical colour features', '19 pairs of groups merged (rotated copies)\n453 unique images; strict set: 452 (218 anaemic, 234 not)'),
         ('Rotated copies', 'All 19 pairs agree on the anaemia label\nbut not on Hb'), Y); y = down(y)
-y = row(y, ('Stage 4 (post hoc): SIFT keypoints + RANSAC on all\n111,156 pairs, photometric verification', '%d new pairs of re-cropped, rescaled or mirrored copies\n%d distinct photographs (%d singletons + %d groups)\nGeometric set: %d images (%d anaemic, %d not)' % (G['n_new_pairs'], G['geo_unique'], G['singletons'], G['multi'], G['n_class'], G['n_anaemic'], G['n_non'])),
-        ('Re-cropped copies', 'All %d pairs agree on the anaemia label\n(permutation null %.0f, p < 0.0001);\n%d differ in facility and %d in Hb' % (G['n_new_pairs'], G['null_mean'], G['hosp_differ'], G['hb_differ'])), Y)
+y = row(y, ('Stage 4 (post hoc): SIFT keypoints + RANSAC on all\n111,156 pairs, photometric verification', '%d new pairs of images of the same eye\n(re-cropped, rescaled or mirrored)\n%d distinct images (%d singletons + %d groups)\nGeometric set: %d images (%d anaemic, %d not)' % (G['n_new_pairs'], G['geo_unique'], G['singletons'], G['multi'], G['n_class'], G['n_anaemic'], G['n_non'])),
+        ('Images of the same eye', 'All %d pairs agree on the anaemia label\n(permutation null %.0f, p < 0.0001);\n%d differ in facility and %d in Hb' % (G['n_new_pairs'], G['null_mean'], G['hosp_differ'], G['hb_differ'])), Y)
 fig.canvas.draw()
 for p, ts in checks:
     x0, y0, w, h = p.get_x(), p.get_y(), p.get_width(), p.get_height()

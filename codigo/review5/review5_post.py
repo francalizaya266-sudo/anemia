@@ -34,15 +34,25 @@ def holm(ps):
 mfull = pd.read_csv(REPO + 'codigo/meta_groups.csv'); mg = pd.read_csv(REPO + 'codigo/meta_groups_geo.csv').set_index('image_id')
 reps = mfull.sort_values('image_id').drop_duplicates('grp').reset_index(drop=True); y4 = reps.anemia.values; g4 = mg.loc[reps.image_id, 'grp'].values
 a = np.load(REPO + 'resultados/review2/geomverify.npy'); i, j = a[:, 0].astype(int), a[:, 1].astype(int); k, cov, ncc, s = a[:, 2], a[:, 3], a[:, 4], a[:, 6]
-acc = (k >= 10) & (s >= 0.5) & (s <= 2) & (cov >= 0.3) & (ncc >= 0.7); cand = k >= 10; conc = y4[i] == y4[j]; same = g4[i] == g4[j]
+# rows 0..n_orb-1 are the candidates (>= 10 inliers in the keypoint search, review2_orb.py); the last 1000 rows are random
+# control pairs with < 10 inliers in the search (review2_geomverify.py). Inliers in column 2 are re-estimated at verification.
+n_orb = int((np.load(REPO + 'resultados/review2/orb_pairs.npy')[:, 3] >= 10).sum()); assert len(a) == n_orb + 1000
+is_cand = np.arange(len(a)) < n_orb; is_ctrl = ~is_cand
+acc = (k >= 10) & (s >= 0.5) & (s <= 2) & (cov >= 0.3) & (ncc >= 0.7); assert not (acc & is_ctrl).any()
+cand = is_cand; conc = y4[i] == y4[j]; same = g4[i] == g4[j]
 rej = cand & ~acc; rejd = rej & ~same
 def cp_upper(x, n): return float(stats.beta.ppf(0.95, x + 1, n - x)) if x < n else 1.0
 nm = {}
-for tag, m in (('rejected_all', rejd), ('rejected_inl20', rejd & (k >= 20)), ('rejected_inl30', rejd & (k >= 30)), ('random_low', ~cand)):
+for tag, m in (('rejected_all', rejd), ('rejected_inl20', rejd & (k >= 20)), ('rejected_inl30', rejd & (k >= 30)), ('random_low', is_ctrl)):
     nm[tag] = dict(n=int(m.sum()), concordance=float(conc[m].mean()), upper95=cp_upper(int(conc[m].sum()), int(m.sum())))
 npairs = int(acc.sum() - 17); base = 1 - 0.05 ** (1 / npairs)
 def bound(q): return float(base / (1 - q))
-P['nearmiss'] = dict(n_cand=int(cand.sum()), n_acc=int(acc.sum()), n_rej=int(rej.sum()), rej_ncc_below_02=int((rej & (ncc < 0.2)).sum()), rej_ncc_02_07=int((rej & (ncc >= 0.2) & (ncc < 0.7)).sum()),
+f_k = cand & (k >= 10); f_s = f_k & (s >= 0.5) & (s <= 2); f_c = f_s & (cov >= 0.3)
+P['funnel'] = dict(pairs_searched=111156, candidates=int(cand.sum()), controls=int(is_ctrl.sum()), cand_ge10_at_verification=int(f_k.sum()), cand_scale_ok=int(f_s.sum()), cand_overlap_ok=int(f_c.sum()),
+                   accepted=int(acc.sum()), accepted_already_stage3=17, accepted_new=int(acc.sum()) - 17, rejected=int(rej.sum()), rejected_same_geo_group=int((rej & same).sum()),
+                   rej_k_lt10=int((cand & (k < 10)).sum()), rej_scale=int((f_k & ~f_s).sum()), rej_overlap=int((f_s & ~f_c).sum()), rej_ncc=int((f_c & ~acc).sum()),
+                   controls_ge10=int((is_ctrl & (k >= 10)).sum()), controls_accepted=int((is_ctrl & acc).sum()))
+P['nearmiss'] = dict(n_cand=int(cand.sum()), n_acc=int(acc.sum()), n_rej=int(rej.sum()), n_rejd=int(rejd.sum()), rej_ncc_ge07=int((rej & (ncc >= 0.7)).sum()), n_rej_k10=int((rej & (k >= 10)).sum()), rej_ncc_below_02=int((rej & (k >= 10) & (ncc < 0.2)).sum()), rej_ncc_02_07=int((rej & (k >= 10) & (ncc >= 0.2) & (ncc < 0.7)).sum()),
                      acc_ncc_min=float(ncc[acc].min()), groups=nm, prevalence_reps=float(y4.mean()), chance_concordance=float(y4.mean() ** 2 + (1 - y4.mean()) ** 2),
                      new_pairs=npairs, bound_q05=bound(0.5), bound_q_inl20=bound(nm['rejected_inl20']['concordance']), bound_q_inl20_upper=bound(nm['rejected_inl20']['upper95']))
 # ---------- 2. synthetic ----------
