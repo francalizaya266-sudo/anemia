@@ -1,0 +1,9 @@
+numpy
+pandas
+scikit-learn
+opencv-python-headless
+matplotlib
+onnx
+onnxruntime
+onnxconverter-common
+onnxscript

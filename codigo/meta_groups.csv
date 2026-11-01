@@ -1,0 +1,711 @@
+image_id,image_path,hb,anemia,severity,hospital,age_months,gender,sha,grp
+Image_001,images/Image_001.png,9.8,1,Moderate,Nkawie-Toase Government Hospital,6,F,89097840724fc79b13bb6cdf3dff3b4571b21fb1438a67c646f79cbeba39bef8,0
+Image_002,images/Image_002.png,9.9,1,Moderate,Ejusu Government Hospital,24,M,4ea3eb64d07d6ccb89e38509385ab327518ab0d484a49c27c6cd6b09f98418de,1
+Image_003,images/Image_003.png,11.1,0,Non-Anemic,Ahmadiyya Muslim Hospital,24,F,62514d22bba9a554e7da406085d852b70466d72bac2e4dea3f2040ea9f7e693c,2
+Image_004,images/Image_004.png,12.5,0,Non-Anemic,Ahmadiyya Muslim Hospital,12,M,c5e9afc6009c72882a5cb35441b683d05ca8f1a0070d89becd69aeb37b06c818,3
+Image_005,images/Image_005.png,9.9,1,Moderate,Sunyani Municipal Hospital,24,M,1d61df9cce90b958b3a7e9aed2d427096c46f94e5d371e37d43643847aadf202,4
+Image_006,images/Image_006.png,12.5,0,Non-Anemic,Sunyani Municipal Hospital,24,M,2803471e0adbb2d7b043ae2985f50f39ffba4ca52b0a0f8105be3228a50724c7,5
+Image_007,images/Image_007.png,9.9,1,Moderate,SDA Hospital,48,F,50145f9f86e72127776acbafd0849a1d9c239bbb27ab58ce837aa7c7730ee962,6
+Image_008,images/Image_008.png,12.5,0,Non-Anemic,Nkawie-Toase Government Hospital,48,M,918457e089bb09bca8a7c6ba312f7697d8b0882ff76a2d1f60452366041c8654,7
+Image_009,images/Image_009.png,9.9,1,Moderate,Kintampo Municipal Hospital,36,F,15a7265451a0aef130f460d3cc152c270a89400cf877b6fae56000f7fd39956d,8
+Image_010,images/Image_010.png,9.9,1,Moderate,Kintampo Municipal Hospital,36,F,9109234580aa47296f917c2382152c25032ac58ac13eaa164380c48456e5bf10,9
+Image_011,images/Image_011.png,12.4,0,Non-Anemic,Bolgatanga Regional Hospital,60,M,7fc572d93512a7a92f6c331bec913613e6d9244c087dd8439907f4e337890b51,10
+Image_012,images/Image_012.png,12.5,0,Non-Anemic,Komfo Anokye Teaching Hospital,36,M,10273edaa51d05cee04e526e07a26d0ce04cb98f0832ad89620fdb1ee7b9b91a,11
+Image_013,images/Image_013.png,9.9,1,Moderate,Ejusu Government Hospital,24,M,1cbe357fb677c08791d6b989937d6c21cf6f782611763af9660c9f644a59adce,12
+Image_014,images/Image_014.png,12.4,0,Non-Anemic,Komfo Anokye Teaching Hospital,48,M,52d6583163f21236c1b89fb230eb71a06de087bcc125241d1f16812fd19945d7,13
+Image_015,images/Image_015.png,9.9,1,Moderate,Nkawie-Toase Government Hospital,60,M,490825bec9bc51602a83e55b054227ac9a926307b930aebe05ac660e1ec48b1f,14
+Image_016,images/Image_016.png,9.9,1,Moderate,Bolgatanga Regional Hospital,24,F,c00452a3bff3a73b391009a1f0ed18c9f3304db6d5129033bcc79b5aa51ade2f,15
+Image_017,images/Image_017.png,9.9,1,Moderate,Ahmadiyya Muslim Hospital,24,F,f80feec84e11cecad7ed8e93719cbaa80a800114547924a87b8ef0a9468948a7,16
+Image_018,images/Image_018.png,10.93,1,Mild,Kintampo Municipal Hospital,48,M,4328497af6437d23b51ab2bcaf93b698179cfde6673a19c75ee1094a83775929,17
+Image_019,images/Image_019.png,10.9,1,Mild,Komfo Anokye Teaching Hospital,48,M,1158993f04abd00ee687c2d3f08826f3fbe2de8733bc3eae56263519d536a127,18
+Image_020,images/Image_020.png,11.3,0,Non-Anemic,Sunyani Municipal Hospital,48,M,f98a2071454e3260df162270fa73fbe6fa151902aba7be8820141202cc3309d0,19
+Image_021,images/Image_021.png,10.9,1,Mild,Bolgatanga Regional Hospital,36,F,84560038d87d7713ac802e3f7bb9cb410c3ff03b03b3cb8fb56acbbd62a6cd8b,20
+Image_022,images/Image_022.png,10.74,1,Mild,Komfo Anokye Teaching Hospital,48,F,bc1215bbaef83306302215b374ae3515e8c79514d7d13f23c59cd963e148cdf2,21
+Image_023,images/Image_023.png,12.9,0,Non-Anemic,Manhyia District Hospital,60,F,8e2a5d482fe66d21b3d36363e1d47078f829d83a58a6b50a73242b717ad766ba,22
+Image_024,images/Image_024.png,12.9,0,Non-Anemic,Komfo Anokye Teaching Hospital,60,F,be1d6e45700279228592f9cb6b4c5ad733004c47a5236a63e262d3ddcaa98568,23
+Image_025,images/Image_025.png,10.2,1,Mild,Bolgatanga Regional Hospital,24,M,38f274aec16e4000e5bcc4a2bedd484855927e806840c4800fd792dd4ad84a97,24
+Image_026,images/Image_026.png,10.2,1,Mild,Nkawie-Toase Government Hospital,48,F,eefbefe6f6d6fb12d631ab16379ddd3a846bafc1502ca185e72c1ca76b881d4d,25
+Image_027,images/Image_027.png,12.9,0,Non-Anemic,Sunyani Municipal Hospital,48,M,7fc572d93512a7a92f6c331bec913613e6d9244c087dd8439907f4e337890b51,10
+Image_028,images/Image_028.png,12.9,0,Non-Anemic,Manhyia District Hospital,60,M,42511f9b733e9005664781cd0f483fb164f2ccef40832eadc0ff5a97eea434d1,26
+Image_029,images/Image_029.png,10.2,1,Mild,Ahmadiyya Muslim Hospital,12,M,5fd93eb109fb2c13c89e6ccf207f100730cadb44f647ba1aeacb4465a4a6d98b,1
+Image_030,images/Image_030.png,7.9,1,Moderate,Sunyani Municipal Hospital,60,M,338db157e405fbb93a389c0defa599196cd0e49f74a907fceea67b915f6e4d08,27
+Image_031,images/Image_031.png,6.9,1,Severe,Nkawie-Toase Government Hospital,48,F,68cefed0898b29119ea43493030b9a8125425173c3ddf3a27968e03890833cc8,28
+Image_032,images/Image_032.png,8.1,1,Moderate,Ejusu Government Hospital,12,F,dc27f04ed907c911b725d47e7578c1c4c805e965091de1fa718358c850085d3e,29
+Image_033,images/Image_033.png,8.1,1,Moderate,Bolgatanga Regional Hospital,12,M,778449db8291e08ebac7ac9a0101cffd01a76c5232c341662c32df8b59d1cc82,30
+Image_034,images/Image_034.png,8.2,1,Moderate,Ahmadiyya Muslim Hospital,12,M,5d362f837349cf41fe7dc6ad9aa9d962bbb1d166e0fd04c860cbaf602779baab,31
+Image_035,images/Image_035.png,8.2,1,Moderate,Kintampo Municipal Hospital,12,M,12195a1c9b3091f618af960b5e957a266519b06e5dad23294afd4003f7443260,32
+Image_036,images/Image_036.png,8.2,1,Moderate,Sunyani Municipal Hospital,60,M,a7cb3d86195f781749ba61b88664689a4cf15d2d61f0bf0d9fbe4d23c129f367,33
+Image_037,images/Image_037.png,8.2,1,Moderate,Sunyani Municipal Hospital,48,M,e8dfb97be7f7705abe1e429079d06a92329c08c99a70115ef84475f176446f8e,34
+Image_038,images/Image_038.png,8.2,1,Moderate,Nkawie-Toase Government Hospital,12,F,5858f6c1b144978ce4e880f3c1fa9afc2962c33bcca28093fc279fddd0b876d7,35
+Image_039,images/Image_039.png,8.2,1,Moderate,SDA Hospital,36,M,6724cee93ac6ef15e632da0beda78eb05f068d477f760431381ae7eedf0453b9,36
+Image_040,images/Image_040.png,8.3,1,Moderate,Ahmadiyya Muslim Hospital,12,F,90b89cbd567c08a76b620d401beaa29ea78f0cdfcc047f55ce0f7e9ab59d8415,37
+Image_041,images/Image_041.png,8.3,1,Moderate,Ahmadiyya Muslim Hospital,12,M,9b33a9adc76993a6454b732164128f7006f2e2d1aa838a800ea0e2d944fafe78,38
+Image_042,images/Image_042.png,8.3,1,Moderate,Nkawie-Toase Government Hospital,24,F,492c9ef1f68a17baf00c9762e30bfe29f37bb3ed387f0cbe8d1c078b3b689554,39
+Image_043,images/Image_043.png,8.3,1,Moderate,Ahmadiyya Muslim Hospital,12,M,bca25174ed4a1cd70fc300b2f54b798e39cf8f6d030d604670e3e06780661433,40
+Image_044,images/Image_044.png,8.3,1,Moderate,Bolgatanga Regional Hospital,24,M,8b2d55c95ec099483d9967259761e2bec5706ca45f7cfae954b9a3f7f406773f,41
+Image_045,images/Image_045.png,8.3,1,Moderate,Nkawie-Toase Government Hospital,12,M,7bba611365b97e1c171943e91d04ab9f06f331b908b14182add96d7f2c36d141,42
+Image_046,images/Image_046.png,8.3,1,Moderate,Nkawie-Toase Government Hospital,12,M,d3d9bee0ed5f8aca623867e78645dae0d92d23b5aa70c2a46910256d3a7250d1,43
+Image_047,images/Image_047.png,8.3,1,Moderate,Sunyani Municipal Hospital,9,M,90b89cbd567c08a76b620d401beaa29ea78f0cdfcc047f55ce0f7e9ab59d8415,37
+Image_048,images/Image_048.png,8.3,1,Moderate,Sunyani Municipal Hospital,12,M,9958d64fdcba14097d951597996282380deb59da0c4feabbf9827729e43cd740,44
+Image_049,images/Image_049.png,8.3,1,Moderate,Nkawie-Toase Government Hospital,24,M,044498f24592985aafab8f559244c7876d970a4c88c38deb1a8fc8f08942cf8a,45
+Image_050,images/Image_050.png,8.4,1,Moderate,Kintampo Municipal Hospital,24,F,bb8c945404324055369bfb0847610a993f22cc7fc0cb3456b30e7d72322605f0,46
+Image_051,images/Image_051.png,8.5,1,Moderate,Bolgatanga Regional Hospital,48,F,15a7265451a0aef130f460d3cc152c270a89400cf877b6fae56000f7fd39956d,8
+Image_052,images/Image_052.png,8.5,1,Moderate,Manhyia District Hospital,24,M,57ff8267b826d72fe1fee93362d9d4f361892c7e26a3f1fb712bc61505687efb,47
+Image_053,images/Image_053.png,8.5,1,Moderate,Bolgatanga Regional Hospital,12,M,3a3e99b60b2d9be1a4dfc05b55dfd0ab8c60adf117fe3c831433ad55ee2eb507,6
+Image_054,images/Image_054.png,8.5,1,Moderate,Ejusu Government Hospital,12,M,fdee5d27a30d8b7f2334b15ecaf88877de90b2411e2cea4d8140fcc05701a641,48
+Image_055,images/Image_055.png,8.5,1,Moderate,Manhyia District Hospital,24,F,69ac9bf09af78ad2a36eecade840d145a62098326a3a8e2a49c2b547e9dd756d,28
+Image_056,images/Image_056.png,8.6,1,Moderate,Ejusu Government Hospital,24,M,ae8f1db6340a625453e949d235e1b944c059a431e8c76a73ecb81b7ddf3bda63,49
+Image_057,images/Image_057.png,8.6,1,Moderate,Bolgatanga Regional Hospital,24,M,20f208c4035f221e032c94762b2bde735210616fdc6c87308e793ed5ff62fe90,50
+Image_058,images/Image_058.png,11.9,0,Non-Anemic,Bolgatanga Regional Hospital,36,F,7ff95ee81cd05b0c309037bbf25d1f704a1aecef4d4b01644c4b5d433d3d401d,51
+Image_059,images/Image_059.png,11.9,0,Non-Anemic,Komfo Anokye Teaching Hospital,12,M,f8dd49430b16166cb0effc3aa6c50b368376aef00c384a1c9e59a12e8d89212a,52
+Image_060,images/Image_060.png,11.9,0,Non-Anemic,Nkawie-Toase Government Hospital,36,F,63503a3786854f163ccfd060a84c986115016e04a6a36f2b1dac283e9b56c99f,53
+Image_061,images/Image_061.png,11.9,0,Non-Anemic,Kintampo Municipal Hospital,24,F,c82f72078fc77fdf8e091ba6cecb8ea2121beab1d7ae2b65f932bf1fcf03f9db,54
+Image_062,images/Image_062.png,12.4,0,Non-Anemic,Nkawie-Toase Government Hospital,24,M,1478058f574cb98854cbc949c20992adff95fbf8d0a63467027b5db2f867f21e,55
+Image_063,images/Image_063.png,12.4,0,Non-Anemic,SDA Hospital,60,F,8cb9ece27d59ae53b9a774eecd3bec125f820dfe5a6b6556e41839c1054edb42,56
+Image_064,images/Image_064.png,12.7,0,Non-Anemic,Manhyia District Hospital,12,M,47b49219e738fa87589f9542cf4ebbad7ac74e63b6768619e97a7b6f89cc9780,57
+Image_065,images/Image_065.png,12.7,0,Non-Anemic,Sunyani Municipal Hospital,12,M,28d053faa7d871e4e88aead29201d0048358f9091dfa8b392310245d89310ca0,58
+Image_066,images/Image_066.png,10.1,1,Mild,Nkawie-Toase Government Hospital,48,F,d19917a3fd4a2cce3997fc773c0735a2711d4086661fd225cde3b2c0e9f37194,59
+Image_067,images/Image_067.png,12.4,0,Non-Anemic,Komfo Anokye Teaching Hospital,12,M,6dcb3f107c4cd330d3d8dfba740b5d0e5a30cc832490cf29278c3764da1b6fa4,60
+Image_068,images/Image_068.png,7.1,1,Moderate,Nkawie-Toase Government Hospital,36,F,a1e3e9fc400651f1818e8a346f4f4bee2cba7dd6abcb96c48a6a57316f9d5c43,61
+Image_069,images/Image_069.png,8.0,1,Moderate,Sunyani Municipal Hospital,24,M,aab1d199b49a5ff5075fdcd98038d327039c00a47b0d6d8b2843a9071bd0af8b,62
+Image_070,images/Image_070.png,11.9,0,Non-Anemic,Ahmadiyya Muslim Hospital,24,M,751489aea6627ccf068adf2120363702cf4c242106034388399e990615354ae8,63
+Image_071,images/Image_071.png,12.4,0,Non-Anemic,Komfo Anokye Teaching Hospital,48,F,fbbee18ffb9c64e9917711f2cba548689a3a1ed5f19af8ac475c8d9539bddd99,64
+Image_072,images/Image_072.png,11.2,0,Non-Anemic,Ahmadiyya Muslim Hospital,48,F,6315b798ee1b7cb2e330d6d5b1cb8ad540d8b79d0d1482c3b1bd13b9d8574126,65
+Image_073,images/Image_073.png,14.2,0,Non-Anemic,Manhyia District Hospital,60,M,3a07cf46bc04193647fbc4d958423643ebf30a5fa9ac6f6e91a91debedcc1131,66
+Image_074,images/Image_074.png,9.7,1,Moderate,Komfo Anokye Teaching Hospital,60,F,2ddba5fc3bb33b84d36a9fa12cda4ac0759b349e7c87136b5b757397b282d200,67
+Image_075,images/Image_075.png,11.1,0,Non-Anemic,Ahmadiyya Muslim Hospital,60,F,3882c85ff68e26383ba119deb9b41a4d91b7e337bb78cfc1f6f3ba032d9bd390,68
+Image_076,images/Image_076.png,9.7,1,Moderate,Bolgatanga Regional Hospital,24,F,c7710b4e58d0ecb9ad5c691ba7379aa15e236e59cbb616efbcf4eaff5c06c24d,69
+Image_077,images/Image_077.png,9.7,1,Moderate,Bolgatanga Regional Hospital,48,F,ddb137ec5c0003e0815a47a0095173453b4be663a756adbb428da61413c1ed56,70
+Image_078,images/Image_078.png,9.7,1,Moderate,Ahmadiyya Muslim Hospital,12,F,9127888a258fb99abf69e8be4cec62cc36c78937fa1c28b9d3b53fe9f24a9887,71
+Image_079,images/Image_079.png,9.7,1,Moderate,Ahmadiyya Muslim Hospital,24,M,89097840724fc79b13bb6cdf3dff3b4571b21fb1438a67c646f79cbeba39bef8,0
+Image_080,images/Image_080.png,10.1,1,Mild,Komfo Anokye Teaching Hospital,36,M,72301fb843630d496fd9fa9f042e423a771e665f99c135d48c4c69517c7ae18f,72
+Image_081,images/Image_081.png,11.0,0,Non-Anemic,Komfo Anokye Teaching Hospital,36,F,26a6e8d4394c3d057eb0e6d1df6232185299fec5c95b51cde0a832e16d9ed114,73
+Image_082,images/Image_082.png,10.1,1,Mild,Komfo Anokye Teaching Hospital,48,F,84560038d87d7713ac802e3f7bb9cb410c3ff03b03b3cb8fb56acbbd62a6cd8b,20
+Image_083,images/Image_083.png,10.1,1,Mild,Nkawie-Toase Government Hospital,36,M,3edf04ea796b8a16aefad86034e1850a51553b9d0c0b48e0f006e5c8bf1a0d79,74
+Image_084,images/Image_084.png,10.3,1,Mild,Bolgatanga Regional Hospital,48,F,38f274aec16e4000e5bcc4a2bedd484855927e806840c4800fd792dd4ad84a97,24
+Image_085,images/Image_085.png,10.1,1,Mild,Kintampo Municipal Hospital,12,F,1cbe357fb677c08791d6b989937d6c21cf6f782611763af9660c9f644a59adce,12
+Image_086,images/Image_086.png,10.9,1,Mild,Kintampo Municipal Hospital,24,F,1cbe357fb677c08791d6b989937d6c21cf6f782611763af9660c9f644a59adce,12
+Image_087,images/Image_087.png,10.7,1,Mild,Sunyani Municipal Hospital,60,M,1cbe357fb677c08791d6b989937d6c21cf6f782611763af9660c9f644a59adce,12
+Image_088,images/Image_088.png,13.0,0,Non-Anemic,Komfo Anokye Teaching Hospital,24,M,21b8ca780a1489696bbca1953ad7d7b0ef543af3c4da5408d45a41ffd166346b,75
+Image_089,images/Image_089.png,10.7,1,Mild,Kintampo Municipal Hospital,24,M,83a21b528c61bd599b9633202938508ce8eb0406a18dcfe808ca2179ff87b444,76
+Image_090,images/Image_090.png,13.0,0,Non-Anemic,Komfo Anokye Teaching Hospital,24,M,3378c70a69ad6da7da5fa486067c85f4d34e2b63c2f24de989ec5e7ad0a18f57,77
+Image_091,images/Image_091.png,10.7,1,Mild,Kintampo Municipal Hospital,24,F,f0eaaea336af827b92b2b7ebd1cf8962c0eed45411a468d9f95a3cf6a1d4b081,78
+Image_092,images/Image_092.png,10.7,1,Mild,Manhyia District Hospital,60,M,161b2ba1bfeaad8bb89afdc6004102a78c14b0228c24fc68ccd9242e82c89c18,79
+Image_093,images/Image_093.png,10.2,1,Mild,Sunyani Municipal Hospital,36,M,cee2216cde3fc2d29a8603f7acc4da7836db14d3b86265acb420d786705c9601,25
+Image_094,images/Image_094.png,10.2,1,Mild,Manhyia District Hospital,60,F,e45f5f5ed8be919c796a97e84277fd7928cccc7d682109efb96a25c8500ba58c,80
+Image_095,images/Image_095.png,12.9,0,Non-Anemic,Bolgatanga Regional Hospital,36,F,28d053faa7d871e4e88aead29201d0048358f9091dfa8b392310245d89310ca0,58
+Image_096,images/Image_096.png,12.9,0,Non-Anemic,Komfo Anokye Teaching Hospital,12,F,4d63ca441fe569fba676ed7f39ef4949bbd7824a9785faeb2dd5485ff9731c57,81
+Image_097,images/Image_097.png,12.9,0,Non-Anemic,Ahmadiyya Muslim Hospital,24,M,5e2c234f8e8943e6847510506e400663b957874a32b63f43efde2a4de2870da8,82
+Image_098,images/Image_098.png,12.9,0,Non-Anemic,Komfo Anokye Teaching Hospital,12,M,5b1061b153b27a45a010bc011642bc59fe07f8f8f2bfce5f63068f98ea429b6c,83
+Image_099,images/Image_099.png,10.2,1,Mild,Nkawie-Toase Government Hospital,24,M,fadc3fefcfd542faf488f6d75bbb4900a2ef3c6126d275f0b196a80c2562c73c,84
+Image_100,images/Image_100.png,12.9,0,Non-Anemic,Ejusu Government Hospital,36,M,78097c37599da4940dc52469c764d3ec3d77748a44f7653ef888d85048eb87b0,85
+Image_101,images/Image_101.png,10.2,1,Mild,Ahmadiyya Muslim Hospital,24,M,066b5095242cbde968ca6e6c9d2a58c379e81023f8b542bfe041133e1a9ff60a,86
+Image_102,images/Image_102.png,10.2,1,Mild,Kintampo Municipal Hospital,12,M,eefbefe6f6d6fb12d631ab16379ddd3a846bafc1502ca185e72c1ca76b881d4d,25
+Image_103,images/Image_103.png,12.9,0,Non-Anemic,Ahmadiyya Muslim Hospital,60,M,9b7b19fd7e32d4663a11f394aae245ce5a86b5f1b2f7bafc8bfd18fda8d8e8b7,87
+Image_104,images/Image_104.png,10.2,1,Mild,Bolgatanga Regional Hospital,36,M,5966f6140e51c30aa0022224ca2a1d80b1f1d2b35a19a868fde90eea1100447f,88
+Image_105,images/Image_105.png,10.3,1,Mild,Nkawie-Toase Government Hospital,36,M,19c7e9119c07be2f16e908e28be8fc0a8a7e254bebe14ad7366c762beeda883d,89
+Image_106,images/Image_106.png,12.9,0,Non-Anemic,Komfo Anokye Teaching Hospital,60,M,4459d543229a8140653996247809d519d1303fed1dd4799b0f0ea1a03f4e5e83,90
+Image_107,images/Image_107.png,12.9,0,Non-Anemic,Ahmadiyya Muslim Hospital,36,F,e69d2194437fb73d02c8a48d93f5d59345da18e6f6a17508d8b9f8724e81e914,91
+Image_108,images/Image_108.png,12.9,0,Non-Anemic,Ahmadiyya Muslim Hospital,36,F,cf22b5e31a43d98928e09400fef5eff7a397e3ca6b563932377c59270bf71064,92
+Image_109,images/Image_109.png,10.3,1,Mild,Komfo Anokye Teaching Hospital,12,F,84560038d87d7713ac802e3f7bb9cb410c3ff03b03b3cb8fb56acbbd62a6cd8b,20
+Image_110,images/Image_110.png,10.3,1,Mild,Ahmadiyya Muslim Hospital,12,M,843528a75fb5c19995ea493fd370d2243f6447bfb76f8939df294ef5e8c489c2,93
+Image_111,images/Image_111.png,10.3,1,Mild,Sunyani Municipal Hospital,36,F,7420ebccbece3f1b1919472a0ddb24d18859903d5724bdedd306fc5d6ffdc3f3,94
+Image_112,images/Image_112.png,10.3,1,Mild,Komfo Anokye Teaching Hospital,24,F,fb2c6bdaae46ded61b272db9418731ccde6e319e3a567f04c0efdaf77cb34c8b,95
+Image_113,images/Image_113.png,12.9,0,Non-Anemic,Bolgatanga Regional Hospital,24,F,5bf8d0f6430617cf0e6433d3e42114f4b3308545efc9683fb613cd3f2a8f5a95,96
+Image_114,images/Image_114.png,12.9,0,Non-Anemic,Komfo Anokye Teaching Hospital,24,M,efea5d5de90de424200922bc237cee75f8f5dadeb5743840145447d4ad34a976,97
+Image_115,images/Image_115.png,10.3,1,Mild,Ahmadiyya Muslim Hospital,48,M,a50077a08de01cf333b2955df2b1880e501947b319720f8a8d46b9161dc4f542,98
+Image_116,images/Image_116.png,7.0,1,Moderate,SDA Hospital,12,M,4ec7d81499872359906983c998fe91ab2d36683be0e89b062a9f321e49a4fbaf,99
+Image_117,images/Image_117.png,12.4,0,Non-Anemic,Ejusu Government Hospital,48,F,01308c4496d6003efffe64f7dff1facf5c1492d897a6d20db3eb728bc71cb0d9,100
+Image_118,images/Image_118.png,7.09,1,Moderate,Sunyani Municipal Hospital,24,M,eefbefe6f6d6fb12d631ab16379ddd3a846bafc1502ca185e72c1ca76b881d4d,25
+Image_119,images/Image_119.png,9.6,1,Moderate,Nkawie-Toase Government Hospital,24,M,7b1ffbda7576f47afa19d0ab7d8097c21a612e4b59ad60275066dc67595200cd,101
+Image_120,images/Image_120.png,7.3,1,Moderate,Bolgatanga Regional Hospital,12,M,c27c1b1cf47b405dd950f70b170aa49a62f576bee52fbbb2efb770123f535c83,102
+Image_121,images/Image_121.png,9.6,1,Moderate,Bolgatanga Regional Hospital,36,M,18bd3cbdca2b103ced4a2fd2d7b8824ad5dd6ab2f9b098e34a7092d31727460f,103
+Image_122,images/Image_122.png,9.6,1,Moderate,Kintampo Municipal Hospital,12,F,a50077a08de01cf333b2955df2b1880e501947b319720f8a8d46b9161dc4f542,98
+Image_123,images/Image_123.png,8.1,1,Moderate,SDA Hospital,24,M,6566a61072c7878e185236f66f70e1e59f18d898526d9ed610b8ed37f0f0e4ca,104
+Image_124,images/Image_124.png,12.4,0,Non-Anemic,Komfo Anokye Teaching Hospital,48,F,f5277362d09fb6224bd6bf1250c343f06d2b68f2f5c320c6857170e927d5fc13,105
+Image_125,images/Image_125.png,8.4,1,Moderate,Bolgatanga Regional Hospital,12,F,84560038d87d7713ac802e3f7bb9cb410c3ff03b03b3cb8fb56acbbd62a6cd8b,20
+Image_126,images/Image_126.png,8.5,1,Moderate,Nkawie-Toase Government Hospital,12,M,d19917a3fd4a2cce3997fc773c0735a2711d4086661fd225cde3b2c0e9f37194,59
+Image_127,images/Image_127.png,8.9,1,Moderate,Komfo Anokye Teaching Hospital,36,M,ae02d3f05bcb9b347f1b1162614a90520ddacd6921ac49793d18a7debdbc8316,106
+Image_128,images/Image_128.png,8.9,1,Moderate,Bolgatanga Regional Hospital,24,M,3edf04ea796b8a16aefad86034e1850a51553b9d0c0b48e0f006e5c8bf1a0d79,74
+Image_129,images/Image_129.png,12.0,0,Non-Anemic,Komfo Anokye Teaching Hospital,60,M,f160efef2b74cfd88ac897c8f7e43da545da7f8645868b688107813f88f42ecf,107
+Image_130,images/Image_130.png,12.0,0,Non-Anemic,Ahmadiyya Muslim Hospital,48,F,5b1ba9b69e79f3e786129a3324012983ff136d8e67feb68ef254e71aa86c9a9f,108
+Image_131,images/Image_131.png,12.0,0,Non-Anemic,Komfo Anokye Teaching Hospital,48,M,75454e5fdc62f9dca04638422b811c23b17b0f3dee0e36cb7f2609f9fc77cf63,109
+Image_132,images/Image_132.png,9.9,1,Moderate,Ahmadiyya Muslim Hospital,60,M,fafcc22ad6a044bb4919d0ad53a58052976d83dbbebefbba169155604f7446ce,110
+Image_133,images/Image_133.png,12.0,0,Non-Anemic,Kintampo Municipal Hospital,12,F,6db3fef4943451f20bfb8a1113e89feb1c5373adeeb2846142bb01b86cb7beab,111
+Image_134,images/Image_134.png,12.0,0,Non-Anemic,Bolgatanga Regional Hospital,12,M,2cd24ef902a0f44a990292b9e0cf1be5c746d06b86e394f6eed639b1206f74c5,112
+Image_135,images/Image_135.png,12.5,0,Non-Anemic,Kintampo Municipal Hospital,36,F,851fe7208d9daacd46aff27e1169ef965127c32f5174ca2f374bfe75827d0864,113
+Image_136,images/Image_136.png,9.9,1,Moderate,Nkawie-Toase Government Hospital,48,M,96b4e2dcbfdda0276afceccb82086995992fedff84e6470cb5cd487311da6ec4,1
+Image_137,images/Image_137.png,12.0,0,Non-Anemic,Ejusu Government Hospital,24,F,1aec9884c2111d3c7b0ea5d15dd9d1f863fe1280e527a64656a56973fc2e5cfe,114
+Image_138,images/Image_138.png,8.9,1,Moderate,Nkawie-Toase Government Hospital,48,M,cb3a433fc558cc122efca4508c52d62b789f38395daea57c974f9bd4ccf54f85,115
+Image_139,images/Image_139.png,9.9,1,Moderate,Ahmadiyya Muslim Hospital,36,F,add8f7c7c3c777bd7433ce83802208df12bf9259f2415f3c339a69c6f2f32f11,116
+Image_140,images/Image_140.png,8.9,1,Moderate,Komfo Anokye Teaching Hospital,24,F,f0eaaea336af827b92b2b7ebd1cf8962c0eed45411a468d9f95a3cf6a1d4b081,78
+Image_141,images/Image_141.png,8.95,1,Moderate,Ahmadiyya Muslim Hospital,24,M,4cc5a02a06e83e3ad68a089bdcd365d92cda006d5420ddac4585e5e0a5fe4dd2,117
+Image_142,images/Image_142.png,12.0,0,Non-Anemic,Ahmadiyya Muslim Hospital,24,F,a63d95fc8569ad9e7098b20edbb75f6fcb1589dcb359f39946a1143318c46ebc,118
+Image_143,images/Image_143.png,12.5,0,Non-Anemic,Ahmadiyya Muslim Hospital,60,M,05005492e77d889a2fb59a8d68a1c4f463511a7d16817ecb4b81774be175908f,119
+Image_144,images/Image_144.png,9.0,1,Moderate,Sunyani Municipal Hospital,12,M,c0ade6954295db96d2ce98e29e55ce8619b8a8ab632d2290ac89b0cc140a16d5,120
+Image_145,images/Image_145.png,12.5,0,Non-Anemic,Sunyani Municipal Hospital,60,M,aea1a0d00fa8cc80591cacefd9c4465d552f8e01fd618a561df27baa0cd604de,121
+Image_146,images/Image_146.png,9.9,1,Moderate,Manhyia District Hospital,12,M,319aaea36b19191b27bf45c08755cdc812adfbd3d97407aaab463a4dc91db315,122
+Image_147,images/Image_147.png,12.1,0,Non-Anemic,Komfo Anokye Teaching Hospital,60,F,bcb70b28392d1b3529e46fea042047778b8cc9a113571ac18d945664b3245a11,123
+Image_148,images/Image_148.png,9.7,1,Moderate,Manhyia District Hospital,48,F,2df793055b3a4e7487cca3d5a92cfd260f19357bb0d6c1394ad4ebeefd51a53e,124
+Image_149,images/Image_149.png,9.9,1,Moderate,Sunyani Municipal Hospital,12,M,83a21b528c61bd599b9633202938508ce8eb0406a18dcfe808ca2179ff87b444,76
+Image_150,images/Image_150.png,9.98,1,Moderate,Manhyia District Hospital,48,F,ae1cd14243822d8e658c403df4c2f1fb3b91896e8fb4c4e6f803c70d4c98a540,125
+Image_151,images/Image_151.png,12.7,0,Non-Anemic,Nkawie-Toase Government Hospital,24,F,2bfeeaebd8dda155fc382fb9a42111c8ce6522b95385f997c6de66568fa1a662,126
+Image_152,images/Image_152.png,10.0,1,Mild,Ahmadiyya Muslim Hospital,60,F,315051ea34995ab5bb32286d83294e79f0840b3195bcef08ad03c34425ff99b9,127
+Image_153,images/Image_153.png,10.1,1,Mild,Komfo Anokye Teaching Hospital,36,M,1d61df9cce90b958b3a7e9aed2d427096c46f94e5d371e37d43643847aadf202,4
+Image_154,images/Image_154.png,10.0,1,Mild,Nkawie-Toase Government Hospital,12,M,215010c40b00da4b42d093dfbd62c52f7982794f4f4564c6db061ed3dfcf2904,128
+Image_155,images/Image_155.png,10.1,1,Mild,Ejusu Government Hospital,60,M,f0eaaea336af827b92b2b7ebd1cf8962c0eed45411a468d9f95a3cf6a1d4b081,78
+Image_156,images/Image_156.png,12.6,0,Non-Anemic,Bolgatanga Regional Hospital,24,M,3db748d8de3451b8222c23e52cbebb9b414aafb0d037d0d18528b65e435ef6a9,129
+Image_157,images/Image_157.png,12.8,0,Non-Anemic,Ejusu Government Hospital,48,M,51f8ebb91f278f5b67a7d92ee5e03bc1ce020bf8538a6afc8184af2e5b833e7a,130
+Image_158,images/Image_158.png,10.0,1,Mild,Ahmadiyya Muslim Hospital,24,M,b207bd1465780beea4fb4cd29d48ffd8e05421d564bef97fb81c72a3ce37a844,25
+Image_159,images/Image_159.png,10.1,1,Mild,Manhyia District Hospital,12,F,9109234580aa47296f917c2382152c25032ac58ac13eaa164380c48456e5bf10,9
+Image_160,images/Image_160.png,12.6,0,Non-Anemic,Bolgatanga Regional Hospital,60,F,aae538fe03b3a6efc74b3262698e9f8a8caced3dfe4bcd04a5efa45c3df3242d,131
+Image_161,images/Image_161.png,10.2,1,Mild,Ahmadiyya Muslim Hospital,12,M,9aa93507254d6b7b8cf03a50063c355fc703a65bce940e7cb6cf19bdc46f97b2,132
+Image_162,images/Image_162.png,10.0,1,Mild,Manhyia District Hospital,36,M,1d61df9cce90b958b3a7e9aed2d427096c46f94e5d371e37d43643847aadf202,4
+Image_163,images/Image_163.png,10.2,1,Mild,Manhyia District Hospital,12,F,10e22136933b05f4f99516a94750d8cf8cc15186f4649240faa904ae04dbb019,89
+Image_164,images/Image_164.png,10.0,1,Mild,Bolgatanga Regional Hospital,60,F,ef52a9fa9413b2bc9110cbc428988b1e20ee70fa49bf8b73b1a7326aa31af3e9,133
+Image_165,images/Image_165.png,12.8,0,Non-Anemic,Nkawie-Toase Government Hospital,24,M,b1fa7dd0f67272d2dac504b73a5f913c04ad7b60cce9435da00bfa4fc8c4646d,134
+Image_166,images/Image_166.png,10.0,1,Mild,Ahmadiyya Muslim Hospital,24,F,460090e3d1ae9a76cca51885b20e6b08a3e433e9393e25339c9f085c5245e322,135
+Image_167,images/Image_167.png,10.2,1,Mild,Sunyani Municipal Hospital,12,F,7420ebccbece3f1b1919472a0ddb24d18859903d5724bdedd306fc5d6ffdc3f3,94
+Image_168,images/Image_168.png,5.0,1,Severe,Nkawie-Toase Government Hospital,24,F,985be2711c8d2dcae8870722924575c5b09acf50bd3d1e57474a975cd98d187b,136
+Image_169,images/Image_169.png,11.1,0,Non-Anemic,Komfo Anokye Teaching Hospital,12,F,c38d66d6c6e631e02ab04287a79211a1a8d2e21ae392417be5aad800beccf49a,137
+Image_170,images/Image_170.png,5.0,1,Severe,Komfo Anokye Teaching Hospital,36,M,6761218308ed1fc7675efcf5436a20e3f2f253abd20240f30bf123642e1a6355,138
+Image_171,images/Image_171.png,7.1,1,Moderate,Ahmadiyya Muslim Hospital,36,M,6bc21b145fc482de1104388701b7d852417c19d8037f4f29b107e8b1daac5f69,139
+Image_172,images/Image_172.png,7.2,1,Moderate,Komfo Anokye Teaching Hospital,48,M,84560038d87d7713ac802e3f7bb9cb410c3ff03b03b3cb8fb56acbbd62a6cd8b,20
+Image_173,images/Image_173.png,11.4,0,Non-Anemic,Kintampo Municipal Hospital,12,M,6bf5290e220f0cc43945d8f9f78f926fd93021f94860414050aa274df87535da,140
+Image_174,images/Image_174.png,11.46,0,Non-Anemic,Komfo Anokye Teaching Hospital,48,M,83141394bd5f6ccc12fb6f0895720783aa53e88019a1267a7439c751d4012f51,141
+Image_175,images/Image_175.png,11.05,0,Non-Anemic,Ahmadiyya Muslim Hospital,48,F,73fe13fea3d3352376ff81feb67bada5408171dea8ca46f64898ac42cbf921d9,142
+Image_176,images/Image_176.png,13.1,0,Non-Anemic,Ahmadiyya Muslim Hospital,36,M,c8f0b7ff149d31b9e36d3fbc83b94941f9df02676fac82097bb12ffc3c08930f,143
+Image_177,images/Image_177.png,10.4,1,Mild,Ejusu Government Hospital,48,M,6f43658e341f60ebf96f89be838868f9a42625eea2d851680ab6dcf908a19910,144
+Image_178,images/Image_178.png,11.1,0,Non-Anemic,Sunyani Municipal Hospital,60,F,055e4d435cff3076fb8f092d58bf99d7ea0d573bfd832392459d8449b0f3e406,145
+Image_179,images/Image_179.png,3.4,1,Severe,Sunyani Municipal Hospital,24,M,ccdac5a0ef050931f965355897e45199f09638193c826c4bc86acf7cfa4f36d8,146
+Image_180,images/Image_180.png,10.4,1,Mild,Komfo Anokye Teaching Hospital,24,F,1fe45617b2f4c1d4f2ebd734c2babb6352dee2ff2dde4e5545be58504120841f,16
+Image_181,images/Image_181.png,4.0,1,Severe,Ahmadiyya Muslim Hospital,12,M,7420ebccbece3f1b1919472a0ddb24d18859903d5724bdedd306fc5d6ffdc3f3,94
+Image_182,images/Image_182.png,10.4,1,Mild,Nkawie-Toase Government Hospital,36,M,665deb80b2864f70a999475e027198e280d46503495da87de2cbc8d084ad9db7,147
+Image_183,images/Image_183.png,4.2,1,Severe,Nkawie-Toase Government Hospital,24,F,69ac9bf09af78ad2a36eecade840d145a62098326a3a8e2a49c2b547e9dd756d,28
+Image_184,images/Image_184.png,13.1,0,Non-Anemic,Manhyia District Hospital,36,M,d183740fe1c249865c7427bac051a24bbb14893b10f7f1d29718c2de03dd9071,148
+Image_185,images/Image_185.png,13.1,0,Non-Anemic,Ahmadiyya Muslim Hospital,11,M,b070504e13ed49ff9a1b3bfbfb4c9f23ad270e820cdcbaa600c9963923d895fa,149
+Image_186,images/Image_186.png,4.6,1,Severe,Sunyani Municipal Hospital,36,F,23e33440debbc33b7746dcc0153f4c15954a252706bc93b917b1b944c8fea9b3,1
+Image_187,images/Image_187.png,10.4,1,Mild,Kintampo Municipal Hospital,12,F,543589fa0e05f0d42b00be33109dd8addc07f806ba74b80a217704ba30f3081e,150
+Image_188,images/Image_188.png,11.1,0,Non-Anemic,Manhyia District Hospital,7,F,fb5eb6a30d69314a1d615a5bf00cf7cb3e734c6f979a55088c3e8c6a04f3222a,151
+Image_189,images/Image_189.png,13.2,0,Non-Anemic,Ahmadiyya Muslim Hospital,12,F,7b9e0b437b4ebc11473d3d0713a9b98332b1826197324ebfb9d5406c71a2ef7b,152
+Image_190,images/Image_190.png,4.8,1,Severe,Kintampo Municipal Hospital,24,M,38f274aec16e4000e5bcc4a2bedd484855927e806840c4800fd792dd4ad84a97,24
+Image_191,images/Image_191.png,13.2,0,Non-Anemic,Bolgatanga Regional Hospital,60,F,6e80fbadd5cd828ee2305a69a181b33a78f23affe7b05013c5ff80bffc001147,153
+Image_192,images/Image_192.png,13.2,0,Non-Anemic,Ahmadiyya Muslim Hospital,36,M,1ba7eeff44979852aa855651b150991758abedce51875fe812b6f93d000238cc,154
+Image_193,images/Image_193.png,10.4,1,Mild,Bolgatanga Regional Hospital,48,F,f0eaaea336af827b92b2b7ebd1cf8962c0eed45411a468d9f95a3cf6a1d4b081,78
+Image_194,images/Image_194.png,10.74,1,Mild,Komfo Anokye Teaching Hospital,48,F,01d99fd57ccf8d8452881583e522db79e81d16dc198a03cf10980d1a28687b66,155
+Image_195,images/Image_195.png,13.1,0,Non-Anemic,Sunyani Municipal Hospital,24,M,a1899641f3108bc9b06e2410f961574553e801e20cdc58c811aac972b591d1e1,156
+Image_196,images/Image_196.png,10.8,1,Mild,Sunyani Municipal Hospital,12,M,3ab0d9446ab6e44c37532303a43341aa2eb7faa0b51a3f7d1dbc192c0a282ab2,157
+Image_197,images/Image_197.png,13.1,0,Non-Anemic,Komfo Anokye Teaching Hospital,36,M,a363ad600425429f782701690f7a1432cad50f0612dd8911d215239e832a6fbd,158
+Image_198,images/Image_198.png,10.4,1,Mild,Sunyani Municipal Hospital,48,M,60ed0e5cdedd9fc0a9129468b50a30e232e2c0456e2e72b40a7710d2787fc26c,159
+Image_199,images/Image_199.png,10.4,1,Mild,Ahmadiyya Muslim Hospital,24,M,6f43658e341f60ebf96f89be838868f9a42625eea2d851680ab6dcf908a19910,144
+Image_200,images/Image_200.png,10.8,1,Mild,Ahmadiyya Muslim Hospital,12,F,261b12ff84f9c7a1415a1e5454f83dbb180572b1735264b707f86572a5530693,160
+Image_201,images/Image_201.png,10.4,1,Mild,Kintampo Municipal Hospital,48,M,661eb6773fd6c6734f3b494a0a4138ed61a25aa8cbba515c2964eb559e6b063f,161
+Image_202,images/Image_202.png,10.9,1,Mild,Ejusu Government Hospital,48,M,1d61df9cce90b958b3a7e9aed2d427096c46f94e5d371e37d43643847aadf202,4
+Image_203,images/Image_203.png,10.8,1,Mild,Komfo Anokye Teaching Hospital,12,M,19c7e9119c07be2f16e908e28be8fc0a8a7e254bebe14ad7366c762beeda883d,89
+Image_204,images/Image_204.png,13.1,0,Non-Anemic,Komfo Anokye Teaching Hospital,36,F,d14d055ecb17cc244cdf6b6936b656d1aa6d1a304b5a0d36cff729b8677642fe,162
+Image_205,images/Image_205.png,13.2,0,Non-Anemic,Ahmadiyya Muslim Hospital,12,M,0c6aa07c60633bbc1a8b918e46e9caec431fac7006a8b180e2f7c5ef8032d05c,163
+Image_206,images/Image_206.png,10.9,1,Mild,Nkawie-Toase Government Hospital,24,M,f0eaaea336af827b92b2b7ebd1cf8962c0eed45411a468d9f95a3cf6a1d4b081,78
+Image_207,images/Image_207.png,13.2,0,Non-Anemic,Nkawie-Toase Government Hospital,24,F,ec6b7ebc2bfe8d75be84935ac94a1fa417c7dca30b269ceb9b87a01aa39bb19e,164
+Image_208,images/Image_208.png,13.2,0,Non-Anemic,Komfo Anokye Teaching Hospital,24,M,efc8c67f760558e998e4f3adc1c6f296ffeab917e520580210ad18bce6ce1405,165
+Image_209,images/Image_209.png,10.9,1,Mild,Bolgatanga Regional Hospital,36,F,d19917a3fd4a2cce3997fc773c0735a2711d4086661fd225cde3b2c0e9f37194,59
+Image_210,images/Image_210.png,11.0,0,Non-Anemic,Manhyia District Hospital,36,F,f5277362d09fb6224bd6bf1250c343f06d2b68f2f5c320c6857170e927d5fc13,105
+Image_211,images/Image_211.png,13.2,0,Non-Anemic,Holy Family Hospital,60,M,8fd9e3b71167b8922f4bc78e31911878ab2e47cb090bfc8ea535c6fae0efa347,166
+Image_212,images/Image_212.png,11.0,0,Non-Anemic,Bolgatanga Regional Hospital,60,M,cc89896c1784ce87e69c208107798688934736165661b3621c30348596002b3e,167
+Image_213,images/Image_213.png,13.2,0,Non-Anemic,Kintampo Municipal Hospital,12,F,d5feec18a01cc4d6f0a2734d40815a67a92158a2e1e169040e5325b6293c806a,168
+Image_214,images/Image_214.png,10.4,1,Mild,Nkawie-Toase Government Hospital,60,F,7420ebccbece3f1b1919472a0ddb24d18859903d5724bdedd306fc5d6ffdc3f3,94
+Image_215,images/Image_215.png,11.0,0,Non-Anemic,Komfo Anokye Teaching Hospital,36,M,db4ed72bb5913110c51cc655b1a184643f9f4810e3715b5dd73c18da357bde51,169
+Image_216,images/Image_216.png,10.4,1,Mild,Komfo Anokye Teaching Hospital,60,M,07e3022e693c187c4c66900e0f63eaaf1e88cb05f3c476a617e3c09f39fa7b76,1
+Image_217,images/Image_217.png,11.0,0,Non-Anemic,Komfo Anokye Teaching Hospital,48,M,462222b4f8ee06edd49e39a21d60ea18366d293fb811704da833c5f217d27ae4,170
+Image_218,images/Image_218.png,13.2,0,Non-Anemic,Sunyani Municipal Hospital,36,M,1f33f262d0fbc3cdd865df5a7d3d4478004b720f3962b2a491becc44e4feb1ca,171
+Image_219,images/Image_219.png,10.4,1,Mild,Komfo Anokye Teaching Hospital,12,M,ae4b0cf422a244f750ea975419a1d18a56ec861db431139830607d73f96c6fc6,172
+Image_220,images/Image_220.png,10.41,1,Mild,Komfo Anokye Teaching Hospital,24,M,bc1215bbaef83306302215b374ae3515e8c79514d7d13f23c59cd963e148cdf2,21
+Image_221,images/Image_221.png,10.5,1,Mild,Ahmadiyya Muslim Hospital,36,F,d264ccd4495962adf455e089467e629d2919f0e52aee7f98220e4a6fbee21a8b,16
+Image_222,images/Image_222.png,13.2,0,Non-Anemic,Komfo Anokye Teaching Hospital,36,F,68d1308a3ab31ddb00ea35f612889f9ddbbc6e4f41033137ddec46a8add747ae,173
+Image_223,images/Image_223.png,10.5,1,Mild,Sunyani Municipal Hospital,48,F,341e0abd4efcabdaa65f47db7c55dfffda8122af75882a02cc818b1301541064,174
+Image_224,images/Image_224.png,13.2,0,Non-Anemic,Nkawie-Toase Government Hospital,48,F,466695dcf87007d2eb2571910d4dbbf39ecee958cbe601593d36d9335838573c,175
+Image_225,images/Image_225.png,13.2,0,Non-Anemic,Sunyani Municipal Hospital,36,M,f5277362d09fb6224bd6bf1250c343f06d2b68f2f5c320c6857170e927d5fc13,105
+Image_226,images/Image_226.png,10.5,1,Mild,Komfo Anokye Teaching Hospital,48,M,f0eaaea336af827b92b2b7ebd1cf8962c0eed45411a468d9f95a3cf6a1d4b081,78
+Image_227,images/Image_227.png,4.2,1,Severe,Ejusu Government Hospital,12,M,8769bad185018cf2c2acb8c7cf9eb89aff68d070c0f60d4277feaa6b18365d10,176
+Image_228,images/Image_228.png,6.1,1,Severe,Ahmadiyya Muslim Hospital,36,F,18bd3cbdca2b103ced4a2fd2d7b8824ad5dd6ab2f9b098e34a7092d31727460f,103
+Image_229,images/Image_229.png,6.5,1,Severe,Nkawie-Toase Government Hospital,48,M,38f274aec16e4000e5bcc4a2bedd484855927e806840c4800fd792dd4ad84a97,24
+Image_230,images/Image_230.png,4.4,1,Severe,Sunyani Municipal Hospital,24,M,07e3022e693c187c4c66900e0f63eaaf1e88cb05f3c476a617e3c09f39fa7b76,1
+Image_231,images/Image_231.png,6.6,1,Severe,Ahmadiyya Muslim Hospital,12,M,9bd8a300e99dc7196becd7af6325b32a262ae38d6bcb60cc21d7cc085638bfcd,177
+Image_232,images/Image_232.png,6.9,1,Severe,Bolgatanga Regional Hospital,24,M,978b199f80032285184122096051c43be51b07e06cc79247bb08ad30311e1ec6,178
+Image_233,images/Image_233.png,7.0,1,Moderate,Holy Family Hospital,36,F,72301fb843630d496fd9fa9f042e423a771e665f99c135d48c4c69517c7ae18f,72
+Image_234,images/Image_234.png,5.1,1,Severe,Ahmadiyya Muslim Hospital,48,F,4328497af6437d23b51ab2bcaf93b698179cfde6673a19c75ee1094a83775929,17
+Image_235,images/Image_235.png,7.9,1,Moderate,Bolgatanga Regional Hospital,12,F,2cfa56c5f12a60e1860d01cf1fe975fccd24ced2b56eb2016bf8ca993cb4f4bf,179
+Image_236,images/Image_236.png,5.4,1,Severe,Komfo Anokye Teaching Hospital,12,F,d98977c4af43466b5d4aff2aa50083bb493564412450266192503e5a14fb9beb,180
+Image_237,images/Image_237.png,8.0,1,Moderate,Ahmadiyya Muslim Hospital,12,F,fb4d2fd3cb621483fbeb9d0850282ffba5c2fd3dd1ac84b4313ae9fd531baf78,181
+Image_238,images/Image_238.png,5.4,1,Severe,Kintampo Municipal Hospital,24,M,e4d6890de5f74c4297d2272feb858eebe8f2335cb44d2da5cbb3c77bd22f4a4f,182
+Image_239,images/Image_239.png,8.4,1,Moderate,Komfo Anokye Teaching Hospital,12,M,68cf3e7b2c3711ed697ba0ed688b9448eafc82beddf2d59f166c216affeff684,183
+Image_240,images/Image_240.png,5.5,1,Severe,Ahmadiyya Muslim Hospital,24,F,6f43658e341f60ebf96f89be838868f9a42625eea2d851680ab6dcf908a19910,144
+Image_241,images/Image_241.png,8.4,1,Moderate,Ejusu Government Hospital,24,F,c3b1437aeb22dc018f6d3f8bfcdeee5e965930bbf75ccbe56ca44dbd44316b28,184
+Image_242,images/Image_242.png,5.9,1,Severe,Nkawie-Toase Government Hospital,12,M,557c43ca795521743b09f4396baa304e88c053193f3522f1577c66abde775e67,185
+Image_243,images/Image_243.png,8.4,1,Moderate,Ejusu Government Hospital,48,M,d169af37a83198554399e3a8d33f987c8d82822e6bcdf9e8e15322322fe0690f,186
+Image_244,images/Image_244.png,6.0,1,Severe,Komfo Anokye Teaching Hospital,12,F,a538525f08103a65052be6061df625defd8dbb978a6979f01434ee78a005fa4d,187
+Image_245,images/Image_245.png,8.6,1,Moderate,Kintampo Municipal Hospital,36,F,2b292a7df1b63bb850c23bc58d0b222dcc06ed3303f684a5ee4336f0ce403f63,188
+Image_246,images/Image_246.png,6.5,1,Severe,Ahmadiyya Muslim Hospital,12,M,7001b98bf474a9990a6b0a9ec5cee2fa3fd12d42057ecfc665929f873db2b86f,189
+Image_247,images/Image_247.png,8.9,1,Moderate,SDA Hospital,24,F,15fb2c32d3eafe74d99833f98430f7ca973c982bcaad1fe403e09632ca750ff0,190
+Image_248,images/Image_248.png,11.3,0,Non-Anemic,Bolgatanga Regional Hospital,24,F,30852c8bac629cec685acf2e54cfcd1776ecd61307876f47025ed3ec1188eac6,191
+Image_249,images/Image_249.png,12.0,0,Non-Anemic,Sunyani Municipal Hospital,48,F,c383dd8f16a0084d5215efb0af46f10706976e56bad4327a94c2ed70abc774f8,192
+Image_250,images/Image_250.png,6.7,1,Severe,Manhyia District Hospital,12,M,e4d6890de5f74c4297d2272feb858eebe8f2335cb44d2da5cbb3c77bd22f4a4f,182
+Image_251,images/Image_251.png,9.1,1,Moderate,Bolgatanga Regional Hospital,24,F,fb2c6bdaae46ded61b272db9418731ccde6e319e3a567f04c0efdaf77cb34c8b,95
+Image_252,images/Image_252.png,9.1,1,Moderate,Ahmadiyya Muslim Hospital,24,M,5730ec4c7b5bb2a0c187a5522c763ba5b32ad102f972f5ffc82dcb8a0c2ffce8,193
+Image_253,images/Image_253.png,11.3,0,Non-Anemic,Nkawie-Toase Government Hospital,60,M,59eae8653c600a22310007b3bef79cff26f833497d908de5a4d4ce345350f858,194
+Image_254,images/Image_254.png,6.9,1,Severe,Sunyani Municipal Hospital,12,M,af414a5b786f41e2f024e9d84ebc475ac12d481cd7568839366a932663ac025d,195
+Image_255,images/Image_255.png,9.1,1,Moderate,Sunyani Municipal Hospital,48,F,c56ea806912704d9d3baf8c900740972d3832f07788b52a2e7a58bbc53848ca8,196
+Image_256,images/Image_256.png,6.9,1,Severe,Nkawie-Toase Government Hospital,24,F,1d61df9cce90b958b3a7e9aed2d427096c46f94e5d371e37d43643847aadf202,4
+Image_257,images/Image_257.png,7.0,1,Moderate,Bolgatanga Regional Hospital,48,F,d22f398e5a35e7a72018d577fa615038455e5d9469d2af7fbd3e3fe8c751e9ae,197
+Image_258,images/Image_258.png,9.1,1,Moderate,Manhyia District Hospital,6,M,c30243ef628a9cf07aca6e8622abb62e7430877ea216e78553e9eed7c67a2647,198
+Image_259,images/Image_259.png,10.1,1,Mild,Ahmadiyya Muslim Hospital,36,F,136c24c47c12edc927bb451c52d5cc347093d8c36cc3975fd7891d404507ddfc,117
+Image_260,images/Image_260.png,7.0,1,Moderate,Kintampo Municipal Hospital,12,M,63fda5f79849bc7fba7d6a216f39ef8aa2d922489b66692a0c136bc43b547b25,199
+Image_261,images/Image_261.png,10.1,1,Mild,Holy Family Hospital,24,F,d19917a3fd4a2cce3997fc773c0735a2711d4086661fd225cde3b2c0e9f37194,59
+Image_262,images/Image_262.png,10.5,1,Mild,SDA Hospital,48,F,d138f103ea4dbb27c498791701f600016d8889a22279638f4e07b70b706a3d52,200
+Image_263,images/Image_263.png,11.3,0,Non-Anemic,Komfo Anokye Teaching Hospital,36,F,a8682a5f7d88351284c4fd66f9b0a0ee0d1bfab60bb805da99cc0f97b2cc46bc,201
+Image_264,images/Image_264.png,7.0,1,Moderate,Nkawie-Toase Government Hospital,12,M,dbb1a0c207c79b95ed316d43d8032d27b08fc4c61aa915199fec168d0086c780,202
+Image_265,images/Image_265.png,10.5,1,Mild,Bolgatanga Regional Hospital,60,F,3e93cbf554cb29c315b70a5ceaab3d0bff8dbf1c3124bdb6d6e264a4fccc8c34,203
+Image_266,images/Image_266.png,7.0,1,Moderate,Komfo Anokye Teaching Hospital,24,M,f0eaaea336af827b92b2b7ebd1cf8962c0eed45411a468d9f95a3cf6a1d4b081,78
+Image_267,images/Image_267.png,10.52,1,Mild,Ahmadiyya Muslim Hospital,48,M,3ba4090dce027d514cf6a6052aeed7bc4199d4ee44399d6387826c443f75cf0a,204
+Image_268,images/Image_268.png,7.0,1,Moderate,SDA Hospital,36,F,ab6fe44740eda256c2ccd6bbb206a8efd5e8490c0a54c29ae58ff3a40aacfe36,205
+Image_269,images/Image_269.png,7.1,1,Moderate,Ahmadiyya Muslim Hospital,36,M,fc953a2f26591d333f7d5ec0b86886260882645fbde62f59e41d364c4220f66e,206
+Image_270,images/Image_270.png,7.1,1,Moderate,Ejusu Government Hospital,36,F,23e33440debbc33b7746dcc0153f4c15954a252706bc93b917b1b944c8fea9b3,1
+Image_271,images/Image_271.png,9.0,1,Moderate,Manhyia District Hospital,36,M,279265d4393eb62f0213e01ee8736a64cc0f4b254bcd943517a2faeb027f2cd2,207
+Image_272,images/Image_272.png,9.0,1,Moderate,Ahmadiyya Muslim Hospital,48,M,54b5764c25a8a0367ce145b212210247369b15debf31c23217e03db55c5a1f66,208
+Image_273,images/Image_273.png,12.1,0,Non-Anemic,Sunyani Municipal Hospital,36,F,5f914043709600e09da3c4bb9e635cf947b9a6179031b49e47064eb63be69b01,209
+Image_274,images/Image_274.png,9.5,1,Moderate,Ahmadiyya Muslim Hospital,24,M,ec0cb1f363a7a8e5665bf23e8d8cc4c2b4bd3e3da69e011524c9826b7d477e45,210
+Image_275,images/Image_275.png,10.54,1,Mild,Komfo Anokye Teaching Hospital,24,M,f0a904335f08a9624018cf172680587c5e36ca641d2fe0544e107aca00fe6aaf,117
+Image_276,images/Image_276.png,12.02,0,Non-Anemic,Sunyani Municipal Hospital,48,F,b0a5b7fb6b7f1e6545304def60faae78d2aae87112c2b641da1319c62bb8a49f,211
+Image_277,images/Image_277.png,5.2,1,Severe,Nkawie-Toase Government Hospital,36,F,9edb474282b52d3f1f9e3f64186ad54199f8c8c42fc30c71e182416b8bfd241c,212
+Image_278,images/Image_278.png,7.1,1,Moderate,Kintampo Municipal Hospital,60,M,6d8b9e6ad218e2899808339a893bb1dc8e23e6f7908f67054838a4e19fcf9534,213
+Image_279,images/Image_279.png,7.2,1,Moderate,Ahmadiyya Muslim Hospital,60,M,5be72780173c1b1f02ffe9be22d7cce4791688b4cff7bac1cf95c30481f57a64,28
+Image_280,images/Image_280.png,11.0,0,Non-Anemic,Nkawie-Toase Government Hospital,24,F,a999af56b478a15c5959aff8f15460cd692f5ec1c911dd89006879529cc74ce0,214
+Image_281,images/Image_281.png,11.1,0,Non-Anemic,Bolgatanga Regional Hospital,36,F,3dbdf8740c3ac475e13e933c4745230a3026d30c32f10a47ad5d16e31ad6526c,215
+Image_282,images/Image_282.png,11.0,0,Non-Anemic,Ejusu Government Hospital,48,F,87853199315b85576bc44719f0f4d6ed50d251cb0a6ed78e068c89d95cc771cb,216
+Image_283,images/Image_283.png,11.1,0,Non-Anemic,Komfo Anokye Teaching Hospital,12,M,dff2944eacf0ddf3b51f186493974e35f75738cbeadc939957cef1eece9c3c44,217
+Image_284,images/Image_284.png,3.1,1,Severe,Bolgatanga Regional Hospital,36,M,96c85442c5691bdf56b040fdc3c4ee164356ae3c4eb243eb2ae79146e1a2bbf4,218
+Image_285,images/Image_285.png,5.2,1,Severe,Bolgatanga Regional Hospital,12,F,66096439d78e37d87c54d6be2e6518e59afe26feb8c6f2a68a5a2c2e7ec5e965,219
+Image_286,images/Image_286.png,11.4,0,Non-Anemic,Komfo Anokye Teaching Hospital,36,M,0ab89e65725eb15604353a63150235adcd56fedfea22141e6adce36ea4a0e844,220
+Image_287,images/Image_287.png,5.3,1,Severe,Nkawie-Toase Government Hospital,36,M,261b12ff84f9c7a1415a1e5454f83dbb180572b1735264b707f86572a5530693,160
+Image_288,images/Image_288.png,11.0,0,Non-Anemic,Komfo Anokye Teaching Hospital,48,M,82ed8c69f2eb039e3a97d10e88130a7286fddd9ae401f2a9b5c5ccf1a54f4499,221
+Image_289,images/Image_289.png,3.3,1,Severe,Manhyia District Hospital,24,M,661eb6773fd6c6734f3b494a0a4138ed61a25aa8cbba515c2964eb559e6b063f,161
+Image_290,images/Image_290.png,5.7,1,Severe,Ahmadiyya Muslim Hospital,36,F,fc953a2f26591d333f7d5ec0b86886260882645fbde62f59e41d364c4220f66e,206
+Image_291,images/Image_291.png,5.8,1,Severe,Ejusu Government Hospital,36,M,7f1720cdd831bc9dfe255e6aae667c8a09ea52c39c169e54054bac0a74c912b9,25
+Image_292,images/Image_292.png,11.0,0,Non-Anemic,Manhyia District Hospital,48,F,bd293e1544b1a6e2c19397966abc3230f9efc2245ca68a5d88e70ba72b2ce625,222
+Image_293,images/Image_293.png,3.1,1,Severe,Bolgatanga Regional Hospital,36,M,cbe625b05247490027eb2158492ddb301364a4e70f80f4b95e391fe90716eb55,223
+Image_294,images/Image_294.png,5.9,1,Severe,Manhyia District Hospital,12,M,4521f529a1f699f78e5034009f33ab165fd097ead4b94f9c04e02a827522d54e,224
+Image_295,images/Image_295.png,6.8,1,Severe,Bolgatanga Regional Hospital,60,M,c605461dfa666213e58da9f73e7e5e741db9a3d49fcd731a5f5a5a7fe2b8f05c,225
+Image_296,images/Image_296.png,7.1,1,Moderate,Ahmadiyya Muslim Hospital,36,M,271abd50cc5a90c89ed9f530d53e5f9c51de55a93610af92518096932b166619,226
+Image_297,images/Image_297.png,11.8,0,Non-Anemic,Bolgatanga Regional Hospital,12,F,d74e03e45e81343df45a9f7acc315e1f0fb980e5065f6867abbf976c20ee0b58,227
+Image_298,images/Image_298.png,11.4,0,Non-Anemic,Ahmadiyya Muslim Hospital,12,M,51699778dc282d559bd94f65c1d6b6c725897fe144723525b58f678b77186ac4,228
+Image_299,images/Image_299.png,11.8,0,Non-Anemic,Komfo Anokye Teaching Hospital,12,M,ed9f345626c3ba6c69a441116fcdd1d1e2b50c2503e29aa580e96db12a65bf9d,229
+Image_300,images/Image_300.png,8.0,1,Moderate,Komfo Anokye Teaching Hospital,24,M,fad041674d764df20aeadac8413a39ea2704f05c2b3909df156d5a3fe929916a,230
+Image_301,images/Image_301.png,8.0,1,Moderate,Komfo Anokye Teaching Hospital,60,F,136c24c47c12edc927bb451c52d5cc347093d8c36cc3975fd7891d404507ddfc,117
+Image_302,images/Image_302.png,11.8,0,Non-Anemic,Komfo Anokye Teaching Hospital,36,M,f706f752b6992f95daaff4a3f29a194fb69560a280a0318606200ae28425a426,231
+Image_303,images/Image_303.png,11.8,0,Non-Anemic,Komfo Anokye Teaching Hospital,12,M,2d8ea0309348bd9bb246fca1970e8be4391b80e165e5aa61836ea7887844277e,232
+Image_304,images/Image_304.png,8.0,1,Moderate,Komfo Anokye Teaching Hospital,12,M,4ee8767c0e0ac41ffd992c9655df25b801da51ccaa9842b1ba07352e6e78a544,233
+Image_305,images/Image_305.png,11.9,0,Non-Anemic,Ahmadiyya Muslim Hospital,12,M,e1d898b9ace91f38bff6f2a4435f0660fe784dfff342093bf65fd814fb4d51a5,234
+Image_306,images/Image_306.png,8.1,1,Moderate,Sunyani Municipal Hospital,24,F,1136f3417309b7ba091435ffa069fc29c3464b2b478d6ac11f45c792169c5e5f,235
+Image_307,images/Image_307.png,11.9,0,Non-Anemic,Bolgatanga Regional Hospital,12,F,f50a7f6034a8b95542f82e67581ea816c971ae1d671fa6fc4b292c0eb3b7a3ca,236
+Image_308,images/Image_308.png,8.0,1,Moderate,Nkawie-Toase Government Hospital,24,F,6d65f0636244af510e05844a6173f8d437e95ef93d3ebeb0983d0734480f201b,136
+Image_309,images/Image_309.png,8.1,1,Moderate,Bolgatanga Regional Hospital,24,F,e8dfb97be7f7705abe1e429079d06a92329c08c99a70115ef84475f176446f8e,34
+Image_310,images/Image_310.png,8.06,1,Moderate,Nkawie-Toase Government Hospital,12,M,fb5eb6a30d69314a1d615a5bf00cf7cb3e734c6f979a55088c3e8c6a04f3222a,151
+Image_311,images/Image_311.png,11.9,0,Non-Anemic,Sunyani Municipal Hospital,36,M,d0b5b7b0106afd678f462a6ad4cfbd20dd60f954897be4f94f06c4d668f62837,237
+Image_312,images/Image_312.png,11.9,0,Non-Anemic,Komfo Anokye Teaching Hospital,60,M,a236477eb422189d319e9344605b0a4d5024a7b8936c7131901091ae6bdc2e8a,238
+Image_313,images/Image_313.png,11.9,0,Non-Anemic,Bolgatanga Regional Hospital,48,F,c8f0b7ff149d31b9e36d3fbc83b94941f9df02676fac82097bb12ffc3c08930f,143
+Image_314,images/Image_314.png,9.9,1,Moderate,Komfo Anokye Teaching Hospital,12,F,4b4c13095060890f040f5a8c6b1f90b45d2bf595d6b332618fc725d7dc837ce8,233
+Image_315,images/Image_315.png,9.9,1,Moderate,Sunyani Municipal Hospital,48,M,3b59828c99f519cf1028973a53b5021d9b854388d863e41602c4faac8de1b640,207
+Image_316,images/Image_316.png,6.1,1,Severe,Ahmadiyya Muslim Hospital,24,F,1136f3417309b7ba091435ffa069fc29c3464b2b478d6ac11f45c792169c5e5f,235
+Image_317,images/Image_317.png,11.16,0,Non-Anemic,Kintampo Municipal Hospital,12,F,5020d2a3bc6eeb217442752be51aa10a5464134c28f2467f6dacc4a7f4e4cfcf,239
+Image_318,images/Image_318.png,6.8,1,Severe,Komfo Anokye Teaching Hospital,12,F,66096439d78e37d87c54d6be2e6518e59afe26feb8c6f2a68a5a2c2e7ec5e965,219
+Image_319,images/Image_319.png,11.2,0,Non-Anemic,Komfo Anokye Teaching Hospital,12,M,0f79f8c9131274e06ca006d99a193b9e60a0e98b4829aee8de95571a2426922a,240
+Image_320,images/Image_320.png,8.6,1,Moderate,Sunyani Municipal Hospital,12,F,80fa3247d145b35671c31a08cdce7d296a3a694b8d9c4c2a24d26e531a7f1ba0,241
+Image_321,images/Image_321.png,11.2,0,Non-Anemic,Bolgatanga Regional Hospital,24,F,be471fffd1b6dcde0d6e53eb3e2417bb9a677351d63878f1297715b4efbcc75a,242
+Image_322,images/Image_322.png,8.7,1,Moderate,Holy Family Hospital,60,F,51eabe90585332a38e08f72911c4629b3e79928efbe74e107a4ca389a02cd84f,243
+Image_323,images/Image_323.png,11.2,0,Non-Anemic,Ahmadiyya Muslim Hospital,48,F,0a5921806e47bac37b538cd0aa5955f80fc6d66f4599bee5872b5479afd9188a,244
+Image_324,images/Image_324.png,8.7,1,Moderate,Nkawie-Toase Government Hospital,60,M,23e33440debbc33b7746dcc0153f4c15954a252706bc93b917b1b944c8fea9b3,1
+Image_325,images/Image_325.png,11.3,0,Non-Anemic,Komfo Anokye Teaching Hospital,24,M,306acba90ce777a3c010d28f372ce7d17892a167289288178d48b8b3f389f03c,245
+Image_326,images/Image_326.png,8.7,1,Moderate,Sunyani Municipal Hospital,60,F,8913d1bf2bca54cbdd22c70f429429a8759f20240b12c17d22f5128e22ba96cd,246
+Image_327,images/Image_327.png,8.7,1,Moderate,Ahmadiyya Muslim Hospital,24,F,279265d4393eb62f0213e01ee8736a64cc0f4b254bcd943517a2faeb027f2cd2,207
+Image_328,images/Image_328.png,10.2,1,Mild,Sunyani Municipal Hospital,48,M,fc953a2f26591d333f7d5ec0b86886260882645fbde62f59e41d364c4220f66e,206
+Image_329,images/Image_329.png,10.2,1,Mild,Ejusu Government Hospital,60,F,95ff03efbe39222d506b40721e14cb0b92bf5cb48ba2128f732a399a6ded45fb,1
+Image_330,images/Image_330.png,10.5,1,Mild,Ejusu Government Hospital,60,M,e4d6890de5f74c4297d2272feb858eebe8f2335cb44d2da5cbb3c77bd22f4a4f,182
+Image_331,images/Image_331.png,10.5,1,Mild,Bolgatanga Regional Hospital,60,F,7e825b91474cf5d6b96fc8ad52e4703016fa46fff9a3383eac2685c451f4deb3,247
+Image_332,images/Image_332.png,10.6,1,Mild,SDA Hospital,10,M,a25fd2af2a6b5a7c899b3ab213583c4437275fbbc0c13986f34417679c9f7fbb,248
+Image_333,images/Image_333.png,10.7,1,Mild,Ahmadiyya Muslim Hospital,12,M,4cc5a02a06e83e3ad68a089bdcd365d92cda006d5420ddac4585e5e0a5fe4dd2,117
+Image_334,images/Image_334.png,10.8,1,Mild,Manhyia District Hospital,24,M,187b56e2f179aa5a64fdffef81f98c61bb27dd6a566c695dae8abdf27e59439a,136
+Image_335,images/Image_335.png,3.3,1,Severe,Ahmadiyya Muslim Hospital,12,M,6f43658e341f60ebf96f89be838868f9a42625eea2d851680ab6dcf908a19910,144
+Image_336,images/Image_336.png,10.5,1,Mild,Bolgatanga Regional Hospital,60,M,e4d6890de5f74c4297d2272feb858eebe8f2335cb44d2da5cbb3c77bd22f4a4f,182
+Image_337,images/Image_337.png,12.4,0,Non-Anemic,Ejusu Government Hospital,60,F,7abef7f0d54adfc172fd05c46dea7875aa698009382232c782d7b7c7d2611363,249
+Image_338,images/Image_338.png,10.5,1,Mild,Nkawie-Toase Government Hospital,12,M,c93c48a608c338bf404297c7c9c45cc1ed7e45ab941d13f9de30a7cb5b9e7dd6,250
+Image_339,images/Image_339.png,12.1,0,Non-Anemic,Nkawie-Toase Government Hospital,12,M,808496805064b57c5e87e21e6bc82a2d4dbb283710db6e2238847b9dd21691ba,251
+Image_340,images/Image_340.png,12.5,0,Non-Anemic,Ejusu Government Hospital,48,F,48021191c49803c6e4f31689676421bd715a5522a4385ede94ee82a19cfa4fcb,222
+Image_341,images/Image_341.png,12.2,0,Non-Anemic,Komfo Anokye Teaching Hospital,60,M,8e2a5d482fe66d21b3d36363e1d47078f829d83a58a6b50a73242b717ad766ba,22
+Image_342,images/Image_342.png,12.5,0,Non-Anemic,Komfo Anokye Teaching Hospital,24,M,760ca323c70f69a3f90eea648e8ac9b7e5fd0c4fd35fc5e8b343615c3859b049,252
+Image_343,images/Image_343.png,13.6,0,Non-Anemic,Manhyia District Hospital,12,F,5aa028339e7e5bf815f7e66db76007075ce3a484b25d0c317742c4d63255022f,253
+Image_344,images/Image_344.png,12.3,0,Non-Anemic,Komfo Anokye Teaching Hospital,12,F,01ba5629e826cb0ee3c0b769d1ac2bf8993bc003f159419c0a56526721155389,254
+Image_345,images/Image_345.png,13.3,0,Non-Anemic,Bolgatanga Regional Hospital,48,F,59eae8653c600a22310007b3bef79cff26f833497d908de5a4d4ce345350f858,194
+Image_346,images/Image_346.png,12.3,0,Non-Anemic,Ahmadiyya Muslim Hospital,24,M,6b3232842fc8e96d71681853a41468b97f26a3297d0f0fee6a9b9f4ffa337e92,255
+Image_347,images/Image_347.png,13.3,0,Non-Anemic,Komfo Anokye Teaching Hospital,60,M,d36901c71ca3c64fd3f8cfbbd87570aca6a0f8b6f445ebac0b88dd73e9f5070e,256
+Image_348,images/Image_348.png,12.3,0,Non-Anemic,Komfo Anokye Teaching Hospital,24,F,2e7f6b63b8b10dd9752d9a4829c5614396896389651c90c48aeb4336e6513fc3,257
+Image_349,images/Image_349.png,13.3,0,Non-Anemic,Nkawie-Toase Government Hospital,48,F,17e206af003ff85e3cfca3fd2a900e83f559019f9c4b892faab1a2884a537a23,258
+Image_350,images/Image_350.png,9.2,1,Moderate,Nkawie-Toase Government Hospital,36,F,f89d669162ea78d76a32f4b55003ebe5645bd8ff9e3fffb94d0281be6cf53a3a,259
+Image_351,images/Image_351.png,13.3,0,Non-Anemic,Kintampo Municipal Hospital,48,M,b4768d56a30ecfe3795dd824c0c7ab05649c6b65de57681579d8828f772503bf,260
+Image_352,images/Image_352.png,12.3,0,Non-Anemic,Sunyani Municipal Hospital,24,M,1f3ff6e8934df7be1912175142ab3253aa4b29ad05bed6805f7012dfd160b317,261
+Image_353,images/Image_353.png,13.3,0,Non-Anemic,Komfo Anokye Teaching Hospital,36,M,6fd74e3d17e9aee347626d383ecb80e87b81dcedee24f8b9f388dc3bd7385a41,262
+Image_354,images/Image_354.png,12.3,0,Non-Anemic,Bolgatanga Regional Hospital,24,F,e47b76d0dad11625f583288d0f96ce7ad415ae29b7fb5b724767d58a6992f1e4,263
+Image_355,images/Image_355.png,13.4,0,Non-Anemic,Bolgatanga Regional Hospital,12,F,35a0933b2806013f0f667acd9d1749ffbb1233f742e4569b87f2a6106e4bf729,264
+Image_356,images/Image_356.png,12.3,0,Non-Anemic,Ahmadiyya Muslim Hospital,12,F,2c891d70b24a02ffaa55eeb76b5378daffcbb0f89bd527da6e60926c3f69e43c,265
+Image_357,images/Image_357.png,13.4,0,Non-Anemic,Komfo Anokye Teaching Hospital,36,M,108a4b1f2cade3689b083deadddf14ce43e6105c9a0c1a6eab76dd88cbcb0b55,266
+Image_358,images/Image_358.png,10.5,1,Mild,Komfo Anokye Teaching Hospital,36,M,1d6659c8b400a529dc8eb924c4916044777c54ba6a7f0b456340c6031f2a7c50,267
+Image_359,images/Image_359.png,12.3,0,Non-Anemic,Ahmadiyya Muslim Hospital,12,M,02981b2da3ece502dddd4ba9d94ee6a23532e63c57b095025bd69bbe90ba5d53,268
+Image_360,images/Image_360.png,12.3,0,Non-Anemic,Ahmadiyya Muslim Hospital,24,F,8f7cb384adee4f39f4ae15228fc313127dbcad0e301d0103f92fedfc08a3f9ee,269
+Image_361,images/Image_361.png,13.4,0,Non-Anemic,Komfo Anokye Teaching Hospital,60,M,53fc0a49712c615d5e06eb9f5b008f24b944af54867cf2edee16586b1db28ea3,270
+Image_362,images/Image_362.png,12.3,0,Non-Anemic,Ahmadiyya Muslim Hospital,60,F,98197524f23da133d90bd65f813370b8652de8a80d65360db9ae8a0d4d0e7e46,271
+Image_363,images/Image_363.png,13.5,0,Non-Anemic,Bolgatanga Regional Hospital,6,M,fa44070590a25a7f1da2567250508dfc68ac4deebb983228a293fe7febf85684,272
+Image_364,images/Image_364.png,12.3,0,Non-Anemic,Manhyia District Hospital,60,M,0b76df3f125fe530ac02426e819ac3b00f26aeb9f1b70236584e6187748a2f78,273
+Image_365,images/Image_365.png,13.6,0,Non-Anemic,Sunyani Municipal Hospital,36,F,d640048013e4aa912052ed9507a567709117ee0a643c52af93094a5f0ef79861,274
+Image_366,images/Image_366.png,12.5,0,Non-Anemic,Ahmadiyya Muslim Hospital,48,F,7027c5fb381b1f1406ccc183686b9187df9b72bb3437ab4d5c0280c5bed1b0f6,275
+Image_367,images/Image_367.png,13.5,0,Non-Anemic,Ejusu Government Hospital,60,F,434264f367d5fa33842b6f1804f8381eca8cd74130d015316c6f8eaebc419ea6,276
+Image_368,images/Image_368.png,10.5,1,Mild,Bolgatanga Regional Hospital,36,F,49c7b1e84cf1aaba43b18b4df55ad936816d6597e70d44e70f1a6ed4a2a94044,277
+Image_369,images/Image_369.png,10.5,1,Mild,Manhyia District Hospital,48,F,4328497af6437d23b51ab2bcaf93b698179cfde6673a19c75ee1094a83775929,17
+Image_370,images/Image_370.png,13.5,0,Non-Anemic,Kintampo Municipal Hospital,48,M,1f159ac91578c46d04f6ca2def7efa8c9d67d19999304c602f4e7d5eb78a732a,278
+Image_371,images/Image_371.png,13.5,0,Non-Anemic,Sunyani Municipal Hospital,60,M,f455c491b12489ab543cd95e8224ead194ee27def862392ed29b0ef195e47f1b,279
+Image_372,images/Image_372.png,10.5,1,Mild,Komfo Anokye Teaching Hospital,12,M,d19917a3fd4a2cce3997fc773c0735a2711d4086661fd225cde3b2c0e9f37194,59
+Image_373,images/Image_373.png,13.5,0,Non-Anemic,Manhyia District Hospital,36,F,4bc2d442d8765e0c12d2b089c3a09fc976de6da2e9d2acb6536add44e717789b,280
+Image_374,images/Image_374.png,13.5,0,Non-Anemic,Bolgatanga Regional Hospital,48,M,f468a8e2b95477818a10480962ffd941e145cc2abd65d7c5d5783a7eca7e478c,281
+Image_375,images/Image_375.png,13.5,0,Non-Anemic,Sunyani Municipal Hospital,24,F,1c909f047b9e15c87b28596eae944108266dc352636efbe17a4967c1166b2ae9,282
+Image_376,images/Image_376.png,13.5,0,Non-Anemic,Ahmadiyya Muslim Hospital,60,M,b18afa17cc03ddb5fdd5071dec257174cfddf8cad7b2571cdf517330e3744d66,283
+Image_377,images/Image_377.png,10.5,1,Mild,Kintampo Municipal Hospital,12,F,2ddba5fc3bb33b84d36a9fa12cda4ac0759b349e7c87136b5b757397b282d200,67
+Image_378,images/Image_378.png,13.5,0,Non-Anemic,Ejusu Government Hospital,36,M,8cb9ece27d59ae53b9a774eecd3bec125f820dfe5a6b6556e41839c1054edb42,56
+Image_379,images/Image_379.png,13.6,0,Non-Anemic,SDA Hospital,60,F,8b113b3699661936cb932e1813b8faca44cc5c7cb92b1b138c8cf71cbd9c18aa,284
+Image_380,images/Image_380.png,13.6,0,Non-Anemic,Kintampo Municipal Hospital,36,F,477cb49bdf4f97227b4fc2be3cebf2a60380bcd10177ce090b0f365f5a66ac36,285
+Image_381,images/Image_381.png,13.6,0,Non-Anemic,Ahmadiyya Muslim Hospital,24,F,7a4daa71505dceff0401eba187611ee1f28a2c9477c950687a3a18041ed363fc,286
+Image_382,images/Image_382.png,13.6,0,Non-Anemic,Bolgatanga Regional Hospital,48,F,9070217d0811d1df9a305155075e8740250707f0577fc45fce15ec7e7b1fe749,287
+Image_383,images/Image_383.png,7.2,1,Moderate,Sunyani Municipal Hospital,48,M,b4c56b9e464afc1a08505fa1d4a5da85db0593223225af991a6b0e559744cd8c,288
+Image_384,images/Image_384.png,9.0,1,Moderate,Komfo Anokye Teaching Hospital,60,M,9edb474282b52d3f1f9e3f64186ad54199f8c8c42fc30c71e182416b8bfd241c,212
+Image_385,images/Image_385.png,9.6,1,Moderate,Sunyani Municipal Hospital,12,M,a82632e31afd9c13ed40edab436b132ef484a16e90861d27309b3ff90453344a,289
+Image_386,images/Image_386.png,9.6,1,Moderate,Manhyia District Hospital,12,M,06182a4397e399e9a302d796358aa94372a5bf3075e9d75453b97e6b197be0f5,290
+Image_387,images/Image_387.png,9.6,1,Moderate,Sunyani Municipal Hospital,12,M,6d8b9e6ad218e2899808339a893bb1dc8e23e6f7908f67054838a4e19fcf9534,213
+Image_388,images/Image_388.png,9.6,1,Moderate,Sunyani Municipal Hospital,48,M,ae8f1db6340a625453e949d235e1b944c059a431e8c76a73ecb81b7ddf3bda63,49
+Image_389,images/Image_389.png,9.6,1,Moderate,Sunyani Municipal Hospital,9,M,8e6ffbf018e260d3ea3e510af6ef7dc629db406eee63c56ab177495988c8f634,291
+Image_390,images/Image_390.png,9.6,1,Moderate,Ahmadiyya Muslim Hospital,24,F,bca25174ed4a1cd70fc300b2f54b798e39cf8f6d030d604670e3e06780661433,40
+Image_391,images/Image_391.png,10.1,1,Mild,Manhyia District Hospital,24,M,1d61df9cce90b958b3a7e9aed2d427096c46f94e5d371e37d43643847aadf202,4
+Image_392,images/Image_392.png,10.1,1,Mild,Sunyani Municipal Hospital,24,M,498b03005b575a6db771f4e8e2dbc80af42c6198be1274293ca3654f9308a169,292
+Image_393,images/Image_393.png,10.1,1,Mild,Komfo Anokye Teaching Hospital,12,F,ba08627fa376f255610a734317ee8e724a124502e4d68897a26463169a8d1477,293
+Image_394,images/Image_394.png,12.8,0,Non-Anemic,Manhyia District Hospital,24,F,ff6b29dc417ffa3a1c1228d07ddbb3ce33ff150e8f7ff75ab684438d2a912e6e,294
+Image_395,images/Image_395.png,12.8,0,Non-Anemic,Ahmadiyya Muslim Hospital,60,M,dc98a843063f083ade1a0a8718456ec6513533a4634eaee9b945eafcdcbebf85,295
+Image_396,images/Image_396.png,10.1,1,Mild,Komfo Anokye Teaching Hospital,24,M,e397c873f60e2f17410a6d080161129aac8fc14634940b7cb4436b32f451827f,296
+Image_397,images/Image_397.png,10.1,1,Mild,Ahmadiyya Muslim Hospital,48,F,2b066575e85ba4dbcd2c01488d7bddf5ae7cb786cc12fd43c98e39beff3d334b,297
+Image_398,images/Image_398.png,10.2,1,Mild,Sunyani Municipal Hospital,36,M,8466f7ade696a87c44c31033eee9586a3782fabf96d1dc5c776ec7cb63cccd19,298
+Image_399,images/Image_399.png,8.9,1,Moderate,Ahmadiyya Muslim Hospital,36,F,06182a4397e399e9a302d796358aa94372a5bf3075e9d75453b97e6b197be0f5,290
+Image_400,images/Image_400.png,8.9,1,Moderate,Kintampo Municipal Hospital,60,M,ba08627fa376f255610a734317ee8e724a124502e4d68897a26463169a8d1477,293
+Image_401,images/Image_401.png,8.9,1,Moderate,Sunyani Municipal Hospital,12,M,9920b6dfa927f5e4d8be21ca926ced548636c61fb0809b2e42147c06645cb619,299
+Image_402,images/Image_402.png,8.9,1,Moderate,Holy Family Hospital,12,M,fc953a2f26591d333f7d5ec0b86886260882645fbde62f59e41d364c4220f66e,206
+Image_403,images/Image_403.png,10.2,1,Mild,Nkawie-Toase Government Hospital,24,F,06182a4397e399e9a302d796358aa94372a5bf3075e9d75453b97e6b197be0f5,290
+Image_404,images/Image_404.png,12.8,0,Non-Anemic,Sunyani Municipal Hospital,60,F,775b6d7ccef2495b108e0088d60e0790730a97ad1f96d412fb8be428f8a0079a,300
+Image_405,images/Image_405.png,10.3,1,Mild,Ahmadiyya Muslim Hospital,24,F,2fa6f53e565d1e4985b589cb92c8304e72e5888169e5cfb0625b07550bef1839,301
+Image_406,images/Image_406.png,10.3,1,Mild,Komfo Anokye Teaching Hospital,12,F,7420ebccbece3f1b1919472a0ddb24d18859903d5724bdedd306fc5d6ffdc3f3,94
+Image_407,images/Image_407.png,10.3,1,Mild,Ahmadiyya Muslim Hospital,24,M,d264ccd4495962adf455e089467e629d2919f0e52aee7f98220e4a6fbee21a8b,16
+Image_408,images/Image_408.png,10.3,1,Mild,Komfo Anokye Teaching Hospital,24,M,da5119bef05494ae18fcd581fcdac8864f94cd8d93bd1ebfe0a55a4f8f818b15,302
+Image_409,images/Image_409.png,11.7,0,Non-Anemic,Bolgatanga Regional Hospital,48,F,21579010941884b4fbcd442e56f8afe9072b6713b5d522597fe5c070540b3360,303
+Image_410,images/Image_410.png,11.7,0,Non-Anemic,Sunyani Municipal Hospital,36,F,1c10255049e3af0275e41fe4d375838b67d0b47a77dfb8f3f2c5ec27b3981f3c,304
+Image_411,images/Image_411.png,8.0,1,Moderate,Sunyani Municipal Hospital,12,M,4328497af6437d23b51ab2bcaf93b698179cfde6673a19c75ee1094a83775929,17
+Image_412,images/Image_412.png,8.0,1,Moderate,Ejusu Government Hospital,12,M,f8969f72a2c19075f9bb67f1d9c252e4411f60d32ab32a20d94949fbc54a3dc7,305
+Image_413,images/Image_413.png,11.7,0,Non-Anemic,Komfo Anokye Teaching Hospital,48,M,647b9d50a3f62fce8026e690bc386d2c7e20035d4837d7a84cc8e960962ed21f,306
+Image_414,images/Image_414.png,11.7,0,Non-Anemic,Komfo Anokye Teaching Hospital,12,F,098ac7556d8235f61c5197aca4265e259c4bb5b6b8c0c82f78616d85d7eef19c,307
+Image_415,images/Image_415.png,11.7,0,Non-Anemic,Sunyani Municipal Hospital,24,F,a80dbc57c87e27ed3f780fd5dfc975b7562370449e53d60e63ae0eaeff884a8f,308
+Image_416,images/Image_416.png,11.7,0,Non-Anemic,Ejusu Government Hospital,12,F,c5a12b39d54247183d9e67062b2a507e3df6d430274a7d6b0dafb62a562ef928,309
+Image_417,images/Image_417.png,11.7,0,Non-Anemic,Nkawie-Toase Government Hospital,36,F,aad467738bb6bfb3c2ea0d6c52b1c37c65e33b4ea61fd565fc2a037d74a6e35c,310
+Image_418,images/Image_418.png,11.7,0,Non-Anemic,Nkawie-Toase Government Hospital,12,M,737972fa1e0ca2d2142df5d871a5d7fea71b5591d25303be48f6415d9fed4038,311
+Image_419,images/Image_419.png,11.72,0,Non-Anemic,Komfo Anokye Teaching Hospital,48,F,3eb701b9b3176d15a6eeca0d605cddc82b9592e7b9bba420b7cb4f2b12b943a4,312
+Image_420,images/Image_420.png,11.8,0,Non-Anemic,Ahmadiyya Muslim Hospital,12,M,33868f91449d2fbfc69ef938068e70e39d9d87d644d63d665b647e2200fc0182,313
+Image_421,images/Image_421.png,11.8,0,Non-Anemic,Kintampo Municipal Hospital,36,F,ca4b01f035b2d2f98b652f77d27ea20e37c4419e74c4ac70bc6c1a5d63d25a8f,314
+Image_422,images/Image_422.png,11.8,0,Non-Anemic,Komfo Anokye Teaching Hospital,24,M,8a6b219812d6a8f9f2a2eb9036d380b6ff01746cb5c8aefcb002f26457e8b6fa,315
+Image_423,images/Image_423.png,11.8,0,Non-Anemic,Ahmadiyya Muslim Hospital,36,M,656086de7597d6082519e3bb921c99575798e182b85700c7d30da38fdbf4e57d,316
+Image_424,images/Image_424.png,11.8,0,Non-Anemic,Kintampo Municipal Hospital,24,M,6f00fc6389cb69d4739570f302268c297abb095b84e331f8ac651a1efb908a83,317
+Image_425,images/Image_425.png,8.0,1,Moderate,Sunyani Municipal Hospital,24,F,303ccf3d4ff6ba05f7cc0d0845c7708c38e7be63cdfd5edb9ab3035dbda36204,318
+Image_426,images/Image_426.png,11.8,0,Non-Anemic,Manhyia District Hospital,48,M,b67c9e289daca244e073e9ef52a0b8784907a6d0eff726d717cb65f8d9b2392b,319
+Image_427,images/Image_427.png,9.3,1,Moderate,Bolgatanga Regional Hospital,48,F,624b553f310fc3e4e03b5a0132001869b91d8ce0f39f316a056037f641cfc027,320
+Image_428,images/Image_428.png,10.6,1,Mild,Komfo Anokye Teaching Hospital,36,M,e3d6ab8ab5671e51c8eb83634865c4ee57478bdea34044d4e4c6f3951989f919,321
+Image_429,images/Image_429.png,10.6,1,Mild,Nkawie-Toase Government Hospital,36,F,909dfdbe6454185331857dd29bc255c6941023ee174eb2ae2734a4b863c9c5bb,322
+Image_430,images/Image_430.png,13.6,0,Non-Anemic,Kintampo Municipal Hospital,48,M,c0867978c5ea67e08347004d1a010cbdcf9e25d7e1190a5d2cb290adc58c6d74,323
+Image_431,images/Image_431.png,13.6,0,Non-Anemic,Ahmadiyya Muslim Hospital,24,M,016133cb6e9a429a711cb066fc8f93c4cd570f4795be590fca879c0a232e17fc,324
+Image_432,images/Image_432.png,13.6,0,Non-Anemic,Ahmadiyya Muslim Hospital,12,F,f2fcd569a10ea41e4bbd47ba46af8c2c4c00a97aec36d716ad0d830cb1f747cf,325
+Image_433,images/Image_433.png,13.7,0,Non-Anemic,Komfo Anokye Teaching Hospital,48,F,f5277362d09fb6224bd6bf1250c343f06d2b68f2f5c320c6857170e927d5fc13,105
+Image_434,images/Image_434.png,13.7,0,Non-Anemic,Kintampo Municipal Hospital,60,M,85539ac3f2197e1f6eec68056e1f27abee4e450880b1413552c0af391c7a987e,326
+Image_435,images/Image_435.png,13.7,0,Non-Anemic,Bolgatanga Regional Hospital,60,M,8cb9ece27d59ae53b9a774eecd3bec125f820dfe5a6b6556e41839c1054edb42,56
+Image_436,images/Image_436.png,13.8,0,Non-Anemic,Komfo Anokye Teaching Hospital,24,M,b28289a7ce52de767352a8eafb7a5d6f311921f796dbd6541dca64da3bde7a79,327
+Image_437,images/Image_437.png,13.8,0,Non-Anemic,Sunyani Municipal Hospital,36,M,0203cb28914f30356e657e12254d7ef6f2d752a618b0910a430deb926b14b850,328
+Image_438,images/Image_438.png,10.6,1,Mild,Sunyani Municipal Hospital,36,M,669201b8353a8abb960341d3fcd9d52d10787e8aa70061673cc92874f71cd7d2,329
+Image_439,images/Image_439.png,10.6,1,Mild,Ahmadiyya Muslim Hospital,48,M,3817bb515128dcfcc0431533737a0f88506fff390dca455e9345f7ae6fffcaf9,330
+Image_440,images/Image_440.png,13.8,0,Non-Anemic,Ahmadiyya Muslim Hospital,36,M,a325e485d7338fe06f59b91381d98ccc4934a747717e8faf028fb8dd21c99305,331
+Image_441,images/Image_441.png,13.8,0,Non-Anemic,Ahmadiyya Muslim Hospital,48,M,aae538fe03b3a6efc74b3262698e9f8a8caced3dfe4bcd04a5efa45c3df3242d,131
+Image_442,images/Image_442.png,10.6,1,Mild,Kintampo Municipal Hospital,11,F,6ac5b054ae362087976d80ebf6550143b7cd49576f6e507c59d7aaac9a75a912,332
+Image_443,images/Image_443.png,10.6,1,Mild,Nkawie-Toase Government Hospital,36,M,dddb35bd00199581219dd3b883c8dfa51d590d5edafef198564ec6b903c431a2,333
+Image_444,images/Image_444.png,10.64,1,Mild,Komfo Anokye Teaching Hospital,48,F,9edb474282b52d3f1f9e3f64186ad54199f8c8c42fc30c71e182416b8bfd241c,212
+Image_445,images/Image_445.png,10.8,1,Mild,Ahmadiyya Muslim Hospital,60,F,57ff8267b826d72fe1fee93362d9d4f361892c7e26a3f1fb712bc61505687efb,47
+Image_446,images/Image_446.png,10.8,1,Mild,Sunyani Municipal Hospital,12,M,07e3022e693c187c4c66900e0f63eaaf1e88cb05f3c476a617e3c09f39fa7b76,1
+Image_447,images/Image_447.png,14.1,0,Non-Anemic,Komfo Anokye Teaching Hospital,24,F,90ed2f99d0719c7a0666c989bf64c6ea4348230f1e9080639584984c2268ae41,334
+Image_448,images/Image_448.png,10.8,1,Mild,Bolgatanga Regional Hospital,36,M,00d11c32ce32928d03570198d145b724b303613445004d2758010a2153ef748a,335
+Image_449,images/Image_449.png,14.1,0,Non-Anemic,Ahmadiyya Muslim Hospital,48,M,59eae8653c600a22310007b3bef79cff26f833497d908de5a4d4ce345350f858,194
+Image_450,images/Image_450.png,14.2,0,Non-Anemic,Sunyani Municipal Hospital,12,M,c9199b468f507da28e13ac073e5745669c6a9657938bf4bb5a7060f7f844f374,336
+Image_451,images/Image_451.png,11.1,0,Non-Anemic,Komfo Anokye Teaching Hospital,12,M,e7966044d55d025469bfd270f2c74e07150c5086ca4275da03f01806ef34ff36,337
+Image_452,images/Image_452.png,12.1,0,Non-Anemic,Sunyani Municipal Hospital,12,M,903e3148cde3a5113f9a73f1ef1f77253c3e39c356dc2961315cae9ae8e6c8e4,338
+Image_453,images/Image_453.png,11.2,0,Non-Anemic,Komfo Anokye Teaching Hospital,48,M,bddfd7b31c4d984aebf83727bfdf4797ccfaf88f61638697ce0591fc72309512,339
+Image_454,images/Image_454.png,12.1,0,Non-Anemic,Sunyani Municipal Hospital,36,M,92c4c04f0ad3a7553396d18a34d01d6cb0d92343d844d24c67e7a0ab596dc207,340
+Image_455,images/Image_455.png,11.2,0,Non-Anemic,Bolgatanga Regional Hospital,24,F,80e415174ab97fb33ef97f87e1c38bba0f87c3c744fe1eedc0b904c6d55e17fa,341
+Image_456,images/Image_456.png,12.1,0,Non-Anemic,Sunyani Municipal Hospital,12,M,89e32bc2ba592aed25950ede3e34d3b3bd8c7a7df164fa66b9d76fc20f792ea3,342
+Image_457,images/Image_457.png,12.1,0,Non-Anemic,Bolgatanga Regional Hospital,24,M,2fff385bd8f4bc5e15d8be0a91de909fb8ce4bd3f28f4a035a037122b9fb92ac,343
+Image_458,images/Image_458.png,12.15,0,Non-Anemic,Ahmadiyya Muslim Hospital,48,M,702cdb35469e501e0aa15cd927fae8d72f3ce623c910adc5d160ddadd9ac8915,344
+Image_459,images/Image_459.png,12.2,0,Non-Anemic,Sunyani Municipal Hospital,48,F,beaf0afc56463f6a29e984df1384001c47324bb78f036a94d8f8afe9bcd4c23a,345
+Image_460,images/Image_460.png,9.2,1,Moderate,Kintampo Municipal Hospital,12,M,9c2a406ea5d9087a2681bbec9771b613f3d11050b0c5f41f6a237921f148fb27,346
+Image_461,images/Image_461.png,9.2,1,Moderate,Sunyani Municipal Hospital,12,M,4d25970b6ece0e795841af8aec7625584950a3f156b5bc7fee965de3bd10de97,347
+Image_462,images/Image_462.png,12.5,0,Non-Anemic,Sunyani Municipal Hospital,48,F,005d5babb1db76b6911922f09b16a2bf3c38307bfd0a1c2916a2c6028435c5ef,348
+Image_463,images/Image_463.png,12.5,0,Non-Anemic,Bolgatanga Regional Hospital,48,M,cb449f91bdeefe2ba1406ee376488aec5b59514faeccbb99a8fafa1e37fac72c,349
+Image_464,images/Image_464.png,12.5,0,Non-Anemic,Nkawie-Toase Government Hospital,48,M,0bfe3dfa65f5745e65b6f48c819ea1a992248bd77da5b67362a91ce33535ce3a,350
+Image_465,images/Image_465.png,12.5,0,Non-Anemic,Nkawie-Toase Government Hospital,36,F,9bdb601a1631eb8fceefb678d1e87457c1e4d13af54b78c1552186df5e854eb0,351
+Image_466,images/Image_466.png,12.6,0,Non-Anemic,Nkawie-Toase Government Hospital,36,F,8ef306152b04da8dcc7807b967c22e195e7fcd97180a2f4e77afd69f4fabe4a6,352
+Image_467,images/Image_467.png,12.6,0,Non-Anemic,Sunyani Municipal Hospital,60,M,587df56e5c998e445dee54cc44005eda92b4fc1f1b8ce9ebc2dc9cbd89ac45c5,353
+Image_468,images/Image_468.png,12.7,0,Non-Anemic,Sunyani Municipal Hospital,24,F,93b4de4c042d54dd8ffec1fe02a739a174c0131df4bb661390d9500087ef3f80,354
+Image_469,images/Image_469.png,12.6,0,Non-Anemic,Sunyani Municipal Hospital,24,M,9bf7a0f22b93f71afbafcc5344814f1fb6a539b741d3c935efbbdcbeca8c1e37,355
+Image_470,images/Image_470.png,12.6,0,Non-Anemic,Sunyani Municipal Hospital,48,M,627b6e7882079a813e5aeca5533cfe1b396b9482aa5e628f811bbaac37cd289d,356
+Image_471,images/Image_471.png,10.1,1,Mild,Nkawie-Toase Government Hospital,24,M,dbcf31e247d0c27b260e339912474f12294eee9984c06f7dee17798fa066de6f,357
+Image_472,images/Image_472.png,12.7,0,Non-Anemic,Sunyani Municipal Hospital,24,F,3fb9aed69df53e7931ddc36d98fa7534188b58d62a66cff76434967a245d173e,358
+Image_473,images/Image_473.png,10.1,1,Mild,Holy Family Hospital,24,M,72301fb843630d496fd9fa9f042e423a771e665f99c135d48c4c69517c7ae18f,72
+Image_474,images/Image_474.png,12.7,0,Non-Anemic,Bolgatanga Regional Hospital,60,F,62dd27686682b3585c9eed988e974de78cc75ac3ac548e0551f17e0e1bb52652,359
+Image_475,images/Image_475.png,12.8,0,Non-Anemic,Ahmadiyya Muslim Hospital,60,M,934b7c6b63379707eda97646173ce6e07e0ce15ef9b3e28487d1667921d572d3,360
+Image_476,images/Image_476.png,4.6,1,Severe,SDA Hospital,12,F,4328497af6437d23b51ab2bcaf93b698179cfde6673a19c75ee1094a83775929,17
+Image_477,images/Image_477.png,6.1,1,Severe,Nkawie-Toase Government Hospital,24,F,4b4c13095060890f040f5a8c6b1f90b45d2bf595d6b332618fc725d7dc837ce8,233
+Image_478,images/Image_478.png,6.1,1,Severe,Ahmadiyya Muslim Hospital,12,M,3af20ddeef6316450d13a58600bf1cbb96882c7a1c282e9e85de0c679b0cb334,361
+Image_479,images/Image_479.png,11.1,0,Non-Anemic,Sunyani Municipal Hospital,24,M,ad2ca4ad233c993f15171c9690e3d5400e1ae2bcf6c0a451b65cf978f28acfcd,362
+Image_480,images/Image_480.png,5.0,1,Severe,Komfo Anokye Teaching Hospital,12,F,5be72780173c1b1f02ffe9be22d7cce4791688b4cff7bac1cf95c30481f57a64,28
+Image_481,images/Image_481.png,11.2,0,Non-Anemic,Sunyani Municipal Hospital,48,M,eb66ffd12768d51735ae3e76a3f4c844b9ae460cc3af023f1b390c6b3307f8a3,363
+Image_482,images/Image_482.png,6.3,1,Severe,Kintampo Municipal Hospital,60,F,c5fac67c07a550b3b3c4fa421994d522dd55b5063c6b507cea88c603ce113101,364
+Image_483,images/Image_483.png,11.2,0,Non-Anemic,Komfo Anokye Teaching Hospital,6,M,308a23cff6022ddb5d2c45866a6d65ecb56f100284ec14e2d8fc63ca093d8a66,365
+Image_484,images/Image_484.png,6.3,1,Severe,Kintampo Municipal Hospital,12,M,5139300770706401cb3c647bbc5092d95b79bda26f67f13728c52aa833d766d4,366
+Image_485,images/Image_485.png,6.3,1,Severe,Holy Family Hospital,12,M,06182a4397e399e9a302d796358aa94372a5bf3075e9d75453b97e6b197be0f5,290
+Image_486,images/Image_486.png,11.2,0,Non-Anemic,Komfo Anokye Teaching Hospital,24,M,a78d0dad817c623b2f025e5202f0d14976d8e1c6cab275467751eda919664df4,367
+Image_487,images/Image_487.png,6.4,1,Severe,Kintampo Municipal Hospital,24,M,54b5764c25a8a0367ce145b212210247369b15debf31c23217e03db55c5a1f66,208
+Image_488,images/Image_488.png,6.4,1,Severe,Komfo Anokye Teaching Hospital,12,M,b5da2d1adab022c9805d73e8a8a40bc857f25dd4d929fa4d90f9ddfca995362c,368
+Image_489,images/Image_489.png,8.9,1,Moderate,Bolgatanga Regional Hospital,12,M,e4d6890de5f74c4297d2272feb858eebe8f2335cb44d2da5cbb3c77bd22f4a4f,182
+Image_490,images/Image_490.png,8.9,1,Moderate,Nkawie-Toase Government Hospital,8,M,6f8f2af0f409ceb655302c7226fb8bec3ee37f479bf80d2a5c2931fe2a3c4bc6,369
+Image_491,images/Image_491.png,12.0,0,Non-Anemic,Nkawie-Toase Government Hospital,36,F,c728c33d87b81c336a0f415e5709cda238d980f0e7900a74dac742ba627fe61c,370
+Image_492,images/Image_492.png,8.9,1,Moderate,Sunyani Municipal Hospital,36,F,4328497af6437d23b51ab2bcaf93b698179cfde6673a19c75ee1094a83775929,17
+Image_493,images/Image_493.png,12.1,0,Non-Anemic,Manhyia District Hospital,24,F,c0a72d9e75e5bd808b6a5c94df0f047faaf9c132a56a9abf104bc8e7034ea86c,371
+Image_494,images/Image_494.png,9.0,1,Moderate,Ahmadiyya Muslim Hospital,60,M,187d37ad42edf37c638f301607d8031e9a7ce68e7cfcd2fb3055ec9949f11d69,247
+Image_495,images/Image_495.png,9.1,1,Moderate,Komfo Anokye Teaching Hospital,12,F,80fa3247d145b35671c31a08cdce7d296a3a694b8d9c4c2a24d26e531a7f1ba0,241
+Image_496,images/Image_496.png,9.1,1,Moderate,Kintampo Municipal Hospital,48,F,2c35b49bf7bfd693e348c3d50003039de3ad85bc5cb0601966f2a595efcf3bbe,89
+Image_497,images/Image_497.png,9.1,1,Moderate,Ejusu Government Hospital,24,M,dfef1931f86c99f13646ed44033a44255a5a87c0ca5b33fca4e1559b13157924,372
+Image_498,images/Image_498.png,12.1,0,Non-Anemic,Bolgatanga Regional Hospital,36,M,2d29b9c8a7ce25383a913014eac891cff02bb29c3c254b4570c916b7392eb8f7,373
+Image_499,images/Image_499.png,9.1,1,Moderate,Sunyani Municipal Hospital,12,F,1d61df9cce90b958b3a7e9aed2d427096c46f94e5d371e37d43643847aadf202,4
+Image_500,images/Image_500.png,9.1,1,Moderate,Komfo Anokye Teaching Hospital,12,M,187d37ad42edf37c638f301607d8031e9a7ce68e7cfcd2fb3055ec9949f11d69,247
+Image_501,images/Image_501.png,9.1,1,Moderate,Ahmadiyya Muslim Hospital,48,M,7dd1abfe6d01406f0fa9a61fe60ce333e68a7152de9c122b051f28e01625db03,374
+Image_502,images/Image_502.png,10.1,1,Mild,Bolgatanga Regional Hospital,24,M,2fa6f53e565d1e4985b589cb92c8304e72e5888169e5cfb0625b07550bef1839,301
+Image_503,images/Image_503.png,10.2,1,Mild,Manhyia District Hospital,12,M,ddf86e482b00aacfe756576b45f963b88e8d13ac51348fe9625c5b5b4ef35341,375
+Image_504,images/Image_504.png,10.2,1,Mild,Sunyani Municipal Hospital,12,F,e3c9ddd1fc700b4782714e40fdeecf8976c0b362de72de392a7a352649a75b6b,376
+Image_505,images/Image_505.png,10.3,1,Mild,Komfo Anokye Teaching Hospital,36,M,fc953a2f26591d333f7d5ec0b86886260882645fbde62f59e41d364c4220f66e,206
+Image_506,images/Image_506.png,13.0,0,Non-Anemic,Bolgatanga Regional Hospital,48,M,444c4793047a94fe9299ef0ab36ce723faf34296fb5472b2c5eaa882b163db7c,377
+Image_507,images/Image_507.png,13.0,0,Non-Anemic,Nkawie-Toase Government Hospital,60,M,55bb63469e89528e7bb5865bce81de3c2a8026c698a4549d4f0638ece3aa0874,378
+Image_508,images/Image_508.png,13.0,0,Non-Anemic,Komfo Anokye Teaching Hospital,24,F,89828fd8432972651f8976d2d243d43f1ea4451e627bb09b93cb62604bda3aab,379
+Image_509,images/Image_509.png,10.3,1,Mild,Ahmadiyya Muslim Hospital,36,F,ccdac5a0ef050931f965355897e45199f09638193c826c4bc86acf7cfa4f36d8,146
+Image_510,images/Image_510.png,9.5,1,Moderate,SDA Hospital,60,F,6c4a02aab5a13ee12122ea30139e147af9b1e987e796f42a3097b87f9050804a,380
+Image_511,images/Image_511.png,9.6,1,Moderate,Kintampo Municipal Hospital,12,F,fb2c6bdaae46ded61b272db9418731ccde6e319e3a567f04c0efdaf77cb34c8b,95
+Image_512,images/Image_512.png,9.5,1,Moderate,Komfo Anokye Teaching Hospital,24,M,449781542d351ac72cec11679aeee7aa0860fda51f755575c49650d6c9895e97,381
+Image_513,images/Image_513.png,9.6,1,Moderate,Nkawie-Toase Government Hospital,48,M,2c1000afe4156ea181b2f023dc9c3d76ebac03eacd407e3051ee9a1ce1e67bc9,382
+Image_514,images/Image_514.png,9.6,1,Moderate,Manhyia District Hospital,36,M,1136f3417309b7ba091435ffa069fc29c3464b2b478d6ac11f45c792169c5e5f,235
+Image_515,images/Image_515.png,9.6,1,Moderate,Kintampo Municipal Hospital,48,M,7706d321abceaf0d1c8371e03699b132f49243d6cc0dddf2e75ce443170fa47d,383
+Image_516,images/Image_516.png,9.6,1,Moderate,Bolgatanga Regional Hospital,12,F,65f11349497caf7aad37070ddc4d4d3541f79247f30c95cd58bedf2b10140129,384
+Image_517,images/Image_517.png,12.3,0,Non-Anemic,Ahmadiyya Muslim Hospital,12,F,3e4afc1d96f6a08cb075bc698bfae020727da06061587cf61fc4ea5c543b80fd,385
+Image_518,images/Image_518.png,9.6,1,Moderate,Manhyia District Hospital,36,M,d264ccd4495962adf455e089467e629d2919f0e52aee7f98220e4a6fbee21a8b,16
+Image_519,images/Image_519.png,9.5,1,Moderate,Ejusu Government Hospital,36,F,d4728e91a2d8db7c4ef1f1721aa12ede6567d5b69109e61a2c3cc5d0a9f6d1ab,386
+Image_520,images/Image_520.png,9.7,1,Moderate,Bolgatanga Regional Hospital,12,F,4328497af6437d23b51ab2bcaf93b698179cfde6673a19c75ee1094a83775929,17
+Image_521,images/Image_521.png,9.5,1,Moderate,Komfo Anokye Teaching Hospital,60,F,68cefed0898b29119ea43493030b9a8125425173c3ddf3a27968e03890833cc8,28
+Image_522,images/Image_522.png,12.4,0,Non-Anemic,Komfo Anokye Teaching Hospital,24,F,7d77eed1999113770a6cd50eadd7ebb926ba34f4e6f500ca2dab26fc39fbd99e,387
+Image_523,images/Image_523.png,9.5,1,Moderate,Kintampo Municipal Hospital,24,F,5e4dda226f3c67663aaecd9699ffe3c2803d0e6d18e8112e574fb04ce8321f07,388
+Image_524,images/Image_524.png,9.7,1,Moderate,Bolgatanga Regional Hospital,24,M,9bc416d4bf92dbd84cef5c7c27c68af2d34754026eb5b2812d703dddfc8fd704,389
+Image_525,images/Image_525.png,9.5,1,Moderate,Nkawie-Toase Government Hospital,12,F,4328497af6437d23b51ab2bcaf93b698179cfde6673a19c75ee1094a83775929,17
+Image_526,images/Image_526.png,9.7,1,Moderate,Sunyani Municipal Hospital,24,F,9edb474282b52d3f1f9e3f64186ad54199f8c8c42fc30c71e182416b8bfd241c,212
+Image_527,images/Image_527.png,9.7,1,Moderate,Komfo Anokye Teaching Hospital,24,M,97ac6eb8005416cc3ea5067bc00000ec7f4699ca51ce08db74b584d8eef987a4,390
+Image_528,images/Image_528.png,9.7,1,Moderate,Ahmadiyya Muslim Hospital,36,F,8c0e56a46d11aaa4fe8477d09c211f62bd6e5bad4141eadc2cddf65f5d752121,391
+Image_529,images/Image_529.png,12.4,0,Non-Anemic,Kintampo Municipal Hospital,24,F,672613b63cda66de066b9e4613cdf5142bd7347e68c69ea4a126f8b9cabccd45,392
+Image_530,images/Image_530.png,9.7,1,Moderate,Komfo Anokye Teaching Hospital,24,F,29706576255c57c766e925969d2cde10994d29bdf924e209fe13417777cbb7b6,393
+Image_531,images/Image_531.png,12.3,0,Non-Anemic,Sunyani Municipal Hospital,48,F,2492c623978585dd517f76112dd38916553e4d70eab27556325423cf92dc40f9,394
+Image_532,images/Image_532.png,9.5,1,Moderate,Kintampo Municipal Hospital,60,F,f3c5527b3810407e9657f1b5c49240937eca0552c19ab65a01490aafbf334e0d,395
+Image_533,images/Image_533.png,9.6,1,Moderate,Bolgatanga Regional Hospital,12,F,187b56e2f179aa5a64fdffef81f98c61bb27dd6a566c695dae8abdf27e59439a,136
+Image_534,images/Image_534.png,9.5,1,Moderate,Manhyia District Hospital,48,M,1d61df9cce90b958b3a7e9aed2d427096c46f94e5d371e37d43643847aadf202,4
+Image_535,images/Image_535.png,9.7,1,Moderate,Nkawie-Toase Government Hospital,60,F,22ac66caf8a02ce3679525d210cab94c2ec691779785fb861f85a2019269333e,396
+Image_536,images/Image_536.png,9.5,1,Moderate,Bolgatanga Regional Hospital,12,M,a16caf7e4ff3a4554f17005ab7517c316556c223a7395b5f0e2093f292a91923,397
+Image_537,images/Image_537.png,9.7,1,Moderate,Sunyani Municipal Hospital,12,M,e3c9ddd1fc700b4782714e40fdeecf8976c0b362de72de392a7a352649a75b6b,376
+Image_538,images/Image_538.png,12.3,0,Non-Anemic,Nkawie-Toase Government Hospital,12,F,191e6b91cf5544e16ec87f1886c029b7fb5db53db7a6f1878b63b7dddec5d9e3,398
+Image_539,images/Image_539.png,9.6,1,Moderate,Bolgatanga Regional Hospital,24,M,77f8642836df1b6df7a5b573b16c5185b7c4a959eb897c292cc480cc06a3000a,399
+Image_540,images/Image_540.png,10.0,1,Mild,Komfo Anokye Teaching Hospital,36,F,72301fb843630d496fd9fa9f042e423a771e665f99c135d48c4c69517c7ae18f,72
+Image_541,images/Image_541.png,10.0,1,Mild,Ahmadiyya Muslim Hospital,36,M,51eabe90585332a38e08f72911c4629b3e79928efbe74e107a4ca389a02cd84f,243
+Image_542,images/Image_542.png,10.0,1,Mild,Ejusu Government Hospital,48,M,9df3c729f7e6190a4046dd90375bbf1496694d192f6b4a085b465890adf6e318,400
+Image_543,images/Image_543.png,12.6,0,Non-Anemic,Bolgatanga Regional Hospital,48,M,b5793f3f6c235dac5a73baa0240498609ef2eda8b25392dd97f34df8d2f7f830,401
+Image_544,images/Image_544.png,10.0,1,Mild,Komfo Anokye Teaching Hospital,36,M,48f3ec90c121ccc5567aa390775e377d0b7816cfd9122d74a38552f83a1fa757,402
+Image_545,images/Image_545.png,10.0,1,Mild,Manhyia District Hospital,12,F,81028130cd7035e18e31a7a7747a6e0f94ea62e9c09ea4716f47ce6f6797ceee,403
+Image_546,images/Image_546.png,10.0,1,Mild,Komfo Anokye Teaching Hospital,36,M,4c598f19549a040c5774fad23d5d6bd729f22b1d7ce6b56f4e501a0cbcdf3bcb,404
+Image_547,images/Image_547.png,10.0,1,Mild,Komfo Anokye Teaching Hospital,24,F,ae8f1db6340a625453e949d235e1b944c059a431e8c76a73ecb81b7ddf3bda63,49
+Image_548,images/Image_548.png,10.0,1,Mild,Nkawie-Toase Government Hospital,60,F,d264ccd4495962adf455e089467e629d2919f0e52aee7f98220e4a6fbee21a8b,16
+Image_549,images/Image_549.png,12.6,0,Non-Anemic,Komfo Anokye Teaching Hospital,12,F,b6bade2bf6b96031ea8fe72a3f3f15aa14cf590b12abdebd3655df3d56b382fd,405
+Image_550,images/Image_550.png,12.6,0,Non-Anemic,Komfo Anokye Teaching Hospital,12,F,aeb743fc97d94b3c45c8ed050c7bcb7763287306d4d31f136e122270d4538108,406
+Image_551,images/Image_551.png,12.6,0,Non-Anemic,Bolgatanga Regional Hospital,24,M,a2f33af8abb7cf1985c5397bb7d12490d42cf7196b8771ae0430e561f3b5fb9c,407
+Image_552,images/Image_552.png,10.0,1,Mild,Bolgatanga Regional Hospital,36,F,51eabe90585332a38e08f72911c4629b3e79928efbe74e107a4ca389a02cd84f,243
+Image_553,images/Image_553.png,12.6,0,Non-Anemic,Ahmadiyya Muslim Hospital,60,F,00f78f8f1b94ab688ccbb30b337c54891f1443abc32354a3d82ca78f0bd8724c,408
+Image_554,images/Image_554.png,10.0,1,Mild,Ahmadiyya Muslim Hospital,12,M,b9d7a350e795b8cc86d045ec0fd4bf56b1d3e3f86925c62f008bd41496a15980,409
+Image_555,images/Image_555.png,10.0,1,Mild,Nkawie-Toase Government Hospital,12,M,dddb35bd00199581219dd3b883c8dfa51d590d5edafef198564ec6b903c431a2,333
+Image_556,images/Image_556.png,10.0,1,Mild,Nkawie-Toase Government Hospital,36,F,187d37ad42edf37c638f301607d8031e9a7ce68e7cfcd2fb3055ec9949f11d69,247
+Image_557,images/Image_557.png,10.0,1,Mild,Bolgatanga Regional Hospital,12,F,f8528e9f5ab835a1ce0f6a8d5323340560b0297818fd91603b86ee689d77272b,410
+Image_558,images/Image_558.png,12.6,0,Non-Anemic,Ahmadiyya Muslim Hospital,36,F,63ca0ab7be1c2a527dcd9aa95ccf9f48b0d358f9c3bfe13c1b028019b1a1f09f,411
+Image_559,images/Image_559.png,12.6,0,Non-Anemic,Kintampo Municipal Hospital,36,M,011c3123daad9f341307efc64b0dab3cf26401867eced3c5cdd121123b2fa18a,412
+Image_560,images/Image_560.png,10.01,1,Mild,Ahmadiyya Muslim Hospital,36,F,68cefed0898b29119ea43493030b9a8125425173c3ddf3a27968e03890833cc8,28
+Image_561,images/Image_561.png,12.6,0,Non-Anemic,Komfo Anokye Teaching Hospital,36,F,72e705c8f60a8e4738de796b565b3d985ed0356d13d3e98945437c783f0eed87,413
+Image_562,images/Image_562.png,10.05,1,Mild,Nkawie-Toase Government Hospital,48,M,8840aff039f3a9f39cf02349ad8b103c73cc07efe731fe3a17edfe81933c8ecf,414
+Image_563,images/Image_563.png,10.06,1,Mild,Ahmadiyya Muslim Hospital,36,M,57ff8267b826d72fe1fee93362d9d4f361892c7e26a3f1fb712bc61505687efb,47
+Image_564,images/Image_564.png,10.1,1,Mild,Sunyani Municipal Hospital,24,M,646f300460e49fb2a96e0d17c3de58109145c65f62d61233ad89436e97605ee7,415
+Image_565,images/Image_565.png,10.1,1,Mild,Komfo Anokye Teaching Hospital,12,F,729b91429226a1ad2c5e49cd69da0c9371ba5e2702134fa4d16adcbabb3f2960,17
+Image_566,images/Image_566.png,12.8,0,Non-Anemic,Bolgatanga Regional Hospital,12,F,1009c88eda289676cb58623c94feca7d7c4aaaeb5f866663a29e0cfdb44e0570,416
+Image_567,images/Image_567.png,10.2,1,Mild,Ejusu Government Hospital,12,F,435a7d3d5dfb55786f71e56e83d1c968c20d2ea22931c53790a76d2c4f940273,417
+Image_568,images/Image_568.png,10.2,1,Mild,Manhyia District Hospital,48,F,209b184fd46a20a466e2116c0660296292df1dade96df99c747c83721668276f,418
+Image_569,images/Image_569.png,10.3,1,Mild,SDA Hospital,48,F,e3c9ddd1fc700b4782714e40fdeecf8976c0b362de72de392a7a352649a75b6b,376
+Image_570,images/Image_570.png,12.1,0,Non-Anemic,Komfo Anokye Teaching Hospital,24,M,ff78ab6a2d2a3f62f78abebed7cacda09157947a19548119b1eb5989c56777e9,419
+Image_571,images/Image_571.png,12.0,0,Non-Anemic,Ahmadiyya Muslim Hospital,36,M,3e6c0c29e24f96a00b239571da653e5146cf0c54ceafd6016d8feb0c80e4ca75,420
+Image_572,images/Image_572.png,9.0,1,Moderate,Sunyani Municipal Hospital,36,M,420e685e72a29d6cda989d42951c8534640a2faaa015ce31aecc0ea7f85d3679,421
+Image_573,images/Image_573.png,9.0,1,Moderate,Kintampo Municipal Hospital,48,F,e8529ac8684b9502e416d9e48fb72e97d4dbfdee48d6efef870673c5b11bc989,422
+Image_574,images/Image_574.png,9.1,1,Moderate,Nkawie-Toase Government Hospital,48,M,d225af866993e863d7ec69669ec7746ddce886e4e634ebcedb8ec2a6cf8dd15c,423
+Image_575,images/Image_575.png,7.9,1,Moderate,Sunyani Municipal Hospital,36,M,6d03ee13eed09c6b128c53bcd01c7a5ad4b711f48c0425c3312f2304f04ed6cb,424
+Image_576,images/Image_576.png,11.6,0,Non-Anemic,Sunyani Municipal Hospital,60,M,2f3b19d7863c87da08e3f854ebd3ca1e0ea45a9759f4cf17b4a863e868c795f6,425
+Image_577,images/Image_577.png,8.0,1,Moderate,Sunyani Municipal Hospital,36,M,a1e3e9fc400651f1818e8a346f4f4bee2cba7dd6abcb96c48a6a57316f9d5c43,61
+Image_578,images/Image_578.png,11.9,0,Non-Anemic,Komfo Anokye Teaching Hospital,48,F,f8dd49430b16166cb0effc3aa6c50b368376aef00c384a1c9e59a12e8d89212a,52
+Image_579,images/Image_579.png,8.1,1,Moderate,Kintampo Municipal Hospital,36,M,7bf44494ff949697babec15fd5c2ce5889301ad49771fd60aede2eb913bc3816,426
+Image_580,images/Image_580.png,8.9,1,Moderate,Sunyani Municipal Hospital,36,M,29706576255c57c766e925969d2cde10994d29bdf924e209fe13417777cbb7b6,393
+Image_581,images/Image_581.png,9.0,1,Moderate,Ejusu Government Hospital,36,F,d19917a3fd4a2cce3997fc773c0735a2711d4086661fd225cde3b2c0e9f37194,59
+Image_582,images/Image_582.png,9.2,1,Moderate,Ahmadiyya Muslim Hospital,36,F,13c35a708b9265082d840eea384d1a85fd3db28d9378fdb826f907cd13f61290,427
+Image_583,images/Image_583.png,10.2,1,Mild,Sunyani Municipal Hospital,48,F,1d53ad8c4a92f126fafa4f627b28bcfc7551621fa1eb4215401593fab0e92505,428
+Image_584,images/Image_584.png,10.2,1,Mild,Bolgatanga Regional Hospital,12,F,2448779d6a122ea96bd2aefff8eb65b323f7048ef3cfc21cb463346d2ee5d06e,429
+Image_585,images/Image_585.png,13.9,0,Non-Anemic,Sunyani Municipal Hospital,60,M,9565fce0c47f5eeb0abdc076d5a29374cd6cb7b0413c37e44cdfb416843b5337,430
+Image_586,images/Image_586.png,9.6,1,Moderate,Ahmadiyya Muslim Hospital,36,F,6d65f0636244af510e05844a6173f8d437e95ef93d3ebeb0983d0734480f201b,136
+Image_587,images/Image_587.png,11.5,0,Non-Anemic,Komfo Anokye Teaching Hospital,24,F,9565fce0c47f5eeb0abdc076d5a29374cd6cb7b0413c37e44cdfb416843b5337,430
+Image_588,images/Image_588.png,11.5,0,Non-Anemic,Bolgatanga Regional Hospital,24,M,aae538fe03b3a6efc74b3262698e9f8a8caced3dfe4bcd04a5efa45c3df3242d,131
+Image_589,images/Image_589.png,7.3,1,Moderate,Manhyia District Hospital,36,F,deace4854cb214f78f8efa89e0770302f9f2df2612a378688502614b63e4d76b,431
+Image_590,images/Image_590.png,11.5,0,Non-Anemic,Ahmadiyya Muslim Hospital,60,F,8e2a5d482fe66d21b3d36363e1d47078f829d83a58a6b50a73242b717ad766ba,22
+Image_591,images/Image_591.png,11.5,0,Non-Anemic,Nkawie-Toase Government Hospital,60,M,6432a11fc94fa5bc36665e43a901a5cd86b3e618bdec8b78c0f7a46bf479feaf,432
+Image_592,images/Image_592.png,11.52,0,Non-Anemic,Sunyani Municipal Hospital,36,M,6a50dba7b05366bbfbba109f94b25a5d0ea307a052d6233bbae77da107478125,433
+Image_593,images/Image_593.png,7.3,1,Moderate,Ejusu Government Hospital,48,M,7dd1abfe6d01406f0fa9a61fe60ce333e68a7152de9c122b051f28e01625db03,374
+Image_594,images/Image_594.png,7.4,1,Moderate,Ahmadiyya Muslim Hospital,24,M,5404fd002cf01f21833260b1206f163186e41143467f82e59e4b8d0413c98dc3,434
+Image_595,images/Image_595.png,11.6,0,Non-Anemic,Komfo Anokye Teaching Hospital,24,M,6a50dba7b05366bbfbba109f94b25a5d0ea307a052d6233bbae77da107478125,433
+Image_596,images/Image_596.png,7.5,1,Moderate,Nkawie-Toase Government Hospital,60,M,f33a6d79a43c8e35920724628a674c7053c329c9eafc1b3acaecaf84e881b88b,233
+Image_597,images/Image_597.png,7.5,1,Moderate,Nkawie-Toase Government Hospital,48,M,4e0b9482e47597417f0671e77ca7a5fced390807719b342fa0d89d5cecf11d86,435
+Image_598,images/Image_598.png,7.5,1,Moderate,Kintampo Municipal Hospital,36,M,bca25174ed4a1cd70fc300b2f54b798e39cf8f6d030d604670e3e06780661433,40
+Image_599,images/Image_599.png,7.5,1,Moderate,Ahmadiyya Muslim Hospital,12,M,c469625527f82e684cbdf83734f7aae005a26a335b770f3313e378d35e76356a,436
+Image_600,images/Image_600.png,11.6,0,Non-Anemic,Bolgatanga Regional Hospital,48,F,59eae8653c600a22310007b3bef79cff26f833497d908de5a4d4ce345350f858,194
+Image_601,images/Image_601.png,11.6,0,Non-Anemic,Sunyani Municipal Hospital,12,M,88d50cf07e9604d5c8af8d4662f47dc93d1f62f66436119809c8b7da5642d7a3,437
+Image_602,images/Image_602.png,7.6,1,Moderate,Bolgatanga Regional Hospital,36,M,187b56e2f179aa5a64fdffef81f98c61bb27dd6a566c695dae8abdf27e59439a,136
+Image_603,images/Image_603.png,7.7,1,Moderate,Komfo Anokye Teaching Hospital,12,F,261b12ff84f9c7a1415a1e5454f83dbb180572b1735264b707f86572a5530693,160
+Image_604,images/Image_604.png,11.6,0,Non-Anemic,Kintampo Municipal Hospital,60,F,88d50cf07e9604d5c8af8d4662f47dc93d1f62f66436119809c8b7da5642d7a3,437
+Image_605,images/Image_605.png,7.7,1,Moderate,Ahmadiyya Muslim Hospital,48,M,187b56e2f179aa5a64fdffef81f98c61bb27dd6a566c695dae8abdf27e59439a,136
+Image_606,images/Image_606.png,7.7,1,Moderate,Sunyani Municipal Hospital,48,M,fc865f396164844397444628ad1092d502ccf03556372984b981c4ec63deb013,438
+Image_607,images/Image_607.png,7.8,1,Moderate,Komfo Anokye Teaching Hospital,60,F,279265d4393eb62f0213e01ee8736a64cc0f4b254bcd943517a2faeb027f2cd2,207
+Image_608,images/Image_608.png,7.8,1,Moderate,Manhyia District Hospital,12,M,e8dfb97be7f7705abe1e429079d06a92329c08c99a70115ef84475f176446f8e,34
+Image_609,images/Image_609.png,7.8,1,Moderate,Kintampo Municipal Hospital,12,F,2ddba5fc3bb33b84d36a9fa12cda4ac0759b349e7c87136b5b757397b282d200,67
+Image_610,images/Image_610.png,7.8,1,Moderate,Kintampo Municipal Hospital,12,F,e3c9ddd1fc700b4782714e40fdeecf8976c0b362de72de392a7a352649a75b6b,376
+Image_611,images/Image_611.png,7.8,1,Moderate,Komfo Anokye Teaching Hospital,12,M,c7710b4e58d0ecb9ad5c691ba7379aa15e236e59cbb616efbcf4eaff5c06c24d,69
+Image_612,images/Image_612.png,7.8,1,Moderate,Komfo Anokye Teaching Hospital,12,F,faa23f2060286ba2ce3d39b5bf9ebe5e6aae27883724809fdeba52f2dd25728c,439
+Image_613,images/Image_613.png,7.8,1,Moderate,Manhyia District Hospital,36,M,187b56e2f179aa5a64fdffef81f98c61bb27dd6a566c695dae8abdf27e59439a,136
+Image_614,images/Image_614.png,7.89,1,Moderate,Ahmadiyya Muslim Hospital,24,M,7dd1abfe6d01406f0fa9a61fe60ce333e68a7152de9c122b051f28e01625db03,374
+Image_615,images/Image_615.png,7.9,1,Moderate,Nkawie-Toase Government Hospital,36,F,1d61df9cce90b958b3a7e9aed2d427096c46f94e5d371e37d43643847aadf202,4
+Image_616,images/Image_616.png,7.9,1,Moderate,Ejusu Government Hospital,24,M,286bff002fb2253173136c554d76c2ec3018b18cb57049b7c20e3ea05f5dd6a7,233
+Image_617,images/Image_617.png,7.9,1,Moderate,Manhyia District Hospital,36,M,72301fb843630d496fd9fa9f042e423a771e665f99c135d48c4c69517c7ae18f,72
+Image_618,images/Image_618.png,7.9,1,Moderate,Ahmadiyya Muslim Hospital,60,M,06182a4397e399e9a302d796358aa94372a5bf3075e9d75453b97e6b197be0f5,290
+Image_619,images/Image_619.png,6.9,1,Severe,Ahmadiyya Muslim Hospital,7,M,95bc2cae7f9ff9feaf6ce787daed30b9c202ec2875dac351d97c6d499b57e48b,440
+Image_620,images/Image_620.png,6.9,1,Severe,Nkawie-Toase Government Hospital,24,M,57ff8267b826d72fe1fee93362d9d4f361892c7e26a3f1fb712bc61505687efb,47
+Image_621,images/Image_621.png,7.1,1,Moderate,Sunyani Municipal Hospital,12,M,95da0be80c5fe352c0c2cccef46eaad124bc5ecb1fe45bda9faa18227b3e8023,441
+Image_622,images/Image_622.png,8.6,1,Moderate,Bolgatanga Regional Hospital,36,M,c6045bcc582fa1984cf448ab43ee12e95eea91be3777e98b9e8ef8c571f909c0,442
+Image_623,images/Image_623.png,8.6,1,Moderate,Nkawie-Toase Government Hospital,36,F,15a7265451a0aef130f460d3cc152c270a89400cf877b6fae56000f7fd39956d,8
+Image_624,images/Image_624.png,11.9,0,Non-Anemic,Kintampo Municipal Hospital,36,F,88d50cf07e9604d5c8af8d4662f47dc93d1f62f66436119809c8b7da5642d7a3,437
+Image_625,images/Image_625.png,8.8,1,Moderate,Ejusu Government Hospital,12,F,ba08627fa376f255610a734317ee8e724a124502e4d68897a26463169a8d1477,293
+Image_626,images/Image_626.png,8.7,1,Moderate,Nkawie-Toase Government Hospital,12,M,4328497af6437d23b51ab2bcaf93b698179cfde6673a19c75ee1094a83775929,17
+Image_627,images/Image_627.png,8.7,1,Moderate,Sunyani Municipal Hospital,36,M,1d61df9cce90b958b3a7e9aed2d427096c46f94e5d371e37d43643847aadf202,4
+Image_628,images/Image_628.png,8.7,1,Moderate,SDA Hospital,24,M,7bf44494ff949697babec15fd5c2ce5889301ad49771fd60aede2eb913bc3816,426
+Image_629,images/Image_629.png,8.8,1,Moderate,SDA Hospital,12,M,a82632e31afd9c13ed40edab436b132ef484a16e90861d27309b3ff90453344a,289
+Image_630,images/Image_630.png,8.8,1,Moderate,Ejusu Government Hospital,12,F,4328497af6437d23b51ab2bcaf93b698179cfde6673a19c75ee1094a83775929,17
+Image_631,images/Image_631.png,9.0,1,Moderate,Sunyani Municipal Hospital,36,F,1158993f04abd00ee687c2d3f08826f3fbe2de8733bc3eae56263519d536a127,18
+Image_632,images/Image_632.png,12.1,0,Non-Anemic,Kintampo Municipal Hospital,60,M,e4801ca42ee544c93cc01529187302f153b63dbe7c2ab74ff500eefadfd4f932,443
+Image_633,images/Image_633.png,9.2,1,Moderate,Ahmadiyya Muslim Hospital,12,F,3edf04ea796b8a16aefad86034e1850a51553b9d0c0b48e0f006e5c8bf1a0d79,74
+Image_634,images/Image_634.png,9.2,1,Moderate,Komfo Anokye Teaching Hospital,48,M,bc1215bbaef83306302215b374ae3515e8c79514d7d13f23c59cd963e148cdf2,21
+Image_635,images/Image_635.png,9.2,1,Moderate,Komfo Anokye Teaching Hospital,12,M,6761218308ed1fc7675efcf5436a20e3f2f253abd20240f30bf123642e1a6355,138
+Image_636,images/Image_636.png,9.2,1,Moderate,Bolgatanga Regional Hospital,24,F,3b59828c99f519cf1028973a53b5021d9b854388d863e41602c4faac8de1b640,207
+Image_637,images/Image_637.png,9.2,1,Moderate,Ahmadiyya Muslim Hospital,24,F,6f43658e341f60ebf96f89be838868f9a42625eea2d851680ab6dcf908a19910,144
+Image_638,images/Image_638.png,9.2,1,Moderate,Ejusu Government Hospital,9,M,852b90d489302bb8cecf3491134abeaa5c327f021f59a779f92721535fc1b6f4,444
+Image_639,images/Image_639.png,9.2,1,Moderate,Sunyani Municipal Hospital,24,M,96c85442c5691bdf56b040fdc3c4ee164356ae3c4eb243eb2ae79146e1a2bbf4,218
+Image_640,images/Image_640.png,8.0,1,Moderate,Sunyani Municipal Hospital,12,M,187b56e2f179aa5a64fdffef81f98c61bb27dd6a566c695dae8abdf27e59439a,136
+Image_641,images/Image_641.png,8.0,1,Moderate,Ejusu Government Hospital,24,M,90b89cbd567c08a76b620d401beaa29ea78f0cdfcc047f55ce0f7e9ab59d8415,37
+Image_642,images/Image_642.png,8.4,1,Moderate,Bolgatanga Regional Hospital,12,M,6d65f0636244af510e05844a6173f8d437e95ef93d3ebeb0983d0734480f201b,136
+Image_643,images/Image_643.png,8.4,1,Moderate,Kintampo Municipal Hospital,48,M,a16caf7e4ff3a4554f17005ab7517c316556c223a7395b5f0e2093f292a91923,397
+Image_644,images/Image_644.png,8.5,1,Moderate,Nkawie-Toase Government Hospital,36,M,c6045bcc582fa1984cf448ab43ee12e95eea91be3777e98b9e8ef8c571f909c0,442
+Image_645,images/Image_645.png,8.7,1,Moderate,Ahmadiyya Muslim Hospital,12,M,06182a4397e399e9a302d796358aa94372a5bf3075e9d75453b97e6b197be0f5,290
+Image_646,images/Image_646.png,9.0,1,Moderate,Ahmadiyya Muslim Hospital,60,M,279265d4393eb62f0213e01ee8736a64cc0f4b254bcd943517a2faeb027f2cd2,207
+Image_647,images/Image_647.png,9.0,1,Moderate,Sunyani Municipal Hospital,24,F,8840aff039f3a9f39cf02349ad8b103c73cc07efe731fe3a17edfe81933c8ecf,414
+Image_648,images/Image_648.png,7.0,1,Moderate,Nkawie-Toase Government Hospital,48,M,72301fb843630d496fd9fa9f042e423a771e665f99c135d48c4c69517c7ae18f,72
+Image_649,images/Image_649.png,7.0,1,Moderate,Ahmadiyya Muslim Hospital,24,M,faa23f2060286ba2ce3d39b5bf9ebe5e6aae27883724809fdeba52f2dd25728c,439
+Image_650,images/Image_650.png,7.98,1,Moderate,Nkawie-Toase Government Hospital,48,F,843528a75fb5c19995ea493fd370d2243f6447bfb76f8939df294ef5e8c489c2,93
+Image_651,images/Image_651.png,11.9,0,Non-Anemic,Ahmadiyya Muslim Hospital,36,M,8bfadf26093ca59df885c47bc5edd83ee02f98e904ccdc0aa0b7a5c82fa0cee7,445
+Image_652,images/Image_652.png,8.7,1,Moderate,Ahmadiyya Muslim Hospital,60,M,cb3a433fc558cc122efca4508c52d62b789f38395daea57c974f9bd4ccf54f85,115
+Image_653,images/Image_653.png,12.0,0,Non-Anemic,Ejusu Government Hospital,12,F,8bfadf26093ca59df885c47bc5edd83ee02f98e904ccdc0aa0b7a5c82fa0cee7,445
+Image_654,images/Image_654.png,12.0,0,Non-Anemic,Ahmadiyya Muslim Hospital,24,M,2ba2522a76089f438ddd9749c0503fb1619c62e34d2bab08f91bd5d821da8ff8,446
+Image_655,images/Image_655.png,12.01,0,Non-Anemic,Bolgatanga Regional Hospital,48,F,4b0ba695ceee91e813718bbf760c52ae4d2c88a99b1a70d227feddbd70399368,447
+Image_656,images/Image_656.png,9.0,1,Moderate,Komfo Anokye Teaching Hospital,12,M,9255d5912d7f76d6bf1120e2bf1ea2dd4ad9634e436f1b3ce7ba70a72ef209aa,448
+Image_657,images/Image_657.png,9.2,1,Moderate,Ejusu Government Hospital,36,M,38f274aec16e4000e5bcc4a2bedd484855927e806840c4800fd792dd4ad84a97,24
+Image_658,images/Image_658.png,9.5,1,Moderate,Holy Family Hospital,8,M,94b9268a77b68f26d47da0fe748db15b540d0761d0d58bb7bdd7487de4b08090,449
+Image_659,images/Image_659.png,10.1,1,Mild,Komfo Anokye Teaching Hospital,36,F,f5c053c8610ab15fdc4479c0fb482b26a0f56abe2f6a92a952bca4d74c51b5cd,450
+Image_660,images/Image_660.png,10.2,1,Mild,Komfo Anokye Teaching Hospital,36,M,187b56e2f179aa5a64fdffef81f98c61bb27dd6a566c695dae8abdf27e59439a,136
+Image_661,images/Image_661.png,12.9,0,Non-Anemic,Nkawie-Toase Government Hospital,60,M,c8f0b7ff149d31b9e36d3fbc83b94941f9df02676fac82097bb12ffc3c08930f,143
+Image_662,images/Image_662.png,10.3,1,Mild,Kintampo Municipal Hospital,12,M,efda81df603a9f00f1a28405a66fd3a5da58e9549b0e310135cb597717ede549,451
+Image_663,images/Image_663.png,13.1,0,Non-Anemic,Komfo Anokye Teaching Hospital,36,M,513b13ca8f96b8666ee63f454e1bb7f35c89662ea81d78d330f52b04508a79ef,452
+Image_664,images/Image_664.png,13.1,0,Non-Anemic,Sunyani Municipal Hospital,48,F,f5277362d09fb6224bd6bf1250c343f06d2b68f2f5c320c6857170e927d5fc13,105
+Image_665,images/Image_665.png,10.6,1,Mild,Komfo Anokye Teaching Hospital,12,M,699b1884e8efb240e326a85827db49e346b3ca49b17e0fe2ce6d435088697988,453
+Image_666,images/Image_666.png,10.6,1,Mild,Nkawie-Toase Government Hospital,12,F,06182a4397e399e9a302d796358aa94372a5bf3075e9d75453b97e6b197be0f5,290
+Image_667,images/Image_667.png,10.6,1,Mild,Kintampo Municipal Hospital,36,M,f33a6d79a43c8e35920724628a674c7053c329c9eafc1b3acaecaf84e881b88b,233
+Image_668,images/Image_668.png,10.6,1,Mild,Kintampo Municipal Hospital,24,M,3b59828c99f519cf1028973a53b5021d9b854388d863e41602c4faac8de1b640,207
+Image_669,images/Image_669.png,10.7,1,Mild,Nkawie-Toase Government Hospital,60,M,760ab8af8b2a215b87c808fca5909caf0ab21facca9dec61b303dd310d69c596,454
+Image_670,images/Image_670.png,10.7,1,Mild,Ahmadiyya Muslim Hospital,12,F,16ff088bc7ad5bf03ca3ea6433bec463e56f7811958115403a9323b57a0bed4e,455
+Image_671,images/Image_671.png,12.1,0,Non-Anemic,Ahmadiyya Muslim Hospital,48,F,28d053faa7d871e4e88aead29201d0048358f9091dfa8b392310245d89310ca0,58
+Image_672,images/Image_672.png,12.1,0,Non-Anemic,Komfo Anokye Teaching Hospital,24,F,28d053faa7d871e4e88aead29201d0048358f9091dfa8b392310245d89310ca0,58
+Image_673,images/Image_673.png,12.1,0,Non-Anemic,Ahmadiyya Muslim Hospital,48,F,00dbe01428db3326e383add9d2c711d5b52cad031d4c691bbb1ee20c7f439b68,456
+Image_674,images/Image_674.png,12.1,0,Non-Anemic,Ahmadiyya Muslim Hospital,24,F,c8f0b7ff149d31b9e36d3fbc83b94941f9df02676fac82097bb12ffc3c08930f,143
+Image_675,images/Image_675.png,9.7,1,Moderate,Nkawie-Toase Government Hospital,12,M,89097840724fc79b13bb6cdf3dff3b4571b21fb1438a67c646f79cbeba39bef8,0
+Image_676,images/Image_676.png,9.7,1,Moderate,Nkawie-Toase Government Hospital,12,M,187d37ad42edf37c638f301607d8031e9a7ce68e7cfcd2fb3055ec9949f11d69,247
+Image_677,images/Image_677.png,11.9,0,Non-Anemic,Kintampo Municipal Hospital,36,F,6315b798ee1b7cb2e330d6d5b1cb8ad540d8b79d0d1482c3b1bd13b9d8574126,65
+Image_678,images/Image_678.png,8.6,1,Moderate,Nkawie-Toase Government Hospital,8,M,eefbefe6f6d6fb12d631ab16379ddd3a846bafc1502ca185e72c1ca76b881d4d,25
+Image_679,images/Image_679.png,12.0,0,Non-Anemic,Ejusu Government Hospital,12,F,6315b798ee1b7cb2e330d6d5b1cb8ad540d8b79d0d1482c3b1bd13b9d8574126,65
+Image_680,images/Image_680.png,8.7,1,Moderate,Komfo Anokye Teaching Hospital,12,F,fc953a2f26591d333f7d5ec0b86886260882645fbde62f59e41d364c4220f66e,206
+Image_681,images/Image_681.png,8.7,1,Moderate,Bolgatanga Regional Hospital,12,F,a08f0e479d8773fe321699b43cc628fb7095d000feeb24bcce0e073195ad33c2,457
+Image_682,images/Image_682.png,12.0,0,Non-Anemic,Komfo Anokye Teaching Hospital,48,M,f65b54d12ecf1cc73edb7e5415498eb6bc75088e748f49ab8a70e230b4fcf996,458
+Image_683,images/Image_683.png,8.7,1,Moderate,Komfo Anokye Teaching Hospital,12,F,80fa3247d145b35671c31a08cdce7d296a3a694b8d9c4c2a24d26e531a7f1ba0,241
+Image_684,images/Image_684.png,13.9,0,Non-Anemic,Kintampo Municipal Hospital,60,M,6315b798ee1b7cb2e330d6d5b1cb8ad540d8b79d0d1482c3b1bd13b9d8574126,65
+Image_685,images/Image_685.png,13.9,0,Non-Anemic,Bolgatanga Regional Hospital,11,M,6315b798ee1b7cb2e330d6d5b1cb8ad540d8b79d0d1482c3b1bd13b9d8574126,65
+Image_686,images/Image_686.png,13.9,0,Non-Anemic,Komfo Anokye Teaching Hospital,48,M,dee33955ff5727c49d83878075efdd37a92d7c159c3dfd4cfe7ec7ba436ea8c4,459
+Image_687,images/Image_687.png,13.9,0,Non-Anemic,Bolgatanga Regional Hospital,8,F,c8f0b7ff149d31b9e36d3fbc83b94941f9df02676fac82097bb12ffc3c08930f,143
+Image_688,images/Image_688.png,13.9,0,Non-Anemic,Komfo Anokye Teaching Hospital,48,F,1bac61b9f2d7c24d46b120b8bdd96366091a6b44ab5e41ddf3019ab6b7de6028,460
+Image_689,images/Image_689.png,14.6,0,Non-Anemic,Bolgatanga Regional Hospital,6,F,59eae8653c600a22310007b3bef79cff26f833497d908de5a4d4ce345350f858,194
+Image_690,images/Image_690.png,14.6,0,Non-Anemic,Ejusu Government Hospital,12,M,f5277362d09fb6224bd6bf1250c343f06d2b68f2f5c320c6857170e927d5fc13,105
+Image_691,images/Image_691.png,14.6,0,Non-Anemic,Sunyani Municipal Hospital,10,M,513b13ca8f96b8666ee63f454e1bb7f35c89662ea81d78d330f52b04508a79ef,452
+Image_692,images/Image_692.png,14.6,0,Non-Anemic,Komfo Anokye Teaching Hospital,36,M,f5277362d09fb6224bd6bf1250c343f06d2b68f2f5c320c6857170e927d5fc13,105
+Image_693,images/Image_693.png,14.8,0,Non-Anemic,Ahmadiyya Muslim Hospital,24,F,f5277362d09fb6224bd6bf1250c343f06d2b68f2f5c320c6857170e927d5fc13,105
+Image_694,images/Image_694.png,14.7,0,Non-Anemic,Bolgatanga Regional Hospital,9,F,8cb9ece27d59ae53b9a774eecd3bec125f820dfe5a6b6556e41839c1054edb42,56
+Image_695,images/Image_695.png,14.8,0,Non-Anemic,Bolgatanga Regional Hospital,9,M,513b13ca8f96b8666ee63f454e1bb7f35c89662ea81d78d330f52b04508a79ef,452
+Image_696,images/Image_696.png,14.8,0,Non-Anemic,Nkawie-Toase Government Hospital,12,F,62514d22bba9a554e7da406085d852b70466d72bac2e4dea3f2040ea9f7e693c,2
+Image_697,images/Image_697.png,14.8,0,Non-Anemic,Kintampo Municipal Hospital,12,M,630b1ee546a9f8df01aca59e0059598de8367709b13adc3cf874ed5f0bd15973,461
+Image_698,images/Image_698.png,14.9,0,Non-Anemic,Nkawie-Toase Government Hospital,12,M,122ea1ef4bb636b6a1ba277ae25054551e557329e388645170a810d3ba0109ba,462
+Image_699,images/Image_699.png,14.9,0,Non-Anemic,Ahmadiyya Muslim Hospital,48,M,4b1d055c5abafcc454108e85682a426ab00fb9b1dcad8974ab14a815d0acd4bf,463
+Image_700,images/Image_700.png,15.0,0,Non-Anemic,Ahmadiyya Muslim Hospital,12,M,afa1c683247e84110b86817e38c721256d04a085d6dd86ee6f391bc2a179c50f,464
+Image_701,images/Image_701.png,15.0,0,Non-Anemic,Bolgatanga Regional Hospital,48,M,066ed428139034f8265930e330913205ffa8d561b1f657a01e1344c277ab305d,465
+Image_702,images/Image_702.png,14.5,0,Non-Anemic,Sunyani Municipal Hospital,60,F,1a8a7520ebc56b251828c9b65897864eec5b6b5324d1212e20214e56d7aa2472,466
+Image_703,images/Image_703.png,14.7,0,Non-Anemic,Ahmadiyya Muslim Hospital,10,M,8e54bf2c6060387e9b3009a76432b5f36afe3e8d8bdadddaf799457373d76ee9,467
+Image_704,images/Image_704.png,14.3,0,Non-Anemic,Bolgatanga Regional Hospital,12,M,28d053faa7d871e4e88aead29201d0048358f9091dfa8b392310245d89310ca0,58
+Image_705,images/Image_705.png,14.7,0,Non-Anemic,Bolgatanga Regional Hospital,7,M,28d053faa7d871e4e88aead29201d0048358f9091dfa8b392310245d89310ca0,58
+Image_706,images/Image_706.png,12.8,0,Non-Anemic,Bolgatanga Regional Hospital,48,M,c8f0b7ff149d31b9e36d3fbc83b94941f9df02676fac82097bb12ffc3c08930f,143
+Image_707,images/Image_707.png,11.47,0,Non-Anemic,Ahmadiyya Muslim Hospital,48,F,e7bc79e221084a8ceea393172de53b490c7050a9e18c3fe76d0de8216afe025e,468
+Image_708,images/Image_708.png,11.6,0,Non-Anemic,Komfo Anokye Teaching Hospital,60,M,f7a45a793ba041254f7e308650c80de302ccd218e7be5cfccf93316e42f9d0af,469
+Image_709,images/Image_709.png,12.1,0,Non-Anemic,Bolgatanga Regional Hospital,48,M,e93f34d0bcb31d1db47e4eb47084a3e68017166a55bda16cd77fcdb60f576f0f,470
+Image_710,images/Image_710.png,11.7,0,Non-Anemic,Ahmadiyya Muslim Hospital,24,M,26dededd485ca8663033c10a57a1b41b733fcf20ebac4252a71ae890069cd114,471
