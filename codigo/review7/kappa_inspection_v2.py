@@ -1,12 +1,22 @@
 # Califica la inspeccion ciega del kit ampliado (etapa 4).
 # Reporta: el kappa de Cohen entre los dos evaluadores (con IC 95 % por bootstrap), la proporcion de pares juzgados
 # "mismo ojo" en cada tipo de par (aceptados, rechazados parecidos, al azar) y el acuerdo de cada evaluador con el detector.
-# Uso: python kappa_inspection_v2.py respuestas_evaluador_A.csv respuestas_evaluador_B.csv CLAVE_no_mostrar_a_evaluadores.csv
+# Uso: python kappa_inspection_v2.py <hoja de A>.csv <hoja de B>.csv CLAVE_no_mostrar_a_evaluadores.csv
+# Sirve con las hojas llenadas a mano (columnas code, respuesta) y con las que descarga el calificador en pantalla.
 import sys
 import numpy as np, pandas as pd
 from sklearn.metrics import cohen_kappa_score
 
 a, b, key = (pd.read_csv(f) for f in sys.argv[1:4])
+# las hojas del calificador en pantalla traen ademas el evaluador, el inicio, el fin y los minutos de trabajo
+for letra, hoja in (('A', a), ('B', b)):
+    if 'evaluador' in hoja.columns:
+        quien = set(hoja.evaluador.dropna().astype(str))
+        if quien != {letra}:
+            sys.exit('La hoja que se paso como %s dice ser del evaluador %s. Revise el orden de los archivos.' % (letra, ', '.join(sorted(quien))))
+    if 'minutos' in hoja.columns:
+        print('hoja %s: inicio %s, fin %s, %d minutos de trabajo' % (letra, hoja.inicio.iloc[0], hoja.fin.iloc[0], int(hoja.minutos.max())))
+a, b = a[['code', 'respuesta']], b[['code', 'respuesta']]
 d = key.merge(a.rename(columns={'respuesta': 'A'}), on='code', validate='one_to_one').merge(b.rename(columns={'respuesta': 'B'}), on='code', validate='one_to_one')
 falta = d[d.A.isna() | d.B.isna()]
 if len(falta):
