@@ -1,0 +1,202 @@
+{
+ "pares": 356,
+ "evaluadores": {
+  "E1": {
+   "archivo": "respuestas_evaluador_A_2026-11-17_18min.csv",
+   "letra": "A",
+   "inicio": "2026-11-17 15:40",
+   "fin": "2026-11-17 15:59",
+   "minutos": 18
+  },
+  "E2": {
+   "archivo": "respuestas_evaluador_B_2026-11-17_28min.csv",
+   "letra": "B",
+   "inicio": "2026-11-17 16:26",
+   "fin": "2026-11-17 17:12",
+   "minutos": 28
+  },
+  "E3": {
+   "archivo": "respuestas_evaluador_B_2026-11-17_44min.csv",
+   "letra": "B",
+   "inicio": "2026-11-17 17:01",
+   "fin": "2026-11-17 17:46",
+   "minutos": 44
+  }
+ },
+ "por_tipo": {
+  "accepted": {
+   "n": 168,
+   "E1": {
+    "mismo": 167,
+    "distintos": 0,
+    "no_decide": 1,
+    "pct_mismo_entre_decididos": 100.0
+   },
+   "E2": {
+    "mismo": 165,
+    "distintos": 3,
+    "no_decide": 0,
+    "pct_mismo_entre_decididos": 98.2
+   },
+   "E3": {
+    "mismo": 163,
+    "distintos": 4,
+    "no_decide": 1,
+    "pct_mismo_entre_decididos": 97.6
+   }
+  },
+  "random": {
+   "n": 20,
+   "E1": {
+    "mismo": 3,
+    "distintos": 12,
+    "no_decide": 5,
+    "pct_mismo_entre_decididos": 20.0
+   },
+   "E2": {
+    "mismo": 7,
+    "distintos": 13,
+    "no_decide": 0,
+    "pct_mismo_entre_decididos": 35.0
+   },
+   "E3": {
+    "mismo": 1,
+    "distintos": 18,
+    "no_decide": 1,
+    "pct_mismo_entre_decididos": 5.3
+   }
+  },
+  "rejected_lookalike": {
+   "n": 168,
+   "E1": {
+    "mismo": 70,
+    "distintos": 75,
+    "no_decide": 23,
+    "pct_mismo_entre_decididos": 48.3
+   },
+   "E2": {
+    "mismo": 51,
+    "distintos": 115,
+    "no_decide": 2,
+    "pct_mismo_entre_decididos": 30.7
+   },
+   "E3": {
+    "mismo": 7,
+    "distintos": 151,
+    "no_decide": 10,
+    "pct_mismo_entre_decididos": 4.4
+   }
+  }
+ },
+ "kappa_entre_evaluadores": {
+  "E1-E2": {
+   "kappa": 0.576,
+   "ic95": [
+    0.48,
+    0.668
+   ],
+   "acuerdo": 0.818,
+   "n": 325
+  },
+  "E1-E3": {
+   "kappa": 0.581,
+   "ic95": [
+    0.499,
+    0.669
+   ],
+   "acuerdo": 0.797,
+   "n": 316
+  },
+  "E2-E3": {
+   "kappa": 0.702,
+   "ic95": [
+    0.63,
+    0.77
+   ],
+   "acuerdo": 0.851,
+   "n": 342
+  }
+ },
+ "acuerdo_con_detector": {
+  "E1": {
+   "kappa": 0.549,
+   "ic95": [
+    0.465,
+    0.63
+   ],
+   "acuerdo": 0.777,
+   "n": 327
+  },
+  "E2": {
+   "kappa": 0.66,
+   "ic95": [
+    0.584,
+    0.732
+   ],
+   "acuerdo": 0.828,
+   "n": 354
+  },
+  "E3": {
+   "kappa": 0.93,
+   "ic95": [
+    0.889,
+    0.965
+   ],
+   "acuerdo": 0.965,
+   "n": 344
+  }
+ },
+ "kappa_fleiss": {
+  "kappa": 0.623,
+  "ic95": [
+   0.555,
+   0.687
+  ],
+  "n": 314
+ },
+ "evaluadores_que_dicen_mismo_ojo": {
+  "accepted": {
+   "0": 0,
+   "1": 0,
+   "2": 9,
+   "3": 159
+  },
+  "random": {
+   "0": 11,
+   "1": 7,
+   "2": 2,
+   "3": 0
+  },
+  "rejected_lookalike": {
+   "0": 77,
+   "1": 59,
+   "2": 27,
+   "3": 5
+  }
+ },
+ "evaluadores_que_dicen_ojos_distintos": {
+  "accepted": {
+   "0": 161,
+   "1": 7,
+   "2": 0,
+   "3": 0
+  },
+  "random": {
+   "0": 1,
+   "1": 5,
+   "2": 4,
+   "3": 10
+  },
+  "rejected_lookalike": {
+   "0": 14,
+   "1": 25,
+   "2": 71,
+   "3": 58
+  }
+ },
+ "aceptados_que_la_mayoria_juzga_distintos": {
+  "n": 0,
+  "de": 168,
+  "cota_superior_95_si_cero": 2.17
+ }
+}

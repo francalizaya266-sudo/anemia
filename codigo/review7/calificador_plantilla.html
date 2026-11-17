@@ -50,6 +50,8 @@
   .nav { display: flex; gap: 10px; flex-wrap: wrap; justify-content: space-between; margin-top: 6px; }
   .status { min-height: 1.5em; font-size: .9rem; }
   .warn { color: var(--warn); }
+  .alert { border-color: var(--warn); }
+  .alert b { color: var(--warn); }
   .ok { color: var(--ok); }
   kbd { background: #111; border: 1px solid #555; border-radius: 4px; padding: 0 5px; font: inherit; font-size: .85em; }
   table.sum { border-collapse: collapse; margin: 8px 0; }
@@ -68,6 +70,10 @@
 
 <section id="intro">
   <h1>Inspección ciega de pares (etapa 4), kit ampliado</h1>
+  <div id="noRun" class="card alert">
+    <p><b>El calificador no está funcionando en esta pantalla.</b> El archivo se abrió en un visor que solo lo muestra (pasa en los celulares y en las vistas previas de WhatsApp, Drive o el correo), y por eso los botones no responden.</p>
+    <p>Descargue el archivo en una computadora y ábralo con Chrome, Edge o Firefox: clic derecho sobre el archivo, «Abrir con», y elija el navegador. Si este aviso desaparece, el calificador ya funciona.</p>
+  </div>
   <div class="card">
     <p>Va a ver <span id="nPairs">356</span> pares de imágenes, de P001 a P356. Para cada par decida, sin consultar a nadie ni ningún otro archivo:</p>
     <ul class="clean">
@@ -80,14 +86,15 @@
   </div>
   <div class="card">
     <h2 style="margin-top:0">¿Qué evaluador es usted?</h2>
-    <p class="muted">Use la letra que le indicó el coordinador.</p>
+    <p class="muted">Primero elija la letra que le indicó el coordinador y después pulse «Empezar».</p>
     <div class="row" role="radiogroup" aria-label="Evaluador">
       <label class="choice"><input type="radio" name="ev" value="A"> Evaluador A</label>
       <label class="choice"><input type="radio" name="ev" value="B"> Evaluador B</label>
     </div>
+    <p id="needEv" class="status warn" role="alert" hidden>Falta elegir: marque «Evaluador A» o «Evaluador B» y vuelva a pulsar «Empezar».</p>
     <p id="saved" class="status muted"></p>
     <div class="row">
-      <button id="start" class="primary" disabled>Empezar</button>
+      <button id="start" class="primary">Empezar</button>
       <button id="reset" hidden>Borrar mi avance</button>
     </div>
     <p id="restoreRow" class="muted" hidden>¿Guardó una copia de su avance en otra computadora o en otro navegador?
@@ -251,7 +258,7 @@
   function current(ev) { return load(ev) || (st && st.ev === ev ? st : null); }
   function refreshIntro() {
     var ev = chosen(), n = ev ? countOf(current(ev)) : 0;
-    $('start').disabled = !ev;
+    if (ev) $('needEv').hidden = true;
     $('start').textContent = n ? 'Continuar' : 'Empezar';
     $('saved').textContent = n ? 'Hay un avance guardado para el evaluador ' + ev + ': ' + n + ' de ' + N + ' pares.' : '';
     $('reset').hidden = !n; $('reset').textContent = 'Borrar mi avance'; $('reset').dataset.armed = '';
@@ -284,7 +291,8 @@
     rd.readAsText(f);
   });
   $('start').addEventListener('click', function () {
-    var ev = chosen(); if (!ev) return;
+    var ev = chosen();
+    if (!ev) { $('needEv').hidden = false; radios[0].focus(); return; }
     st = current(ev) || { ev: ev, ans: {}, activeMs: 0, startedAt: Date.now(), finishedAt: null };
     lastTick = Date.now();
     var e = firstEmpty();
@@ -375,6 +383,9 @@
   $('asText').addEventListener('click', function () {
     $('textOut').value = sheet(true); $('textWrap').hidden = false; $('textOut').focus(); $('textOut').select();
   });
+
+  // llegar hasta aquí quiere decir que el programa cargó completo: se quita el aviso inicial
+  $('noRun').hidden = true;
 })();
 </script>
 </body>
