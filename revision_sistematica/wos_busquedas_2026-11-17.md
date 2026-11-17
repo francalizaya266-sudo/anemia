@@ -68,8 +68,12 @@ No se leyeron y, por el título, no usan las imágenes de conjuntiva de CP-Anemi
 
 - Freitas et al. 2026, «Cross-validation strategies under data dependency: An example with anemia prediction in sheep using ocular conjunctiva images», Preventive Veterinary Medicine 251 (WOS:001714508900001). Trata la dependencia entre datos en la validación cruzada, en imágenes de conjuntiva de ovejas. Si se lee, podría citarse en la sección 4.3.
 
+## Actualización tras la búsqueda en Scopus (mismo día)
+
+La búsqueda en Scopus está en `scopus_busquedas_2026-11-17.md`. Cambia esta lista así: Berghout 2024 ya se leyó y entró en la Tabla 3; Said y Tunga 2025, Sharma y Guleria 2025, Çuvadar y Yılmaz 2023, y Fuentes-Beingolea y Palomino-Quispe 2025 no usan CP-AnemiC según su resumen en Scopus; Parikh et al. 2024 no usa imágenes según su ficha en Semantic Scholar; Esfahani et al. 2026 sigue sin leer. La lista vigente de trabajos por leer (once) está en el archivo de Scopus.
+
 ## Lo que falta
 
-- Repetir la búsqueda de citas en Scopus y en Google Scholar.
-- Leer los siete trabajos de la lista y, si usan CP-AnemiC para clasificar, añadirlos a la Tabla 3.
+- Repetir la búsqueda de citas en Google Scholar (la de Scopus ya está hecha).
+- Leer los once trabajos listados en `scopus_busquedas_2026-11-17.md` y, si usan CP-AnemiC para clasificar, añadirlos a la Tabla 3.
 - Confirmar contra el PDF las filas nuevas de la tabla de extracción (S12 a S16): se leyeron por extracción automática.
