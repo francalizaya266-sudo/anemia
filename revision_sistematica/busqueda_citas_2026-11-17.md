@@ -23,7 +23,7 @@ Leídas y descartadas porque no usan CP-AnemiC ni imágenes de conjuntiva de esa
 
 ## Límites
 
-- Esta búsqueda web no usó Scopus, Web of Science, Google Scholar, OpenAlex ni Semantic Scholar. **La búsqueda de citas hacia adelante en Web of Science se hizo después, el mismo día, y está en `wos_busquedas_2026-11-17.md`.** Falta repetirla en Scopus («citado por» del DOI 10.1016/j.medntd.2023.100244) y en Google Scholar («citado por» del artículo de CP-AnemiC y búsqueda de los DOI de Mendeley 10.17632/m53vz6b7fx y 10.17632/nt7r8hv2pz).
+- Esta búsqueda web no usó Scopus, Web of Science, Google Scholar, OpenAlex ni Semantic Scholar. **La búsqueda de citas hacia adelante se hizo después, el mismo día, en Web of Science (`wos_busquedas_2026-11-17.md`) y en Scopus (`scopus_busquedas_2026-11-17.md`).** Falta Google Scholar («citado por» del artículo de CP-AnemiC y búsqueda de los DOI de Mendeley 10.17632/m53vz6b7fx y 10.17632/nt7r8hv2pz), que bloqueó la consulta automática.
 - Los textos se leyeron mediante extracción automática del PDF o de la página. Antes de citar cada estudio, alguien del equipo debe abrir el PDF y confirmar las cifras de la tabla de extracción.
 - De Asare et al. 2024 (Informatics in Medicine Unlocked) solo se leyó el resumen. No se cita hasta leer el texto completo.
 - No se pudo abrir un registro de PubMed Central (PMC11854623) que apareció en una de las búsquedas.
