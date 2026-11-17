@@ -1,0 +1,97 @@
+checklist,item,topic,location,reported,how
+TRIPOD+AI,1,Title,Title,Yes,"Names the task (machine-learning detection of childhood anaemia), the dataset and the type of study (audit)."
+TRIPOD+AI,2,Abstract,Abstract,Yes,"Single paragraph in the journal format (250 words): data, audit, leakage, secondary analyses, conclusion."
+TRIPOD+AI,3a,Background and rationale,1,Yes,"Burden of childhood anaemia, conjunctival photographs, weaknesses of the literature, duplicates in public datasets."
+TRIPOD+AI,3b,"Target population, intended purpose and users",1,Yes,Screening (not diagnosis) of children aged 6-59 months by community health workers with a phone or tablet.
+TRIPOD+AI,3c,Known health inequalities,1,Partly,Geographic inequality only (highest prevalence in Puno; rural primary care). No data on socioeconomic or ethnic groups.
+TRIPOD+AI,4,Objectives,1 (last paragraph),Yes,"One principal question (audit and leakage) and two secondary questions, stated as conditional on the labels."
+TRIPOD+AI,5a,Data sources,2.2,Yes,"CP-AnemiC version 1 (Mendeley Data, DOI, licence, download date, later withdrawal); per-file SHA-256 digests published."
+TRIPOD+AI,5b,Dates of data collection,2.2,Partly,Recruitment January-June 2022 according to the data article; the rows carry no capture date or time.
+TRIPOD+AI,6a,Study setting,2.2,Yes,"Ten health facilities in four regions of Ghana; tablet camera, ambient light, no flash."
+TRIPOD+AI,6b,Eligibility criteria,2.2,Partly,Children aged 6-59 months (source criteria as far as the data article gives them); our only exclusion is one group with conflicting labels.
+TRIPOD+AI,6c,Treatments received,-,Not applicable,Not relevant to a screening model and not recorded in the dataset.
+TRIPOD+AI,7,Data preparation,"2.2, 2.3, 2.5; Algorithm 1",Yes,Region of interest released by the dataset authors; four-stage duplicate audit; conjunctiva mask and input preparation for each model family.
+TRIPOD+AI,8a,Outcome definition,2.2 (reference standard),Partly,"Anaemia: recorded Hb < 110 g/L (WHO cut-off). The data article does not state the sample type, the device or the interval between Hb and photograph; this is declared."
+TRIPOD+AI,8b,Qualifications of the outcome assessors,2.2 (reference standard),Partly,Only what the data article states (trained biomedical staff retrieved the image-Hb pairs).
+TRIPOD+AI,8c,Blinding of outcome assessment,2.2; 4.6,No,Not reported by the source and not verifiable; the audit shows that the image-record link is unreliable.
+TRIPOD+AI,9a,Choice of initial predictors,2.5; S18.1,Yes,"63 colour statistics inside the conjunctiva mask, chosen as physical correlates of pallor; the image itself for the CNNs."
+TRIPOD+AI,9b,Predictor definitions,2.5; S18.1,Yes,Definition of the mask and of every colour statistic; code published.
+TRIPOD+AI,9c,Qualifications of the predictor assessors,2.2,Not applicable,Predictors are computed automatically; the segmentation was done by the dataset authors (triangle thresholding).
+TRIPOD+AI,10,Sample size,2.5; S18.1,Partly,No formal calculation because the dataset already existed (declared); events per variable discussed (2.5 on D-337).
+TRIPOD+AI,11,Missing data,2.2 (missing data),Yes,No missing values and no imputation; one exclusion.
+TRIPOD+AI,12a,"Use of the data, including partitioning",2.4,Yes,"Three protocols (naive, grouped, deduplicated) with stratified 5-fold cross-validation; level at which folds are disjoint."
+TRIPOD+AI,12b,Handling of predictors,2.5; S18.1,Yes,Standardised inputs where relevant; no selection or transformation of features.
+TRIPOD+AI,12c,Model type and building steps,2.5; S18.1,Yes,Four classical models with nested grid search; seven pretrained CNNs with a common and a tuned recipe.
+TRIPOD+AI,12d,Heterogeneity across clusters,"2.7; 4.6; S17.5, Table S6",Partly,"Duplicate groups handled as clusters (Obuchowski, cluster bootstrap). Results by facility only in the supplement and declared unreliable."
+TRIPOD+AI,12e,Performance measures and plots,2.7; S18.1,Yes,"AUC (primary); sensitivity, specificity, Brier score, calibration and decision curves in the supplement."
+TRIPOD+AI,12f,Model updating,-,Not applicable,No model was updated.
+TRIPOD+AI,12g,How predictions were calculated (evaluation),2.4; 2.7,Yes,Out-of-fold predictions of models fitted on the training folds only.
+TRIPOD+AI,13,Class imbalance,2.5; Table 1,Yes,Balanced class weights; classes are close to balanced (53 % anaemic in D-337).
+TRIPOD+AI,14,Fairness,"4.6; S17.5, Table S6",Partly,"Results by sex, age and facility only in the supplement; the main text states that they are unreliable because these data differ within most duplicate groups."
+TRIPOD+AI,15,Model output and thresholds,"3.3; S18.2, Table S18b",Yes,Predicted probability; screening threshold fixed inside each training fold for a sensitivity of 0.90.
+TRIPOD+AI,16,Differences between development and evaluation data,2.4,Not applicable,Internal validation only: development and evaluation use the same dataset; no external data.
+TRIPOD+AI,17,Ethical approval and consent,Ethics statement,Partly,Approval and consent of the source study are cited. Consultation of our ethics committee on the use of a withdrawn dataset is pending.
+TRIPOD+AI,18a,Funding,Funding,Yes,No specific funding.
+TRIPOD+AI,18b,Conflicts of interest,Declaration of competing interest,Yes,None declared.
+TRIPOD+AI,18c,Protocol,2.1,Partly,"No protocol was prepared; the plan was not registered and is called planned, not pre-specified."
+TRIPOD+AI,18d,Registration,2.1,No,Not registered (declared). Every analysis beyond the plan is labelled post hoc (Table S1b).
+TRIPOD+AI,18e,Data sharing,Data availability,Partly,"Digests, duplicate maps, colour features and out-of-fold predictions are public; images and per-child clinical data are not redistributed (withdrawn dataset)."
+TRIPOD+AI,18f,Code sharing,Code availability,Yes,"GitHub repository archived in Zenodo, with lock files."
+TRIPOD+AI,19,Patient and public involvement,Patient and public involvement,Yes,Stated: none.
+TRIPOD+AI,20a,Flow of participants,3.1; Fig. 3; Table 1,Yes,"Flow of rows through the four audit stages; there is no patient identifier, so the unit is the image."
+TRIPOD+AI,20b,Characteristics of participants,2.2; 3.1; Table 1; Table S9,Partly,"Sex and class counts, and class composition of duplicated and non-duplicated rows. Per-child characteristics are unreliable because copies carry different records."
+TRIPOD+AI,20c,Comparison with the development data (evaluation),-,Not applicable,No external evaluation.
+TRIPOD+AI,21,Participants and events in each analysis,2.3; 2.4; Table 1,Yes,"Images and anaemic images in each set (708 rows; D-471, D-452, D-337)."
+TRIPOD+AI,22,Full model specification,Code availability; S18.1,Partly,"Code, hyperparameter grids and training recipes are public. No fitted model is released, because no model is proposed for use."
+TRIPOD+AI,23a,Performance estimates with confidence intervals,3.2; 3.3; Table 2; Figs. 6-8; Table S18a,Yes,AUC of every model under the three protocols with cluster-bootstrap intervals; single-run AUC (mean and SD) on D-337.
+TRIPOD+AI,23b,Heterogeneity in performance,"4.6; S17.5, Table S6",Partly,"By facility, sex and age only in the supplement, declared unreliable."
+TRIPOD+AI,24,Results of model updating,-,Not applicable,No model was updated.
+TRIPOD+AI,25,Interpretation,4.1-4.4,Yes,"Principal findings, how the duplicates may have arisen, previous work, and the limited scope of the secondary analyses."
+TRIPOD+AI,26,Limitations,4.6,Yes,"Single country and device, withdrawn dataset, limits of the audit, label reliability, unregistered plan."
+TRIPOD+AI,27a,Handling of poor-quality or unavailable input data,"4.4; S17.4, Table S12",Partly,"No model is proposed for use. Stability of the features under recompression, rescaling and white-balance error is in the supplement."
+TRIPOD+AI,27b,User interaction and expertise required,4.4,Not applicable,No model is proposed for use; the text states that the data support no clinical use.
+TRIPOD+AI,27c,Next steps and future research,4.5; S16,Yes,Recommendations for users of the dataset; design of a prospective study in the supplement.
+CLAIM 2024,1,"Identification as a study of AI methodology, specifying the category of technology",Title; Abstract,Yes,Machine learning in the title; colour features with Random Forest and pretrained CNNs in the abstract.
+CLAIM 2024,2,"Summary of study design, methods, results and conclusions",Abstract,Yes,
+CLAIM 2024,3,"Scientific and clinical background, intended use and role of the AI approach",1,Yes,
+CLAIM 2024,4,"Study aims, objectives and hypotheses",1 (last paragraph),Yes,
+CLAIM 2024,5,Prospective or retrospective study,2.1,Yes,Retrospective.
+CLAIM 2024,6,Study goal,2.1,Yes,"Data-integrity audit, followed by development and internal validation of diagnostic classifiers."
+CLAIM 2024,7,Data sources,2.2,Yes,
+CLAIM 2024,8,Inclusion and exclusion criteria,2.2,Partly,Source criteria as far as the data article gives them; one exclusion of ours.
+CLAIM 2024,9,Data preprocessing,2.2; 2.5; S18.1,Yes,
+CLAIM 2024,10,Selection of data subsets,2.3; 2.4; Table 1,Yes,"Sets D-471, D-452 and D-337 defined by the three duplicate maps."
+CLAIM 2024,11,De-identification methods,Ethics statement; 2.2,Partly,"The dataset was released de-identified by its authors (regions of interest, no patient identifier); their method is not described."
+CLAIM 2024,12,How missing data were handled,2.2 (missing data),Yes,
+CLAIM 2024,13,Image acquisition protocol,2.2,Yes,As reported by the data article.
+CLAIM 2024,14,Definition of the method used to obtain the reference standard,2.2 (reference standard),Partly,"Recorded Hb; sample type, device and interval are not reported by the source."
+CLAIM 2024,15,Rationale for choosing the reference standard,2.2 (reference standard),Partly,WHO cut-off for the age group; the reference standard is the one fixed by the dataset.
+CLAIM 2024,16,Source of the reference standard annotations,2.2 (reference standard),Partly,"Hb is a measurement, not an image annotation; staff as described by the data article."
+CLAIM 2024,17,Annotation of the test set,2.4,Not applicable,There is no separate test set; held-out folds carry the same labels.
+CLAIM 2024,18,Measures of inter- and intrarater variability,2.3; 3.1; S15,Partly,"Not applicable to Hb. For the duplicate links, a blind rating by two raters with Cohen kappa is prepared and pending."
+CLAIM 2024,19,How data were assigned to partitions,2.4,Yes,
+CLAIM 2024,20,Level at which partitions are disjoint,2.4; 4.6,Yes,"Row (naive), duplicate group (grouped) or distinct image (deduplicated); patient level is impossible without an identifier."
+CLAIM 2024,21,Intended sample size,2.5,Partly,No formal calculation (existing dataset); declared.
+CLAIM 2024,22,Detailed description of the model,2.5; S18.1,Yes,
+CLAIM 2024,23,"Software libraries, frameworks and packages",2.7; Code availability,Yes,Versions in the text and in the lock files.
+CLAIM 2024,24,Initialisation of model parameters,2.5,Yes,ImageNet-pretrained weights.
+CLAIM 2024,25,Details of the training approach,2.5; S18.1,Yes,
+CLAIM 2024,26,Method of selecting the final model,2.5; S18.1,Yes,Inner cross-validation (classical) and inner validation split (CNNs); no final model is proposed.
+CLAIM 2024,27,Ensembling techniques,2.5; Table S13c,Yes,Random Forest and XGBoost; seed ensembles of the tuned CNNs in the supplement.
+CLAIM 2024,28,Metrics of model performance,2.7,Yes,
+CLAIM 2024,29,Statistical measures of significance and uncertainty,2.7,Yes,Obuchowski test and cluster bootstrap; corrected resampled t test; the rest in S18.1.
+CLAIM 2024,30,Robustness or sensitivity analysis,3.2; S17; Table S8,Yes,Three duplicate maps; sensitivity analyses in the supplement.
+CLAIM 2024,31,Methods for explainability or interpretability,2.6,Yes,"Tissue occlusion, Grad-CAM in-mask ratio with its ceiling, shape-only classifier and SHAP, all on D-337."
+CLAIM 2024,32,Evaluation on internal data,2.4; 3.2; 3.3,Yes,
+CLAIM 2024,33,Testing on external data,4.6; S16,No,None; declared as a limitation.
+CLAIM 2024,34,Clinical trial registration,2.1,Not applicable,Not a trial; the analysis plan was not registered (declared).
+CLAIM 2024,35,Numbers of patients or examinations included and excluded,3.1; Fig. 3; Table 1,Yes,Rows and distinct images; no patient identifier.
+CLAIM 2024,36,Demographic and clinical characteristics of cases in each partition,2.2; Table 1; Table S9,Partly,"Per set, not per fold; per-child characteristics are unreliable."
+CLAIM 2024,37,Performance metrics and measures of statistical uncertainty,3.2; 3.3; Table 2; Figs. 6-8,Yes,
+CLAIM 2024,38,Estimates of diagnostic performance and their precision,3.3; Table S18b,Yes,Sensitivity and specificity at the screening threshold; predictive values in the supplement.
+CLAIM 2024,39,Failure analysis of incorrectly classified cases,3.3; 4.4,Partly,"Occlusion and attention tests of what the networks use; no case-by-case analysis of errors, because the labels are unreliable."
+CLAIM 2024,40,Study limitations,4.6,Yes,
+CLAIM 2024,41,"Implications for practice, including intended use and clinical role",4.4; 4.5; 5,Yes,No clinical use is supported; recommendations for users of the dataset.
+CLAIM 2024,42,Reference to the full study protocol or to additional technical details,2.1; Appendix A,Partly,No protocol; technical details in the supplement and the repository.
+CLAIM 2024,43,"Availability of software, trained model and data",Data availability; Code availability,Partly,Code and derived data are public; trained models and images are not released.
+CLAIM 2024,44,Sources of funding and other support; role of funders,Funding,Yes,

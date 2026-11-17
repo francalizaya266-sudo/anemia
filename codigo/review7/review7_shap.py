@@ -83,7 +83,8 @@ R = {'published_top6_D471': published_top6, 'reproduced_top6_D471': topA[:6], 'r
 for label, Z, top in (('D-471', A, topA), ('D-337', B, topB)):
     R[label] = dict(n=Z['n'], best_params=Z['best_params'], inner_cv_auc=Z['inner_cv_auc'],
                     top12={c: round(float(Z['imp'][c]), 4) for c in top[:12]}, family_mean_abs_sum=Z['fam'],
-                    direction_top12={c: round(Z['direction'][c], 3) for c in top[:12]})
+                    direction_top12={c: round(Z['direction'][c], 3) for c in top[:12]},
+                    mean_abs_shap_all={c: round(float(Z['imp'][c]), 4) for c in top}, direction_all={c: round(Z['direction'][c], 3) for c in top})
 R['comparison'] = dict(
     spearman_mean_abs_shap_63_features=float(spearmanr(A['imp'].values, B['imp'][A['imp'].index].values).statistic),
     top6_in_common=sorted(set(topA[:6]) & set(topB[:6])), top12_in_common=sorted(set(topA[:12]) & set(topB[:12])),
