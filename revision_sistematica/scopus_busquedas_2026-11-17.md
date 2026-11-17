@@ -101,11 +101,10 @@ Del preprint de Cruz Romero y Lugo Beauchamp se confirmó que el F1 de 0.977 del
 
 ## Google Scholar
 
-A las 17:12 UTC se buscó el título exacto del artículo de datos entre comillas. Google respondió con la página de «tráfico inusual» (HTTP 429), sin resultados. No se resolvió la comprobación y no se obtuvo el número de «Citado por» ni la lista. **La búsqueda en Google Scholar sigue pendiente** y debe hacerla una persona.
+A las 17:12 UTC se buscó el título exacto del artículo de datos entre comillas. Google respondió con la página de «tráfico inusual» (HTTP 429), sin resultados. No se resolvió la comprobación y no se obtuvo el número de «Citado por» ni la lista. **El equipo decidió el 17-11-2026 no usar Google Scholar.** La búsqueda de citas del artículo se limita a Web of Science y Scopus.
 
 ## Lo que falta
 
-- Buscar en Google Scholar («Citado por» del artículo de datos) y guardar la fecha, el número y la lista.
 - Leer el texto completo de once trabajos que podrían usar el conjunto y, si lo usan para clasificar, añadirlos a la Tabla 3:
   1. Paul et al. 2026 (QPAIN 2026), doi:10.1109/QPAIN69676.2026.11546379. Nombra CP-AnemiC.
   2. Rooj, Vyas y Bharti 2026 (CCIS 2685), doi:10.1007/978-3-032-08511-5_14. Nombra CP-AnemiC.
