@@ -74,6 +74,6 @@ La búsqueda en Scopus está en `scopus_busquedas_2026-11-17.md`. Cambia esta li
 
 ## Lo que falta
 
-- Repetir la búsqueda de citas en Google Scholar (la de Scopus ya está hecha).
+- La búsqueda de citas queda limitada a Web of Science y Scopus. El equipo decidió el 17-11-2026 no usar Google Scholar.
 - Leer los once trabajos listados en `scopus_busquedas_2026-11-17.md` y, si usan CP-AnemiC para clasificar, añadirlos a la Tabla 3.
 - Confirmar contra el PDF las filas nuevas de la tabla de extracción (S12 a S16): se leyeron por extracción automática.
