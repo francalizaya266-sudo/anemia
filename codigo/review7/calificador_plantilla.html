@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Inspección ciega de pares</title>
+<style>
+  :root {
+    --bg: #1b1b1b; --panel: #262626; --line: #3a3a3a; --text: #ececec; --muted: #a8a8a8;
+    --accent: #e8e8e8; --ok: #9ad1a0; --warn: #e7c37a; --focus: #7fb4ff;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--text); }
+  body { font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
+  main { max-width: 1100px; margin: 0 auto; padding: 16px; }
+  h1 { font-size: 1.45rem; line-height: 1.25; margin: 8px 0 12px; }
+  h2 { font-size: 1.1rem; margin: 20px 0 8px; }
+  p { margin: 8px 0; }
+  .muted { color: var(--muted); }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 16px; margin: 12px 0; }
+  ul.clean { margin: 8px 0; padding-left: 20px; }
+  ul.clean li { margin: 4px 0; }
+  button { font: inherit; color: var(--text); background: #333; border: 1px solid #555; border-radius: 8px; padding: 10px 14px; cursor: pointer; }
+  button:hover { background: #3d3d3d; }
+  button:focus-visible, label:focus-within { outline: 2px solid var(--focus); outline-offset: 2px; }
+  button[disabled] { opacity: .45; cursor: not-allowed; }
+  button.primary { background: var(--accent); color: #111; border-color: var(--accent); font-weight: 600; }
+  button.primary:hover { background: #fff; }
+  button.small { padding: 5px 10px; font-size: .9rem; }
+  .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+  .choice { display: inline-flex; align-items: center; gap: 8px; border: 1px solid #555; border-radius: 8px; padding: 10px 14px; cursor: pointer; background: #303030; }
+  .choice input { width: 18px; height: 18px; }
+  [hidden] { display: none !important; }
+
+  /* pantalla de calificación */
+  .top { display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap; justify-content: space-between; }
+  .code { font-size: 1.6rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .bar { height: 6px; background: #3a3a3a; border-radius: 3px; overflow: hidden; margin: 8px 0 12px; }
+  .bar > div { height: 100%; width: 0; background: var(--accent); }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .box { position: relative; background: #000; border: 1px solid var(--line); border-radius: 8px; height: min(46vh, 420px); overflow: hidden; }
+  /* el borde fino marca hasta dónde llega cada imagen, igual que el recuadro del PDF */
+  .box img { position: absolute; top: 50%; left: 50%; transform-origin: center center; image-rendering: auto; user-select: none; -webkit-user-drag: none; outline: 1px solid #6a6a6a; }
+  .side { font-size: .85rem; color: var(--muted); margin: 6px 2px 0; min-height: 34px; display: flex; justify-content: space-between; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .answers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin: 16px 0 10px; }
+  .answers button { padding: 14px 10px; font-size: 1.05rem; text-align: center; }
+  .answers button b { display: block; font-size: 1.5rem; line-height: 1.1; }
+  .answers button.sel { background: var(--accent); color: #111; border-color: var(--accent); }
+  .nav { display: flex; gap: 10px; flex-wrap: wrap; justify-content: space-between; margin-top: 6px; }
+  .status { min-height: 1.5em; font-size: .9rem; }
+  .warn { color: var(--warn); }
+  .ok { color: var(--ok); }
+  kbd { background: #111; border: 1px solid #555; border-radius: 4px; padding: 0 5px; font: inherit; font-size: .85em; }
+  table.sum { border-collapse: collapse; margin: 8px 0; }
+  table.sum td { padding: 4px 16px 4px 0; }
+  textarea { width: 100%; height: 180px; background: #111; color: var(--text); border: 1px solid #555; border-radius: 8px; padding: 8px; font: 13px/1.4 ui-monospace, Consolas, monospace; }
+  @media (max-width: 640px) {
+    .pair { grid-template-columns: 1fr; }
+    .box { height: 34vh; }
+    .answers { grid-template-columns: 1fr; }
+    .answers button b { display: inline; margin-right: 8px; }
+  }
+</style>
+</head>
+<body>
+<main>
+
+<section id="intro">
+  <h1>Inspección ciega de pares (etapa 4), kit ampliado</h1>
+  <div class="card">
+    <p>Va a ver <span id="nPairs">356</span> pares de imágenes, de P001 a P356. Para cada par decida, sin consultar a nadie ni ningún otro archivo:</p>
+    <ul class="clean">
+      <li><b>1</b> = las dos imágenes muestran el mismo ojo (la misma foto recortada, reescalada, espejada o rotada, o una segunda toma del mismo ojo)</li>
+      <li><b>0</b> = son ojos distintos</li>
+      <li><b>9</b> = no puedo decidir</li>
+    </ul>
+    <p>Los pares están en orden aleatorio. No se muestra el nombre del archivo, la etiqueta de anemia, la hemoglobina ni el establecimiento. Mire los vasos, los pliegues y el contorno del tejido; una imagen puede estar espejada, rotada o recortada respecto de la otra. Trabaje solo, sin comentar los pares con el otro evaluador, y sin abrir el conjunto de datos, el artículo ni sus figuras.</p>
+    <p class="muted">Calcule entre 1 y 2 horas. Puede parar y seguir después: el avance se guarda solo en este navegador, siempre que abra este mismo archivo desde el mismo lugar. Puede volver a un par y cambiar su respuesta mientras no haya entregado la hoja.</p>
+  </div>
+  <div class="card">
+    <h2 style="margin-top:0">¿Qué evaluador es usted?</h2>
+    <p class="muted">Use la letra que le indicó el coordinador.</p>
+    <div class="row" role="radiogroup" aria-label="Evaluador">
+      <label class="choice"><input type="radio" name="ev" value="A"> Evaluador A</label>
+      <label class="choice"><input type="radio" name="ev" value="B"> Evaluador B</label>
+    </div>
+    <p id="saved" class="status muted"></p>
+    <div class="row">
+      <button id="start" class="primary" disabled>Empezar</button>
+      <button id="reset" hidden>Borrar mi avance</button>
+    </div>
+    <p id="restoreRow" class="muted" hidden>¿Guardó una copia de su avance en otra computadora o en otro navegador?
+      <button id="restoreBtn" class="small">Cargar esa copia</button>
+      <input type="file" id="restoreFile" accept=".csv,text/csv" hidden>
+    </p>
+    <p id="restoreMsg" class="status"></p>
+  </div>
+  <p class="muted">Este archivo funciona sin internet y no envía nada a ningún sitio. Las respuestas quedan solo en este navegador hasta que usted descargue su hoja. Es de uso interno del equipo: no lo reenvíe ni lo publique.</p>
+  <p id="nostore" class="warn" hidden>Este navegador no permite guardar el avance. Puede calificar igual, pero no cierre esta pestaña hasta descargar su hoja, y use «Guardar copia del avance» si va a parar.</p>
+</section>
+
+<section id="rate" hidden>
+  <div class="top">
+    <div><span class="code" id="code">P001</span> <span class="muted" id="pos"></span></div>
+    <div class="muted"><span id="who"></span> · <span id="count"></span></div>
+  </div>
+  <div class="bar" aria-hidden="true"><div id="barFill"></div></div>
+  <div class="pair">
+    <div>
+      <div class="box" id="boxL"><img id="imgL" alt="Imagen izquierda del par"></div>
+      <div class="side"><span>Imagen izquierda</span></div>
+    </div>
+    <div>
+      <div class="box" id="boxR"><img id="imgR" alt="Imagen derecha del par"></div>
+      <div class="side"><span>Imagen derecha</span>
+        <span class="row" style="gap:6px">
+          <button id="rot" class="small" title="Girar la imagen derecha 90 grados (tecla G)">Girar 90°</button>
+          <button id="flip" class="small" title="Espejar la imagen derecha (tecla E)">Espejar</button>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="answers" role="group" aria-label="Respuesta">
+    <button data-v="1"><b>1</b>Mismo ojo</button>
+    <button data-v="0"><b>0</b>Ojos distintos</button>
+    <button data-v="9"><b>9</b>No puedo decidir</button>
+  </div>
+  <div class="nav">
+    <div class="row">
+      <button id="prev">← Anterior</button>
+      <button id="next">Siguiente →</button>
+      <button id="firstEmpty">Ir al primero sin responder</button>
+    </div>
+    <div class="row">
+      <button id="backup" title="Descarga un archivo con lo que lleva respondido, por si cambia de computadora o de navegador">Guardar copia del avance</button>
+      <button id="toIntro">Instrucciones</button>
+      <button id="finish" class="primary" disabled>Terminar</button>
+    </div>
+  </div>
+  <p class="status muted" id="hint">Teclado: <kbd>1</kbd>, <kbd>0</kbd> o <kbd>9</kbd> para responder; <kbd>←</kbd> y <kbd>→</kbd> para moverse; <kbd>G</kbd> gira y <kbd>E</kbd> espeja la imagen derecha (solo para ayudarle a comparar).</p>
+</section>
+
+<section id="done" hidden>
+  <h1>Hoja completa</h1>
+  <div class="card">
+    <table class="sum">
+      <tr><td class="muted">Evaluador</td><td id="sEv"></td></tr>
+      <tr><td class="muted">Pares respondidos</td><td id="sN"></td></tr>
+      <tr><td class="muted">Inicio</td><td id="sIni"></td></tr>
+      <tr><td class="muted">Fin</td><td id="sFin"></td></tr>
+      <tr><td class="muted">Tiempo de trabajo</td><td id="sMin"></td></tr>
+    </table>
+    <p>Si quiere revisar algún par, hágalo ahora. Después de entregar la hoja, ninguna respuesta se cambia.</p>
+    <div class="row">
+      <button id="download" class="primary">Descargar mi hoja de respuestas</button>
+      <button id="review">Volver a revisar</button>
+      <button id="asText">Ver la hoja como texto</button>
+    </div>
+    <p id="dlMsg" class="status ok"></p>
+    <div id="textWrap" hidden>
+      <p class="muted">Si la descarga no funcionó, copie todo este texto y envíelo al coordinador.</p>
+      <textarea id="textOut" readonly aria-label="Hoja de respuestas como texto"></textarea>
+    </div>
+  </div>
+  <p class="muted">Envíe el archivo descargado al coordinador, tal como está. No comente los pares con el otro evaluador hasta que el coordinador confirme que recibió las dos hojas.</p>
+</section>
+
+</main>
+<script>/*__KIT_DATA__*/</script>
+<script>
+(function () {
+  'use strict';
+  var K = window.KIT, N = K.pairs.length, GAP = 120000, GUARD = 250;
+  var st = null, idx = 0, rot = 0, flip = false, lastTick = 0, shownAt = 0, canStore = true;
+  var known = {};
+  for (var q0 = 0; q0 < N; q0++) known[K.pairs[q0][0]] = true;
+  var $ = function (id) { return document.getElementById(id); };
+  var screens = ['intro', 'rate', 'done'];
+  function show(name) { screens.forEach(function (s) { $(s).hidden = s !== name; }); window.scrollTo(0, 0); }
+  function keyFor(ev) { return 'kit_ciego_v2_' + ev; }
+  function load(ev) {
+    try {
+      var raw = localStorage.getItem(keyFor(ev)), s = raw ? JSON.parse(raw) : null;
+      return s && s.ev === ev && s.ans && typeof s.ans === 'object' ? s : null;
+    } catch (e) { return null; }
+  }
+  function save() {
+    if (!st) return;
+    try { localStorage.setItem(keyFor(st.ev), JSON.stringify(st)); }
+    catch (e) { canStore = false; $('nostore').hidden = false; }
+  }
+  function countOf(s) { return s ? Object.keys(s.ans).length : 0; }
+  function answered() { return countOf(st); }
+  function firstEmpty() { for (var i = 0; i < N; i++) if (!(K.pairs[i][0] in st.ans)) return i; return -1; }
+  function tick() {
+    var now = Date.now();
+    if (lastTick) st.activeMs += Math.min(now - lastTick, GAP);
+    lastTick = now;
+  }
+  function minutes() { return Math.max(1, Math.round(st.activeMs / 60000)); }
+  function p2(n) { return (n < 10 ? '0' : '') + n; }
+  function isoDate(ms) { var d = new Date(ms); return d.getFullYear() + '-' + p2(d.getMonth() + 1) + '-' + p2(d.getDate()); }
+  function stamp(ms) { if (!ms) return ''; var d = new Date(ms); return isoDate(ms) + ' ' + p2(d.getHours()) + ':' + p2(d.getMinutes()); }
+
+  // ---- hoja de respuestas ----
+  function sheet(final) {
+    var lines = ['code,respuesta,evaluador,inicio,fin,minutos'];
+    var ini = stamp(st.startedAt), fin = final ? stamp(st.finishedAt) : '', m = minutes();
+    for (var i = 0; i < N; i++) {
+      var c = K.pairs[i][0];
+      lines.push([c, c in st.ans ? st.ans[c] : '', st.ev, ini, fin, m].join(','));
+    }
+    return lines.join('\n') + '\n';
+  }
+  function download(name, text) {
+    var blob = new Blob([text], { type: 'text/csv;charset=utf-8' });
+    var a = document.createElement('a'), url = URL.createObjectURL(blob);
+    a.href = url; a.download = name;
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function () { URL.revokeObjectURL(url); }, 2000);
+  }
+  function parseSheet(text, ev) {
+    var rows = text.replace(/^﻿/, '').split(/\r?\n/), head = (rows[0] || '').split(',');
+    var col = {};
+    for (var h = 0; h < head.length; h++) col[head[h].trim()] = h;
+    if (!('code' in col) || !('respuesta' in col)) return { error: 'Ese archivo no es una copia de avance de este calificador.' };
+    var ans = {}, mins = 0, ini = '';
+    for (var i = 1; i < rows.length; i++) {
+      if (!rows[i].trim()) continue;
+      var c = rows[i].split(','), code = (c[col.code] || '').trim(), v = (c[col.respuesta] || '').trim();
+      if (!known[code]) continue;
+      if ('evaluador' in col) {
+        var who = (c[col.evaluador] || '').trim();
+        if (who && who !== ev) return { error: 'Esa copia es del evaluador ' + who + ', y usted eligió el evaluador ' + ev + '. No se cargó.' };
+      }
+      if ('minutos' in col) mins = Math.max(mins, parseInt(c[col.minutos], 10) || 0);
+      if ('inicio' in col && !ini) ini = (c[col.inicio] || '').trim();
+      if (v === '0' || v === '1' || v === '9') ans[code] = parseInt(v, 10);
+    }
+    var t = ini ? new Date(ini.replace(' ', 'T')).getTime() : NaN;
+    return { ans: ans, n: Object.keys(ans).length, activeMs: mins * 60000, startedAt: isNaN(t) ? null : t };
+  }
+
+  // ---- inicio ----
+  $('nPairs').textContent = N;
+  try { localStorage.setItem('kit_ciego_v2_test', '1'); localStorage.removeItem('kit_ciego_v2_test'); }
+  catch (e) { canStore = false; $('nostore').hidden = false; }
+  var radios = document.querySelectorAll('input[name=ev]');
+  function chosen() { for (var i = 0; i < radios.length; i++) if (radios[i].checked) return radios[i].value; return null; }
+  function current(ev) { return load(ev) || (st && st.ev === ev ? st : null); }
+  function refreshIntro() {
+    var ev = chosen(), n = ev ? countOf(current(ev)) : 0;
+    $('start').disabled = !ev;
+    $('start').textContent = n ? 'Continuar' : 'Empezar';
+    $('saved').textContent = n ? 'Hay un avance guardado para el evaluador ' + ev + ': ' + n + ' de ' + N + ' pares.' : '';
+    $('reset').hidden = !n; $('reset').textContent = 'Borrar mi avance'; $('reset').dataset.armed = '';
+    $('restoreRow').hidden = !ev;
+  }
+  for (var r = 0; r < radios.length; r++) radios[r].addEventListener('change', function () { $('restoreMsg').textContent = ''; refreshIntro(); });
+  $('reset').addEventListener('click', function () {
+    var b = $('reset');
+    if (!b.dataset.armed) { b.dataset.armed = '1'; b.textContent = 'Confirmar: borrar todo mi avance'; return; }
+    try { localStorage.removeItem(keyFor(chosen())); } catch (e) {}
+    st = null; $('restoreMsg').textContent = ''; refreshIntro();
+  });
+  $('restoreBtn').addEventListener('click', function () { $('restoreFile').value = ''; $('restoreFile').click(); });
+  $('restoreFile').addEventListener('change', function () {
+    var f = this.files && this.files[0], ev = chosen(), msg = $('restoreMsg');
+    this.value = '';  // para que elegir otra vez el mismo archivo vuelva a avisar
+    if (!f || !ev) return;
+    var rd = new FileReader();
+    rd.onload = function () {
+      var res = parseSheet(String(rd.result), ev), have = current(ev), nHave = countOf(have);
+      msg.className = 'status warn';
+      if (res.error) { msg.textContent = res.error; return; }
+      if (!res.n) { msg.textContent = 'Esa copia no tiene respuestas. No se cargó.'; return; }
+      if (nHave > res.n) { msg.textContent = 'Este navegador ya tiene más avance (' + nHave + ' pares) que la copia (' + res.n + '). No se cargó.'; return; }
+      st = { ev: ev, ans: res.ans, activeMs: Math.max(res.activeMs, have ? have.activeMs : 0),
+             startedAt: res.startedAt || (have && have.startedAt) || Date.now(), finishedAt: null };
+      save(); refreshIntro();
+      msg.className = 'status ok'; msg.textContent = 'Se cargaron ' + res.n + ' respuestas de la copia.';
+    };
+    rd.readAsText(f);
+  });
+  $('start').addEventListener('click', function () {
+    var ev = chosen(); if (!ev) return;
+    st = current(ev) || { ev: ev, ans: {}, activeMs: 0, startedAt: Date.now(), finishedAt: null };
+    lastTick = Date.now();
+    var e = firstEmpty();
+    show('rate'); go(e < 0 ? 0 : e);
+  });
+
+  // ---- calificación ----
+  function fit(img, box, w, h, r, f) {
+    var bw = box.clientWidth - 8, bh = box.clientHeight - 8;
+    var odd = r % 2 === 1, sc = odd ? Math.min(bw / h, bh / w) : Math.min(bw / w, bh / h);
+    img.style.width = (w * sc) + 'px'; img.style.height = (h * sc) + 'px';
+    img.style.transform = 'translate(-50%,-50%) rotate(' + (r * 90) + 'deg) scaleX(' + (f ? -1 : 1) + ')';
+  }
+  function layout() {
+    if ($('rate').hidden) return;
+    var p = K.pairs[idx], L = K.images[p[1]], R = K.images[p[2]];
+    fit($('imgL'), $('boxL'), L[1], L[2], 0, false);
+    fit($('imgR'), $('boxR'), R[1], R[2], rot, flip);
+  }
+  function paint() {
+    var p = K.pairs[idx], code = p[0], n = answered();
+    $('code').textContent = code;
+    $('pos').textContent = (idx + 1) + ' de ' + N;
+    $('who').textContent = 'Evaluador ' + st.ev;
+    $('count').textContent = n + ' respondidos';
+    $('barFill').style.width = (100 * n / N) + '%';
+    $('imgL').src = K.images[p[1]][0];
+    $('imgR').src = K.images[p[2]][0];
+    var bs = document.querySelectorAll('.answers button');
+    for (var i = 0; i < bs.length; i++) {
+      var on = String(st.ans[code]) === bs[i].dataset.v;
+      bs[i].classList.toggle('sel', on); bs[i].setAttribute('aria-pressed', on ? 'true' : 'false');
+    }
+    $('prev').disabled = idx === 0; $('next').disabled = idx === N - 1;
+    $('firstEmpty').disabled = firstEmpty() < 0;
+    $('finish').disabled = n < N;
+    layout();
+  }
+  function go(i) { idx = Math.max(0, Math.min(N - 1, i)); rot = 0; flip = false; shownAt = Date.now(); paint(); }
+  function answer(v) {
+    if (Date.now() - shownAt < GUARD) return;  // evita que un doble clic responda también el par siguiente
+    tick();
+    st.ans[K.pairs[idx][0]] = v; save();
+    if (idx < N - 1) { go(idx + 1); return; }
+    var e = firstEmpty();
+    if (e >= 0) go(e); else { paint(); finish(); }
+  }
+  function finish() {
+    if (answered() < N) return;
+    tick(); st.finishedAt = Date.now(); save();
+    $('sEv').textContent = st.ev; $('sN').textContent = N + ' de ' + N;
+    $('sIni').textContent = stamp(st.startedAt); $('sFin').textContent = stamp(st.finishedAt);
+    $('sMin').textContent = minutes() + ' minutos';
+    $('dlMsg').textContent = ''; $('textWrap').hidden = true;
+    show('done');
+  }
+  var ab = document.querySelectorAll('.answers button');
+  for (var b = 0; b < ab.length; b++) ab[b].addEventListener('click', function () { this.blur(); answer(parseInt(this.dataset.v, 10)); });
+  $('prev').addEventListener('click', function () { tick(); save(); go(idx - 1); });
+  $('next').addEventListener('click', function () { tick(); save(); go(idx + 1); });
+  $('firstEmpty').addEventListener('click', function () { tick(); var e = firstEmpty(); if (e >= 0) go(e); });
+  $('rot').addEventListener('click', function () { rot = (rot + 1) % 4; layout(); });
+  $('flip').addEventListener('click', function () { flip = !flip; layout(); });
+  $('finish').addEventListener('click', finish);
+  $('backup').addEventListener('click', function () {
+    tick(); save();
+    download('avance_evaluador_' + st.ev + '_' + answered() + 'de' + N + '.csv', sheet(false));
+  });
+  $('toIntro').addEventListener('click', function () { tick(); save(); lastTick = 0; refreshIntro(); show('intro'); });
+  $('review').addEventListener('click', function () { lastTick = Date.now(); show('rate'); go(0); });
+  window.addEventListener('resize', layout);
+  document.addEventListener('keydown', function (e) {
+    if ($('rate').hidden || e.ctrlKey || e.metaKey || e.altKey) return;
+    var k = e.key;
+    if (k === '1' || k === '0' || k === '9') { e.preventDefault(); if (!e.repeat) answer(parseInt(k, 10)); }
+    else if (k === 'ArrowLeft') { e.preventDefault(); if (idx > 0) { tick(); go(idx - 1); } }
+    else if (k === 'ArrowRight') { e.preventDefault(); if (idx < N - 1) { tick(); go(idx + 1); } }
+    else if (k === 'g' || k === 'G') { rot = (rot + 1) % 4; layout(); }
+    else if (k === 'e' || k === 'E') { flip = !flip; layout(); }
+  });
+
+  // ---- entrega ----
+  $('download').addEventListener('click', function () {
+    var name = 'respuestas_evaluador_' + st.ev + '_' + isoDate(st.finishedAt || Date.now()) + '_' + minutes() + 'min.csv';
+    download(name, sheet(true));
+    $('dlMsg').textContent = 'Se descargó ' + name + '. Envíelo al coordinador.';
+  });
+  $('asText').addEventListener('click', function () {
+    $('textOut').value = sheet(true); $('textWrap').hidden = false; $('textOut').focus(); $('textOut').select();
+  });
+})();
+</script>
+</body>
+</html>
